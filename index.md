@@ -1,4 +1,4 @@
-aef# ./ Willkomen zu unserem Java Tutorial
+./ Willkomen zu unserem Java Tutorial
 
 ### In diesen Tutorial, werden wir euch die Grundlagen für Java, inklusive Beispiele erklären.
 
@@ -19,6 +19,8 @@ Aus Copyright Gründen bekam Oak, den Namen **Java**
 
 Am 23. Januar 1996 wurde **JDk 1.0** veröffentlicht, was Programiierern erlaubte, mit Java, ihre eigenen Minigames zu programmieren. 
 
+---
+
 Die verbliebenden Mitglieder von First Person 
 ---
 ## ./ Einführung
@@ -26,19 +28,16 @@ Die verbliebenden Mitglieder von First Person
 Java funktioniert immer nach dem selben Prinzip.Zuerst gibt man die **Main Methode** an. alles in dieser Methode, gibt den Ablauf des Programmes an. Die Methode läuft von oben nach unten ab.
 Man gibt dem Programm einen **Command**
 
+---
 
 ## ./ Allgemeiner Teil
-
-
-
-<br>
+---
 <br>
 
 ### EVA-Prinzip 
-<br>
 
-Dass EVA-Prinzip ist ein Begriff aus der Datenverarbeitung. Die Abkürzung steht für **E** Eingabe **V** Verarbeitung **A** Ausgabe.
-<br>
+Dass EVA-Prinzip ist ein Begriff aus der Datenverarbeitung. Die Abkürzung steht für **E** Eingabe, **V** Verarbeitung, **A** Ausgabe.
+
 
 Bei der **Eingabe** werden Daten eingeben mithilfen von Eingabegeräten wie z.B der Tastatur.
 <br>
@@ -58,22 +57,29 @@ Im Allgemeinen kann man sagen,dass das **EVA Prinzip** ist die Reihenfolge wie d
 ### Algorithmus 
 <br>
    
-Ein **Algorithmus** ist die eine vorgegebene Vorgehensweise zur Lösung eines Probelemes. Der Vorgang verläuft Schrittweise und er benötigt immer einen Eingabewert um diesen zur Verarbeiten und einen Ausgabewert auszugeben.<br>
-Ein **Algorithmus** besitzt verschhiedene Eigenschaften <br>
-<br>1. Determiniert 
-   - Er liefert bei gleicher Eingabe immer die gleiche Ausgabe
-  
-<br>2. **Deterministisch** 
-   - Jeder einzelne Schritt ist vorgegeben und führt zum Ende  
-  
-<br>3. **Finit**
-- Der Algorithmus besteht aus einer bregenzten Anzahl an Zeichen im Quelltext 
-  
-<br>4. **Terminiert**
-- Der Alogorithmus kommt nach einer bestimmten Zeit zu einen Ergebnis  
+Ein **Algorithmus** ist die eine vorgegebene Vorgehensweise zur Lösung eines Probelemes. Der Vorgang verläuft Schrittweise und er benötigt immer einen Eingabewert um diesen zur Verarbeiten und einen Ausgabewert auszugeben.
 
-<br>5. **Effektive** 
-- jeder einzelne Schritt ist sinvoll und führt schritt für schritt zur ausgabe
+Ein Beispiel für einen **Algorithmus** ist der Google Algorithmus. Er ist dafür zuständig,dass Websiten nach Relevanz und anderen Faktoren wie Schlüsselwörter, gerankt werden. Das bedeutet, dass es ein Ranking gibt, auf welchen Platz eine Website steht.
+
+Ein **Algorithmus** besitzt verschiedene Eigenschaften: 
+
+1. Determiniert 
+   - Er liefert bei gleicher Eingabe immer die gleiche Ausgabe.
+  
+2. **Deterministisch** 
+   - Jeder einzelne Schritt ist vorgegeben und führt zum Ende.  
+  
+3. **Finit**
+   - Der Algorithmus besteht aus einer bregenzten Anzahl an Zeichen im Quelltext. 
+  
+4. **Terminiert**
+   - Der Alogorithmus kommt nach einer bestimmten Zeit zu einen Ergebnis. 
+
+5. **Effektive** 
+   - jeder einzelne Schritt ist sinvoll und führt schritt für schritt zur ausgabe.
+
+<br>
+
 
 <br>
 <br>
@@ -115,3 +121,4 @@ elst gemac .ohür e
 korrek    Ein Beispielut"t.println("Das ist )se {}
     
 t falsSystem.out.pTrifft nicht zus is
+
