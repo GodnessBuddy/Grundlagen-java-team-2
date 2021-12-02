@@ -54,6 +54,7 @@ Im Allgemeinen kann man sagen,dass das **EVA Prinzip** ist die Reihenfolge wie d
 <br>
 <br>
 
+---
 ### Algorithmus 
 <br>
    
@@ -79,6 +80,24 @@ Ein **Algorithmus** besitzt verschiedene Eigenschaften:
    - jeder einzelne Schritt ist sinvoll und führt schritt für schritt zur ausgabe.
 
 <br>
+
+---
+
+### Compiler und Interpreter
+
+Ein **Compiler** istr ein Programm welches Quellcode in Maschinencode umwandelt.
+
+Das heißt, dass der Compiler die Befehle einer Programmiersprache so umwandelt, dass der Computer mit ihnen arbeiten kann. Man nennt diesen Vorgang auch kompilieren.
+
+Der Gegenteil von einen Compiler ist der **Interpreter**
+
+Dieses ist auch ein Programm für die Verarbeitung von Befehlen. Hierbei liegt aber der Unterschied, dass dieser direkt die Befehle ausführen kann ohne sie in Maschinencode umzuwandeln. 
+
+Der Vorteil ist, dass die Befehle unmittelbar ausgeführt werden. Das Bedeutet, dass jeder einzelne Befehl interpretiert wird. Das führt zur einer besseren Fehleranalyse.
+
+Der Nachteil ist, dass es im Vergleich zum Compiler deutlich länger dauert die Befehle auszuführen.
+
+### Wir wird aus Java Quellcode Maschinencode
 
 
 <br>
