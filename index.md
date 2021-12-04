@@ -83,26 +83,49 @@ Ein **Algorithmus** besitzt verschiedene Eigenschaften:
 
 ---
 
-### Compiler und Interpreter
+### Wie funktioniert ein Java Programm 
 
-Ein **Compiler** istr ein Programm welches Quellcode in Maschinencode umwandelt.
+<br>
+
+Um zu verstehen wie ein Java Programm ausgeführt wird müssen wir erstmal ein paar Begriffe erklären.
+
+Der Computer kann nämlich nur Programme in **binärer form** ausführen. Das heißt der code besitzt **einsen** (1) und **nullen** (0). Wenn also ein Programm in **Maschinencode** umgewandelt wird, dann kann der Computer dieses ausführen, weil dieses in binärer form geschrieben ist.
+
+Ein **Compiler** ist dafür zuständig, dass ein Programm welches Quellcode geschrieben ist, in Maschinencode umwandelt wird.
 
 Das heißt, dass der Compiler die Befehle einer Programmiersprache so umwandelt, dass der Computer mit ihnen arbeiten kann. Man nennt diesen Vorgang auch kompilieren.
 
+<br>
+
+Der **Executor** ist dafür zuständig, dass der Kompilierter Code ausgeführt wird.
+
+<br>
+
 Der Gegenteil von einen Compiler ist der **Interpreter**
 
-Dieses ist auch ein Programm für die Verarbeitung von Befehlen. Hierbei liegt aber der Unterschied, dass dieser direkt die Befehle ausführen kann ohne sie in Maschinencode umzuwandeln. 
+Dieses ist auch ein Programm für die Verarbeitung von Befehlen. Hierbei liegt aber der Unterschied, dass dieser direkt die Befehle ausführen kann ohne sie in Maschinencode umzuwandeln. <br>
+Er liest einen Befehl, wandelt ihn Maschinencode um und führt in dann aus. Danach fängt er mit dem nächsten Befehl an. 
 
 Der Vorteil ist, dass die Befehle unmittelbar ausgeführt werden. Das Bedeutet, dass jeder einzelne Befehl interpretiert wird. Das führt zur einer besseren Fehleranalyse.
 
 Der Nachteil ist, dass es im Vergleich zum Compiler deutlich länger dauert die Befehle auszuführen.
 
+<br>
+<br>
+
 ### Wir wird aus Java Quellcode Maschinencode
 
+Zuerst wird der **Java Quellcode** (Endung: .java) mit dem Java Compiler in **Java bytecode** (Endung: .class) umgewandelt. Im nächsten Schritt wird der Java bytecode von der **Java Virtual Machine(JVM)** bearbeitet. Die Java Virtual Machine ist ein interpreter und wie wir uns zurück erinnern übersetzt er jeden Befehl einzeln, führt ihn dann aus und fängt beim nächsten Befehl an. Zum Ende hat man ein ausgeführtes Java Programm.
+
+Der Vorteil an die JVM ist, dass das Java Programm auf jeden Betriebssystem gleich läuft. Es muss nämlich nur die JVM für das Betriebssystem angepasst sein.
 
 <br>
 <br>
 <br>
+
+---
+
+## Einführung in die Programmierung 
 
 ### Variablen
 
@@ -140,4 +163,60 @@ elst gemac .ohür e
 korrek    Ein Beispielut"t.println("Das ist )se {}
     
 t falsSystem.out.pTrifft nicht zus is
+
+<br>
+<br>
+<br>
+
+---
+## Einführung in die objektorientierte Programmierung
+
+---
+### Klasse
+
+
+
+
+
+
+
+
+---
+### Objekte
+
+
+
+
+
+
+---
+### Klassendiagramme
+
+
+
+
+
+
+
+---
+### Objektdiagramme
+
+
+
+
+
+---
+### Konnstrukturen 
+
+
+
+
+
+
+---
+### Objektmethoden
+
+
+
+
 
