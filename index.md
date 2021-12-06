@@ -5,6 +5,7 @@
  **Java**, was für "*Just Another Vogue Acronym*" in deutsch "*Nur ein weiteres unbestimmtes Akronym*" steht, ist eine Programmiersprache, die nach **20 Jahren** von rund **9 Milionen Software Entwicklern** verwendet wird. Sie ist dank ihrer zahlreichen Bibliotheken, und als rubste Objektorientierte Programmiersprache Konkurenzloser Marktführer im Bereich, Plattform unabhängige Programiersprache. Rund **3 Milliarden Geräte füren Java Programme aus**.
 
 ---
+
 ## Geschichte
 
 **Bill Joy** hatte die Vorstellung, eine neue, bessere Programmiersprache auf der Basis von **C++** zu kreiren, da er mit den bis dahin existierenden, unzufrieden war. Später wusste er das C++ ungeeignet für einen langen Code sei.
@@ -19,16 +20,24 @@ Aus Copyright Gründen bekam Oak, den Namen **Java**.
 
 Am 23. Januar 1996 wurde **JDk 1.0** veröffentlicht, was Programierern erlaubte, mit Java ihre eigenen Minigames zu programmieren. 
 
-Die verbliebenden Mitglieder von First Person Inc., gründeten JavaSoft.
+Die verbliebenden Mitglieder von First Person Inc., gründeten JavaSoft und der Erfolg begann.
+
 ---
+
 ## ./ Einführung
 
-Java funktioniert immer nach dem selben Prinzip.Zuerst gibt man die **Main Methode** an. alles in dieser Methode, gibt den Ablauf des Programmes an. Die Methode läuft von oben nach unten ab.
-Man gibt dem Programm einen **Command**
+Zu aller erst, muss man eine **.Java Datei** erstellen, in der man mit Hilfe eines Programmes wie **Visual Studio Code**, programmieren kann.
+
+Java funktioniert immer nach dem selben Prinzip. Zuerst gibt man die **Main Methode** an. Alles in dieser Methode, gibt den Ablauf des Programmes an. Die Methode läuft von oben nach unten ab.
+
+Von nun an gibt man dem Programm eine **Methode**, die die darin beinhalteten **Commands** beeinflusst.
+
+Man kann allerdings auch direkt Commands in der Main Methode angeben, diese dann ausgeführt werden, ohne beeinflusst zu werden.
 
 ---
 
 ## ./ Allgemeiner Teil
+
 ---
 <br>
 
@@ -53,6 +62,7 @@ Im Allgemeinen kann man sagen,dass das **EVA Prinzip** ist die Reihenfolge wie d
 <br>
 
 ---
+
 ### Algorithmus 
 <br>
    
@@ -111,7 +121,7 @@ Der Nachteil ist, dass es im Vergleich zum Compiler deutlich länger dauert die 
 <br>
 <br>
 
-### Wir wird aus Java Quellcode Maschinencode
+### Wie wird aus Java Quellcode Maschinencode
 
 Zuerst wird der **Java Quellcode** (Endung: .java) mit dem Java Compiler in **Java bytecode** (Endung: .class) umgewandelt. Im nächsten Schritt wird der Java bytecode von der **Java Virtual Machine(JVM)** bearbeitet. Die Java Virtual Machine ist ein interpreter und wie wir uns zurück erinnern übersetzt er jeden Befehl einzeln, führt ihn dann aus und fängt beim nächsten Befehl an. Zum Ende hat man ein ausgeführtes Java Programm.
 
@@ -167,28 +177,40 @@ t falsSystem.out.pTrifft nicht zus is
 <br>
 
 ---
-## Einführung in die objektorientierte Programmierung
+## ./ Einführung in die objektorientierte Programmierung
 
 ---
-### Klasse
+<br>
 
-
-
-
-
-
-
+Die **objektorientierte Programmierung (OOP)** ist ein Programmierstil. Sie liegt sehr nah am menschlichen denken, da alles im Program als Objekte beschrieben wird und man als Mensch sachen als Objekt wahrnimmt.Java ist auch eine objektorientierte Programmiersprache.
+<br>
 
 ---
 ### Objekte
+<br>
 
+**Objekte** werden in einem Programm beschrieben und können zusammenarbeiten um zur Problemlösung beizutragen. Jedes Objekt besitzt **Eigenschaften (Attribute)** und auch **Methoden**.
 
+Die **Eigenschaften** beschreiben das Objekt und Jedes Objekt hat unterschiedliche Eigenschaften.
 
+Eine **Methode** dient als Funktion, die im Programm etwas ausführen lässt. Eine Methode kann man so oft ausführen lassen wie man will ohne sie immer neu zuschreiben.
+<br>
 
+---
+### Klassen
+<br>
 
+Eine **Klasse** wird als Bauplan für Objekte benutzt. Sie gibt die verschiedenen Eigenschaften und Methoden für die Objekte die in der Klasse sind vor. Aus der Klasse können unendlich viele Objekte erstellt werden.
+<br>
 
 ---
 ### Klassendiagramme
+<br>
+
+|Klassendiagramm|
+|---|
+|name : string <br> Lebenspunkte : double|
+ 
 
 
 
