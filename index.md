@@ -9,19 +9,17 @@
 
 **Bill Joy** hatte die Vorstellung, eine neue, bessere Programmiersprache auf der Basis von **C++** zu kreiren, da er mit den bis dahin existierenden, unzufrieden war. Später wusste er das C++ ungeeignet für einen langen Code sei.
 
-**James Gosling** hatte die Programmiersprache **Oak** (**Object Aplication Kernel**) entwickelt. Folgend daraus entwickelten er und die anderen Mitglieder eines damaligen Projekt Namens **Green** das Gerät **Star Seven** (*7) aus den Überresten des Gescheiterten Projekts **Green OS**. Das Team Gründete die Firma **First Person Inc.**. 
+**James Gosling** hatte die Programmiersprache **Oak** (**Object Aplication Kernel**) entwickelt. Folgend daraus entwickelten er und die anderen Mitglieder eines damaligen Projektes Namens **Green**, das Gerät **Star Seven** (*7) aus den Überresten des Gescheiterten Projekts **Green OS**. Das Team Gründete die Firma **First Person Inc.**. 
 
-Nach eienigen Richtungswechseln, wie zum Beispiel einen gescheiterten Versuch, Star Seven im Set Top Boxen Markt zu vermarkten, konzentrierten sie sich auf das **World Wide Web** (WWW / Web).
+Nach eienigen Richtungswechseln, wie zum Beispiel einen gescheiterten Versuch, Star Seven im **Set Top Boxen** Markt zu vermarkten, konzentrierten sie sich auf das **World Wide Web** (WWW / Web).
 
 Die Programmiersprache sollte Programmcode aus dem Web empfangen können, ohne das beschädigter Code Schaden anrichten konnte. Damit wären die meißten C++ Konzepte schon übertrumpft. 
 
-Aus Copyright Gründen bekam Oak, den Namen **Java**
+Aus Copyright Gründen bekam Oak, den Namen **Java**.
 
-Am 23. Januar 1996 wurde **JDk 1.0** veröffentlicht, was Programiierern erlaubte, mit Java, ihre eigenen Minigames zu programmieren. 
+Am 23. Januar 1996 wurde **JDk 1.0** veröffentlicht, was Programierern erlaubte, mit Java ihre eigenen Minigames zu programmieren. 
 
----
-
-Die verbliebenden Mitglieder von First Person 
+Die verbliebenden Mitglieder von First Person Inc., gründeten JavaSoft.
 ---
 ## ./ Einführung
 
