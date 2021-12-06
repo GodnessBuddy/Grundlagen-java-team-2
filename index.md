@@ -207,9 +207,10 @@ Eine **Klasse** wird als Bauplan für Objekte benutzt. Sie gibt die verschiedene
 ### Klassendiagramme
 <br>
 
-|Klassendiagramm|
+|**Mensch**|
 |---|
-|name : string <br> Lebenspunkte : double|
+|- name: string <br> - Lebenspunkte: double <br> - Groeße(cm): int <br> - Gewicht(kg): double|
+|+ setName() : string <br> + setGewicht(): int <br> + SetGroeße(): int | 
  
 
 
@@ -234,7 +235,7 @@ Eine **Klasse** wird als Bauplan für Objekte benutzt. Sie gibt die verschiedene
 
 
 ---
-### Objektmethoden
+
 
 
 
