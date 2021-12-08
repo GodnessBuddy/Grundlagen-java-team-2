@@ -143,34 +143,50 @@ Durch diesen Befehl hat man eine Variable, mit dem Wert 20 erstellt, ihr den Bez
 Dass der Datentyp stimmt, ist essenziell, damit die Variable richtig funktioniert, denn je nach Datentwkrdann nur ein bestimmter Zahlenbereich ausgegeben werden. Wenn man versucht, die Variable wie folgt zu iniziieren, wird sie nicht die gewünschte Zahl, sondern nur die höchst mögliche Zahl in ihrem Bereich (in diesem Fall 127) ausgeben.
 byte number = 128; Der byte Datentyp umfasst nur die Zahlen von -128 - 127, weshalb die 128 nicht ausgegeben werden kann. *Tabelle*
 
+### Wertzuweisung
+
+In Java werden Variablen mithilfe von Wertzuweisungen Werte zugewiesen. Dabei kann man die gewöhnlichen Grundrechenarten verwenden, sodass beispielsweise eine Variable einer anderen Variable + 5 entspricht.
+
 ### Schleifen
 
 #### While Schleife
 
 Eine While Schleife besagt im Groben nur, dass etwas getan, beziehungsweise ausgegeben werden soll, **während ein bestimmtes Ereigeigniss** zutrifft. Bedeutet, dass man zum Beispiel eine Geschwindigkeit erhöhen kann, solange man eine Bedingung erfüllt. 
-Ein Beispiel für eine While Schleife, die dauerhaft eine Variable ausgibt, die kleiner oder gleich 10 ist, wäre:
-int number = 9
-while(number <= 10){
-iaBedingung nicht erfüllt wird    System.out.println(number);
-}
-,
-1 ausgibt, wenn die Bedingung erfüllt ist, aber  ### Bedingungen 
-nd andernfalls 
- #### if"Trifft nicht zu" ausgibt, ist:
-if -Bedingung
-falls ***
-* Mit einer if -Bedingung drückt man aus, was getan werden soll, während eine Bedingung erfüllt ist.
-so
- 
-wir
- d entweder nicht, oder eins,  Ausgegeben, ausgegeben, oder es wird dem wurde in der Bedingung angegebnen, was
- so(number = 1)n{
-    System
-ist koWW"}
-elst gemac .ohür e
-korrek    Ein Beispielut"t.println("Das ist )se {}
-    
-t falsSystem.out.pTrifft nicht zus is
+Ein Beispiel für eine While Schleife, die dauerhaft eine Variable ausgibt, die kleiner oder gleich 10 ist, wäre: <br>
+int number = 9 <br>
+while(number <= 10){ <br>
+  System.out.println(number); <br>
+} <br>
+
+#### For Schleife
+
+Eine For Schleife, gibt genau wie die While Schleife einen Zeitraum, beziehungsweise eine Bedingung an, während welcher, eine bestimmte Anweisung ausgeführt werden soll. Diese benutzt man meist, wenn man exakt weiß, wie lang die Schleife gehen soll. Eine Besonderheit dieser ist, dass man eine Variable in der Bedingung selbst initialisiert.
+
+#### Do-While-Schleife
+
+Eine Do-While-Schleife, ist im Prinzip das Gleiche wie eine normale While-Schleife, bloß, dass die Aktion immer einmal ausgeführt wird, auch wenn die Bedingung nicht erfüllt ist.
+
+
+
+
+### Bedingungen
+
+#### If-Bedingung
+
+Eine If- Bedingung gibt an, was getan werden soll, wenn etwas bestimmtes zutrifft. Anders als bei einer Schleife, wird diese Bedingung jedoch nur einmal ausgeführt und nicht immer wieder überprüft.
+
+#### Switch-Case-Bedingung
+
+Die Switch-Case-Bedingung gibt eine beliebige Anzahl von Fällen, die eintreten können vor und eine bzw. mehrere Aktionen zu diesen Fällen. Dazu kommt noch ein "default" Fall mit einer Aktion, die ausgeführt wird, wenn keiner der genannten Fälle eintritt.
+
+#### Verschachtelte Bedingungen
+
+Man kann Bedingungen auch verschachteln, indem man eine Bedingung in die Ausführung, einer anderen Bedingung schreibt. So erreicht man eine doppelte Überprüfung der Bedingung. So kann man zum Beispiel einen Zahlenbereich angeben, in dem ein Wert liegen muss, damit die Aktion ausgeführt wird.
+
+
+### Datentypen
+
+Datentypen sind ein essenzieller Bestandteil, von jeder Variable. Sie geben an, welche Werte beinhaltet werden können. So können manche Datentypen, wie int (Integer - Ganzzahlen) Zahlen in einem bestimmten Bereich umfassen und der Datentyp String kann nur Text beinhalten. Mit Typecasting kann man die Werte von einem primitiven Datentypen zu einem anderen umformen. So würde 9.3 im Datentyp double, im Typ int zu 9 werden.
 
 <br>
 <br>
