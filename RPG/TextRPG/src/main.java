@@ -6,41 +6,54 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        // Scanner for intput
+        // System objects
         Scanner in = new Scanner(System.in);
 
-
-
-
         
-        boolean playing = true;
+        boolean start = true;
 
-
-        //Game is running 
-        
-        //while(playing){
-
-            
+        START:
+        while(start){
             System.out.println("--------------------------------------");
-            System.out.println("Wie willst du heißen:");
-
-
-            
-            String input = in.nextLine();  // Scanner reads the input 
+            System.out.println("Möchtest du das Spiel spielen?");
+            System.out.println("\t" + "Schreibe 1 um das Spiel zu beginnen");
+            System.out.println("\t" + "Schreibe 2 um das Spiel nicht zu beginnen");
             System.out.println("--------------------------------------");
 
+            String input = in.nextLine();
+
+            if(input.equals("1")){
+              break;
+            }
+            else if(input.equals("2")){
+                continue START; 
+            }
+            else 
+                System.out.println("Falsche Eingabe");
+
+        }
 
 
-            System.out.println("Dein Name ist:");
-            System.out.println(input); // Scanner prints the input 
-            System.out.println("--------------------------------------");
+        System.out.println("--------------------------------------");
+        System.out.println("Wie willst du heißen:");
+    
+        String name = in.nextLine();  // variable name
+
+
+
+        System.out.println("--------------------------------------");
+        System.out.println("Dein Name ist:");
+        System.out.println(name); // Scanner prints the input 
+        System.out.println("--------------------------------------");
+
+       
 
 
             
 
         
             
-        //}
+        
     }
 
 }
