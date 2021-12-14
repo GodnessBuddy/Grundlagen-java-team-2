@@ -2,7 +2,7 @@ public class Player {
     
     //Attribute der Klasse Player
 
-    public int karmapunkte; //Karmapunkte
+    public int karmapunkte; //Karmapunkt
     public String name; //Spieler name
 
     
