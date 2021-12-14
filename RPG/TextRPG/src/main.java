@@ -9,6 +9,11 @@ public class Main {
         // System objects
         Scanner in = new Scanner(System.in);
 
+
+        Player player = new Player();
+        player.karmapunkte = 0;
+    
+
         
         boolean start = true;
 
@@ -37,13 +42,13 @@ public class Main {
         System.out.println("--------------------------------------");
         System.out.println("Wie willst du heißen:");
     
-        String name = in.nextLine();  // variable name
+        player.name = in.nextLine();  // variable name
 
 
 
         System.out.println("--------------------------------------");
         System.out.println("Dein Name ist:");
-        System.out.println(name); // Scanner prints the input 
+        System.out.println(player.name); // Scanner prints the input 
         System.out.println("--------------------------------------");
 
        
