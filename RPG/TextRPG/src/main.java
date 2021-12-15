@@ -14,51 +14,53 @@ public class Main {
             player.karmapunkte = 0;
 
         Game game = new Game();
-            game.gamerunning = true; 
-            game.einfuehrung =true;
             game.karmapunkt = "Deine Karmapunkte sind :";
             game.weiter = "--------------------------------------";
+
+            
         
 
-        boolean start = true;
-
-        boolean anfang = true;
         
-        while(anfang){
+        //Game Starts here 
+
+        int i = 0; 
+
+        while(i < 2) {
+            i++;
+
+
+            System.out.println("Willkommen zu ");
         
-            System.out.println("Willkommen zu THE GAME");
-
-                START:
-                while(start){
-
-                    System.out.println("--------------------------------------");
-                    System.out.println("Möchtest du das Spiel spielen?");
-                    System.out.println("\t" + "Schreibe 1 um das Spiel zu beginnen");
-                    System.out.println("\t" + "Schreibe 2 um das Spiel nicht zu beginnen");
-                    System.out.println("--------------------------------------");
-
-                    String input = in.nextLine();
-
-                    if(input.equals("1")){
-                    break;
-                    }
-                    else if(input.equals("2")){
-                    continue START; 
-                    }
-                    else 
-                        System.out.println("Falsche Eingabe");
-
-                }
-        
-
-            EINFÜHRUNG:
-            while(game.einfuehrung){  
-
             System.out.println("--------------------------------------");
-            System.out.println("Wie willst du heißen:");
+            System.out.println("Möchtest du das Spiel spielen?");
+            System.out.println("\t" + "Schreibe 1 um das Spiel zu beginnen");
+            System.out.println("\t" + "Schreibe 2 um das Spiel nicht zu beginnen");
+            System.out.println("--------------------------------------");
+
+            String input = in.nextLine();
+
+                if(input.equals("1")){
+                    break; 
+                }
+                else if(input.equals("2")){
+                    continue;
+                }
+                else 
+                    System.out.println("Falsche Eingabe");
+                    continue;
+
+        }
+  
+             
+            while(i < 2) {
+                i++;
+
+
+                System.out.println("--------------------------------------");
+                System.out.println("Wie willst du heißen:");
 
     
-            player.name = in.nextLine();  // variable name
+                player.name = in.nextLine();  // variable name
 
 
                 System.out.println("--------------------------------------");
@@ -71,33 +73,35 @@ public class Main {
                 System.out.println("Wenn du die Geschichte anfangen willst dann schreibe weiter ");
                 System.out.println("--------------------------------------");
 
-                String input = in.nextLine(); 
+                    String input = in.nextLine();
 
                 if(input.equals("weiter")){
-                    continue GAME;
+                    break;
                 }
                 else if(input.equals("hilfe")){
                     System.out.println("Hier steht die Hilfe");
+                    continue;
                 }
                 else if(input.equals("karmapunkte")){
                     System.out.println(game.karmapunkt);
-
+                    continue;
                 }
                 else {
                     System.out.println("Falsche Eingabe");
+                    continue;
                 }
-                    
             }
+                    
+            
             
             
             
 
-        }   
-        GAME:
-        while(game.gamerunning)
+           
+        
         
 
-    System.out.println("Hat geklappt"); 
+     
         
     }
 
