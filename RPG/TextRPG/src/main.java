@@ -1,6 +1,8 @@
 
 import java.util.Scanner;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -8,21 +10,25 @@ public class Main {
         // System objects
         Scanner in = new Scanner(System.in);
 
-        Player player = new Player();
-        player.karmapunkte = 0;
 
-        Game game = new Game();
-        game.karmapunkt = "Deine Karmapunkte sind :";
-        game.weiter = "--------------------------------------";
 
+
+
+
+        //Game
+        Game game = new Game(new Player("", 100));
+            game.setHilfe("Hier steht die Hilfe");
+            game.showhilfe();
+            System.out.print(game.spieler1.name);
         
-        
-        //int 
-        int z = 0; 
-         
-        while(z <2) {
-            z++;
+       
 
+            
+
+
+
+
+    
 
         //int a für Anfang des Spiels 
         int a = 0;
@@ -57,7 +63,7 @@ public class Main {
         int n = 0;
 
             //Namensvergebung
-            while (n < 2) {
+            while (n <= 1) {
                 n++;
 
                 System.out.println("--------------------------------------");
@@ -65,30 +71,29 @@ public class Main {
                 
 
                 //player Name der in der nächsten Zeile gelesen wird 
-                player.name = in.nextLine();
+                game.spieler1.name = in.nextLine();
+                break;
             }
             
 
             int e = 0;
 
             //Einführung
-            while(e <2) {
-                e++;
+            while(e <1000) {
+                
 
                 System.out.println("--------------------------------------");
-                System.out.println("Dein Name ist:" + " " + player.name);
+                System.out.println("Dein Name ist:" + " " +  game.spieler1.name);
                 System.out.println(" ");
                 System.out.println("\t" + "Wenn du Hilfe benötigst dann schreibe hilfe");
                 System.out.println(" ");
                 System.out.println("\t" + "Wenn du dir deine Karma Punkte anzeigen lassen willst dannn schreibe karmapunkte");
                 System.out.println(" ");
                 System.out.println("\t" + "Wenn du die Geschichte anfangen willst dann schreibe weiter");
-                System.out.println(" ");
-                System.out.println("Wenn du das Spiel beginnst, dann kannst du die Hilfe nicht mehr Einsehen!");
                 System.out.println("--------------------------------------");
 
 
-            }  
+             
 
                
 
@@ -99,26 +104,63 @@ public class Main {
                     } 
                     else if (input.equals("hilfe")) {
                         System.out.println("Hier steht die Hilfe");
+                        e++;
                         continue;
                     } 
                     else if (input.equals("karmapunkte")) {
-                        System.out.println(game.karmapunkt);
+                        game.spieler1.showkarmapunkte();
+                        e++;
                         continue;
                     } 
                     else {
                         System.out.println("Falsche Eingabe");
+                        e++;
                         continue;
                     }
-                }
-        
+            }
 
-        //GAME:
-        while(z < 1){ 
 
+    
+        String input = in.nextLine();
+
+
+
+        if(input.equals("karmapunkte")) {
+            game.spieler1.showkarmapunkte();
+        }
+        else if(input.equals("hilfe")){
+            game.showhilfe();
+        }
+
+
+
+
+
+
+    //Story Start
+
+
+        //Einleitung in das Spiel
             System.out.println("--------------------------------------");
             System.out.println("Einleitung");
             System.out.println("//Hier Steht die Einleitung");
             System.out.println("--------------------------------------");
+
+
+
+
+
+            System.out.println("Du kannst dich nun zwischen 2 Teams entscheiden");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("Team Bravo 6");
+            System.out.println("\t" + " ");
+
+
+
+
+
+            
 
         
 
@@ -149,6 +191,6 @@ public class Main {
 
         //Scanner schließen warning
         in.close();
-        }
+        
     }
 }
