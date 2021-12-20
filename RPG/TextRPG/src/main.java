@@ -7,38 +7,31 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        
+        
         // System objects
         Scanner in = new Scanner(System.in);
 
+        // Objekte erzeugen
+        Main testMain = new Main();
 
 
-
-
-
-        //Game
+        //Game 
         Game game = new Game(new Player("", 100));
-            game.setHilfe("Hier steht die Hilfe");
+            game.setHilfe("Hilfe");
             game.showhilfe();
             System.out.print(game.spieler1.name);
-        
-       
+            	
 
-            
-
-
-
-
-    
 
         //int a für Anfang des Spiels 
         int a = 0;
 
-            //Hier wird gefragt ob das Spiel gespielt werden will 
-            SPIELSTART:
-            while (a < 2) {
+            //Hier wird gefragt ob das Spiel gespielt werden will :
+           while (a <= 1) {
                 a++;
 
-            System.out.println("Willkommen zu ");
+            System.out.println("Willkommen zu THE REVENGE");
 
             System.out.println("--------------------------------------");
             System.out.println("Möchtest du das Spiel spielen?");
@@ -52,36 +45,29 @@ public class Main {
             if (input.equals("1")) {
                 break;
             } else if (input.equals("2")) {
-                continue SPIELSTART;
+                System.exit(0);  
+                
             } else
                 System.out.println("Falsche Eingabe");
-                continue SPIELSTART;
-
-            }
-
-        //int n für Namensvergebung
-        int n = 0;
-
-            //Namensvergebung
-            while (n <= 1) {
-                n++;
-
-                System.out.println("--------------------------------------");
-                System.out.println("Wie willst du heißen:");
-                
-
-                //player Name der in der nächsten Zeile gelesen wird 
-                game.spieler1.name = in.nextLine();
-                break;
+                System.exit(0);
             }
             
 
+            
+            //player Name der in der nächsten Zeile gelesen wird 
+            System.out.println("--------------------------------------");
+            System.out.println("Wie willst du heißen:");
+    
+                game.spieler1.name = in.nextLine();
+                
+            
+            
+            //Variable e für Einführung
             int e = 0;
 
             //Einführung
             while(e <1000) {
                 
-
                 System.out.println("--------------------------------------");
                 System.out.println("Dein Name ist:" + " " +  game.spieler1.name);
                 System.out.println(" ");
@@ -92,105 +78,102 @@ public class Main {
                 System.out.println("\t" + "Wenn du die Geschichte anfangen willst dann schreibe weiter");
                 System.out.println("--------------------------------------");
 
-
-             
-
-               
-
                     String input = in.nextLine();
 
                     if (input.equals("weiter")) {
                         break;
                     } 
+
                     else if (input.equals("hilfe")) {
-                        System.out.println("Hier steht die Hilfe");
                         e++;
                         continue;
                     } 
+
                     else if (input.equals("karmapunkte")) {
                         game.spieler1.showkarmapunkte();
                         e++;
                         continue;
                     } 
+
                     else {
                         System.out.println("Falsche Eingabe");
                         e++;
-                        continue;
+                        continue;  
                     }
+
             }
 
 
     
+        //Input
         String input = in.nextLine();
 
-
-
+        //Abfrage für Hilfe/Karmapunkte 
         if(input.equals("karmapunkte")) {
             game.spieler1.showkarmapunkte();
         }
+        
         else if(input.equals("hilfe")){
             game.showhilfe();
         }
 
 
-
-
-
-
-    //Story Start
-
+        
+        //Story Start
 
         //Einleitung in das Spiel
             System.out.println("--------------------------------------");
             System.out.println("Einleitung");
-            System.out.println("//Hier Steht die Einleitung");
+            System.out.println("Hier Steht die Einleitung");
             System.out.println("--------------------------------------");
-
-
-
-
 
             System.out.println("Du kannst dich nun zwischen 2 Teams entscheiden");
             System.out.println("");
-            System.out.println("");
             System.out.println("Team Bravo 6");
-            System.out.println("\t" + " ");
+            System.out.println("\t" + "Beschreibung");
+            System.out.println("");
+            System.out.println("Team Delta 5");
+            System.out.println("\t" + "Beschreibung");
+            System.out.println("");
 
-
-
-
+            System.out.println("--------------------------------------");
+            System.out.println("Wenn du dich für das Team Bravo 6 entscheidest dann schreibe " + "1");
+            System.out.println("Wenn du dich für das Team Delta 5 entscheidest dann schreibe " + "2");
+            System.out.println("--------------------------------------");
 
             
+            String teamauswahl = in.nextLine();
 
-        
+                switch(teamauswahl){
 
+                    case "1": System.out.println("Du hast dich für das Team Bravo 6 entschieden"); 
+                        testMain.bravo6();
+                        break;
+                        
 
+                    case "2": System.out.println("Du hast dich für das Team Delta 5 entschieden");
+                        testMain.delta5();
+                        break;
+                
+                    default: System.out.println("Falsche Eingabe");
+                    
+                }
 
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+           
+            
         //Scanner schließen warning
         in.close();
         
+    }
+
+
+
+    //Methode vom Team Bravo 6
+    public void bravo6() {
+        System.out.println("Es geht mit der Story von Bravo 6 weiter");
+    }
+    //Methode des Teams Delta 5
+    public void delta5() {
+        System.out.println("Es geht mit der Story von Delta 5 weiter");
     }
 }

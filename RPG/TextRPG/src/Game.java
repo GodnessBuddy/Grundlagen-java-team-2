@@ -20,4 +20,8 @@ public class Game {
     public void setHilfe(String pHilfe){
         this.hilfe = pHilfe;
     }
+
+    
+    
+
 }
