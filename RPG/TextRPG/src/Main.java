@@ -4,11 +4,13 @@ import java.util.Scanner;
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 
 public class Main {
+        
+        
 
     public static void main(String[] args) throws Exception {
 
         
-        
+       
         // System objects
         Scanner in = new Scanner(System.in);
 
@@ -21,7 +23,8 @@ public class Main {
             game.setHilfe("Hilfe");
             game.showhilfe();
             System.out.print(game.spieler1.name);
-            	
+            
+            
 
 
         //int a für Anfang des Spiels 
@@ -100,14 +103,14 @@ public class Main {
                         e++;
                         continue;  
                     }
-
+                 
             }
 
 
     
         //Input
         String input = in.nextLine();
-
+        
         //Abfrage für Hilfe/Karmapunkte 
         if(input.equals("karmapunkte")) {
             game.spieler1.showkarmapunkte();
