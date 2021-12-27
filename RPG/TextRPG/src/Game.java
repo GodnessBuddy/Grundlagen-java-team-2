@@ -1,16 +1,11 @@
 
 public class Game {
     
-   //Attribute
+    //Attribute
     private String hilfe;
-   // public String karmapunkt; 
     public String weiter;
     public Player spieler1;
 
-    //Konstruktor
-    public Game(Player pPlayer){
-        spieler1 = pPlayer;
-    }
 
     //Methoden
     public void showhilfe() {
@@ -20,6 +15,15 @@ public class Game {
     public void setHilfe(String pHilfe){
         this.hilfe = pHilfe;
     }
+
+    
+     //Konstruktor
+     public Game(Player pPlayer){
+        spieler1 = pPlayer;
+     }
+        
+
+    
 
     
     

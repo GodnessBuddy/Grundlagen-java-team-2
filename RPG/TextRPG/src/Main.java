@@ -1,12 +1,10 @@
 
+import java.time.chrono.HijrahEra;
 import java.util.Scanner;
-
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 
 public class Main {
         
-        
-
     public static void main(String[] args) throws Exception {
 
         
@@ -14,16 +12,22 @@ public class Main {
         // System objects
         Scanner in = new Scanner(System.in);
 
+
+
         // Objekte erzeugen
-        Main testMain = new Main();
-
-
+        Team team = new Team();
+            team.teamname = "";
+            team.teammitglieder = "";
+            team.disadvantage = "";
+            team.advantage = "";
+ 
+            
+        
         //Game 
         Game game = new Game(new Player("", 100));
             game.setHilfe("Hilfe");
             game.showhilfe();
-            System.out.print(game.spieler1.name);
-            
+            System.out.print(game.spieler1.name); 
             
 
 
@@ -83,16 +87,17 @@ public class Main {
 
                     String input = in.nextLine();
 
-                    if (input.equals("weiter")) {
-                        break;
-                    } 
 
-                    else if (input.equals("hilfe")) {
+                    //Fehler der noch behoben werden muss (weiter muss 2 mal eingabe Taste)
+                    if (input.equals("weiter")) {
+                        break;  
+
+                    }else if (input.equals("hilfe")) {
                         e++;
                         continue;
-                    } 
+                    
 
-                    else if (input.equals("karmapunkte")) {
+                    } else if (input.equals("karmapunkte")) {
                         game.spieler1.showkarmapunkte();
                         e++;
                         continue;
@@ -132,51 +137,169 @@ public class Main {
 
             System.out.println("Du kannst dich nun zwischen 2 Teams entscheiden");
             System.out.println("");
-            System.out.println("Team Bravo 6");
-            System.out.println("\t" + "Beschreibung");
+            System.out.println("Team Bravo 6:");
+            System.out.println("\t" + "Der Truppleiter, welcher dir direkt unterstellt wäre, heißt Vladimir Gorbatschow und gibt deine Befehle an das Team weiter.");
+            System.out.println("\t" + "Die Namen der Teammitglieder lauten: Jimmy, Riger, Jessica, Eugene, Anastasia, Norman, Stephen und Bernd."); 
+            System.out.println("\t" + "Dieses Team ist sehr gut in Stealth Angriffen und hat einen starken Kampfgeist."); 
             System.out.println("");
-            System.out.println("Team Delta 5");
-            System.out.println("\t" + "Beschreibung");
+            System.out.println("Team Delta 5:");
+            System.out.println("\t" + "Der Truppleiter, welcher dir direkt unterstellt wäre, heißt heißt Jenz Frust und gibt deine Befehle an das Team weiter.");
+            System.out.println("\t" + "Die Namen der Teammitglieder lauten: Tina, Charlkotte, Peter, Vlad, Dimitri, Achmed, Klaus und Hanz.");
+            System.out.println("\t" + "Dieses Team ist sehr taktisch und sehr fokusiert.");
             System.out.println("");
 
             System.out.println("--------------------------------------");
             System.out.println("Wenn du dich für das Team Bravo 6 entscheidest dann schreibe " + "1");
             System.out.println("Wenn du dich für das Team Delta 5 entscheidest dann schreibe " + "2");
             System.out.println("--------------------------------------");
-
             
+
+            //Teamauswahl
             String teamauswahl = in.nextLine();
 
                 switch(teamauswahl){
 
-                    case "1": System.out.println("Du hast dich für das Team Bravo 6 entschieden"); 
-                        testMain.bravo6();
+                    case "1": 
+                        team.teamname = "Bravo-6";
                         break;
+  
+                    case "2": 
+                        team.teamname = "Delta-5";
+                        break;
+                          
+                    default: 
+                        System.out.println("Falsche Eingabe");
                         
-
-                    case "2": System.out.println("Du hast dich für das Team Delta 5 entschieden");
-                        testMain.delta5();
-                        break;
-                
-                    default: System.out.println("Falsche Eingabe");
+                        
                     
+                     
                 }
 
-           
+
+
+
+
+            //Story Bravo-6
+            if(team.teamname.equals ("Bravo-6")) {
+
+                team.teammitglieder = "Jimmy, Riger, Jessica, Eugene, Anastasia, Norman, Stephen und Bernd";
+                team.advantage = "stealth";
+                team.disadvantage = "Differenzen mit dem Truppleiter"; 
+
+                
+                System.out.println("--------------------------------------");
+                System.out.println("Du hast das Team Bravo-6 gewählt.");
+                System.out.println("--------------------------------------");      
+                System.out.println("Zuerst lernst du das team kennen, falls dieses dich nicht interessiert, dann schreibe --weiter--");
+                System.out.println("schreibe --teammitglieder um die Namen deines Teammitglieder zu sehen");
+                System.out.println("schreibe --advantages-- um die Vorteile dieses Teams zu sehen");
+                System.out.println("schreibe --disadvantages-- um die Nachteile dieses Teams zu sehen");
+                System.out.println("--------------------------------------");
+
+
+
+
+                String inputteam = in.nextLine();
+
+                int m = 1;
+
+                while(m < 1){
+                
+                    if (inputteam.equals("teammitglieder")){
+                        System.out.println(team.teammitglieder);
+                    }
+    
+                    else if (inputteam.equals("advantage")){
+                        System.out.println(team.advantage);
+                    }
+    
+                    else if (inputteam.equals("disadvantage")){
+                        System.out.println(team.disadvantage);
+                    }
+    
+                    else if (inputteam.equals("weiter")){
+                        m++;  
+                    }
+                }
+                          
+                    
+    
+               
+                
+            }
+
+
+            
+            //Story Delta-5
+            else if (team.teamname.equals ("Delta-5")){
+
+                
+
+
+                team.teammitglieder = "Tina, Charlkotte, Peter, Vlad, Dimitri, Achmed, Klaus und Hanz";
+                team.advantage = "taktisch und fokussiert";
+                team.disadvantage = "längere Planung und Entscheidung (Liebe oder Ziele)";
+
+
+                System.out.println("--------------------------------------");
+                System.out.println("Du hast das Team Delta-5 gewählt.");
+                System.out.println("--------------------------------------");
+                System.out.println("Zuerst lernst du das team kennen, falls dieses dich nicht interessiert, dann schreibe --weiter--");
+                System.out.println("schreibe --teammitglieder um die Namen deines Teammitglieder zu sehen");
+                System.out.println("schreibe --advantages-- um die Vorteile dieses Teams zu sehen");
+                System.out.println("schreibe --disadvantages-- um die Nachteile dieses Teams zu sehen");
+                System.out.println("--------------------------------------");
+                
+
+                String inputteam = in.nextLine(); 
+
+                int m = 1;
+
+                while(m < 1){
+                
+                    if (inputteam.equals("teammitglieder")){
+                        System.out.println(team.teammitglieder);
+                    }
+    
+                    else if (inputteam.equals("advantage")){
+                        System.out.println(team.advantage);
+                    }
+    
+                    else if (inputteam.equals("disadvantage")){
+                        System.out.println(team.disadvantage);
+                    }
+    
+                    else if (inputteam.equals("weiter")){
+                        m++;  
+                    }
+                }
+                
+            }
+
+            
+
+            else {
+                System.out.println("Du hast kein Team gewählt.");
+            }
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
             
         //Scanner schließen warning
         in.close();
         
     }
 
-
-
-    //Methode vom Team Bravo 6
-    public void bravo6() {
-        System.out.println("Es geht mit der Story von Bravo 6 weiter");
-    }
-    //Methode des Teams Delta 5
-    public void delta5() {
-        System.out.println("Es geht mit der Story von Delta 5 weiter");
-    }
 }
