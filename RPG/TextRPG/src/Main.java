@@ -27,8 +27,16 @@ public class Main {
         Game game = new Game(new Player("", 100));
             game.setHilfe("Hilfe");
             game.showhilfe();
+            game.spieler1.karmapunkte = 0;
             System.out.print(game.spieler1.name); 
+
+
+        //Player
+
+
+        
             
+       
 
 
         //int a für Anfang des Spiels 
@@ -156,24 +164,29 @@ public class Main {
 
             //Teamauswahl
             String teamauswahl = in.nextLine();
+            int t = 0;
 
-                switch(teamauswahl){
+            
+            while (t < 1000000000) {
 
-                    case "1": 
-                        team.teamname = "Bravo-6";
-                        break;
-  
-                    case "2": 
-                        team.teamname = "Delta-5";
-                        break;
-                          
-                    default: 
-                        System.out.println("Falsche Eingabe");
-                        
-                        
-                    
-                     
+                if(teamauswahl.equals ("1")) { 
+                    team.teamname = "Bravo-6";
+                    break;
                 }
+                
+                else if (teamauswahl.equals("2")) {
+                    team.teamname = "Delta-5";
+                    break;
+                }
+                
+                //Fehler bei Falscher Eingabe! (läuft unendlich)
+                else  {
+                    System.out.println("Falsche Eingabe!");
+                    t++;
+                    continue;
+                }               
+            }
+            
 
 
 
@@ -203,7 +216,7 @@ public class Main {
 
                 int m = 1;
 
-                while(m < 1){
+                while(m < 2){
                 
                     if (inputteam.equals("teammitglieder")){
                         System.out.println(team.teammitglieder);
@@ -221,6 +234,38 @@ public class Main {
                         m++;  
                     }
                 }
+
+
+                
+                    System.out.println("--------------------------------------");  
+                    System.out.println("");  
+                    System.out.println("--------------------------------------");  
+
+
+                    System.out.println("--------------------------------------"); 
+                    System.out.println("Du kannst dich nun zwischen 2 verschiedenen Orten entscheiden, die du angreifen möchtest.");
+                    System.out.println("Die erste möglichkeit währe die Satellittenbasis nähe Leipzig.");
+                    System.out.println("\t" + "Schreibe 1 um diesen Angriff zu starten.");   
+                    System.out.println("");  
+                    System.out.println("Die zweite Möglichkeit ist das Munitionslager nähe Osnabrück");
+                    System.out.println("\t"+ "Schreibe 2 um diesen Angriff zu starten.");        
+                    System.out.println("--------------------------------------");  
+
+
+                    if (input.equals("1")) {
+                        
+                        game.spieler1.karmapunkte = -10;  
+                         
+                    }
+
+                    else if (input.equals("2")) {
+
+                        game.spieler1.karmapunkte = 10;
+                    }
+
+                    
+
+
                           
                     
     
@@ -255,7 +300,7 @@ public class Main {
 
                 int m = 1;
 
-                while(m < 1){
+                while(m < 2){
                 
                     if (inputteam.equals("teammitglieder")){
                         System.out.println(team.teammitglieder);
@@ -279,7 +324,8 @@ public class Main {
             
 
             else {
-                System.out.println("Du hast kein Team gewählt.");
+                System.out.println("Du hast kein Team gewählt."); 
+
             }
             
 

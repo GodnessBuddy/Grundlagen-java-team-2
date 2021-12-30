@@ -20,6 +20,7 @@ public class Game {
      //Konstruktor
      public Game(Player pPlayer){
         spieler1 = pPlayer;
+        
      }
         
 
