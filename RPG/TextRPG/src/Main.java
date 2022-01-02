@@ -28,7 +28,7 @@ public class Main {
             game.setHilfe("Hilfe");
             game.showhilfe();
             game.spieler1.karmapunkte = 0;
-            System.out.print(game.spieler1.name); 
+            //System.out.print(game.spieler1.name); 
 
 
         //Player
@@ -86,9 +86,9 @@ public class Main {
                 System.out.println("--------------------------------------");
                 System.out.println("Dein Name ist:" + " " +  game.spieler1.name);
                 System.out.println(" ");
-                System.out.println("\t" + "Wenn du Hilfe benötigst dann schreibe hilfe");
+                System.out.println("\t" + "Wenn du Hilfe benötigst dann schreibe --hilfe--");
                 System.out.println(" ");
-                System.out.println("\t" + "Wenn du dir deine Karma Punkte anzeigen lassen willst dannn schreibe karmapunkte");
+                System.out.println("\t" + "Wenn du dir deine Karma Punkte anzeigen lassen willst dannn schreibe --karmapunkte--");
                 System.out.println(" ");
                 System.out.println("\t" + "Wenn du die Geschichte anfangen willst dann schreibe weiter");
                 System.out.println("--------------------------------------");
@@ -156,35 +156,33 @@ public class Main {
             System.out.println("\t" + "Dieses Team ist sehr taktisch und sehr fokusiert.");
             System.out.println("");
 
-            System.out.println("--------------------------------------");
-            System.out.println("Wenn du dich für das Team Bravo 6 entscheidest dann schreibe " + "1");
-            System.out.println("Wenn du dich für das Team Delta 5 entscheidest dann schreibe " + "2");
-            System.out.println("--------------------------------------");
-            
 
             //Teamauswahl
-            String teamauswahl = in.nextLine();
             int t = 0;
 
-            
-            while (t < 1000000000) {
+            while (t < 1 ) {
 
-                if(teamauswahl.equals ("1")) { 
-                    team.teamname = "Bravo-6";
-                    break;
-                }
+                System.out.println("--------------------------------------");
+                System.out.println("Wenn du dich für das Team Bravo 6 entscheidest dann schreibe " + "1");
+                System.out.println("Wenn du dich für das Team Delta 5 entscheidest dann schreibe " + "2");
+                System.out.println("--------------------------------------");
+
+                String teamauswahl = in.nextLine();
+        
+                    if(teamauswahl.equals ("1")) { 
+                        team.teamname = "Bravo-6";
+                        break;
+                    }
                 
-                else if (teamauswahl.equals("2")) {
-                    team.teamname = "Delta-5";
-                    break;
-                }
+                    else if (teamauswahl.equals("2")) {
+                        team.teamname = "Delta-5";
+                        break;
+                    }
                 
-                //Fehler bei Falscher Eingabe! (läuft unendlich)
-                else  {
-                    System.out.println("Falsche Eingabe!");
-                    t++;
-                    continue;
-                }               
+                    else  {
+                        System.out.println("Falsche Eingabe!");
+                        continue;
+                    }               
             }
             
 
@@ -199,7 +197,13 @@ public class Main {
                 team.advantage = "stealth";
                 team.disadvantage = "Differenzen mit dem Truppleiter"; 
 
-                
+
+
+                int m = 0;
+
+                while(m < 1){
+
+
                 System.out.println("--------------------------------------");
                 System.out.println("Du hast das Team Bravo-6 gewählt.");
                 System.out.println("--------------------------------------");      
@@ -213,21 +217,20 @@ public class Main {
 
 
                 String inputteam = in.nextLine();
-
-                int m = 1;
-
-                while(m < 2){
                 
                     if (inputteam.equals("teammitglieder")){
                         System.out.println(team.teammitglieder);
+                        continue;
                     }
     
                     else if (inputteam.equals("advantage")){
                         System.out.println(team.advantage);
+                        continue;
                     }
     
                     else if (inputteam.equals("disadvantage")){
                         System.out.println(team.disadvantage);
+                        continue;
                     }
     
                     else if (inputteam.equals("weiter")){
@@ -235,12 +238,14 @@ public class Main {
                     }
                 }
 
-
-                
                     System.out.println("--------------------------------------");  
-                    System.out.println("");  
+                    System.out.println(""); //Diskussion mit dem Team, was man angreift 
                     System.out.println("--------------------------------------");  
 
+
+                    //ao = Angriffsortabfrage     
+                    int ao = 0;
+                    while (ao < 1) {
 
                     System.out.println("--------------------------------------"); 
                     System.out.println("Du kannst dich nun zwischen 2 verschiedenen Orten entscheiden, die du angreifen möchtest.");
@@ -249,22 +254,124 @@ public class Main {
                     System.out.println("");  
                     System.out.println("Die zweite Möglichkeit ist das Munitionslager nähe Osnabrück");
                     System.out.println("\t"+ "Schreibe 2 um diesen Angriff zu starten.");        
-                    System.out.println("--------------------------------------");  
+                    System.out.println("--------------------------------------"); 
 
 
-                    if (input.equals("1")) {
-                        
-                        game.spieler1.karmapunkte = -10;  
-                         
+                        // Abfrage für den Angriffsort
+                        String angriffsort = in.nextLine();
+
+                        String Leipzig = "die Satellittenbasis in der nähe von Leipzig";
+                        String Osnabrück = "das Munitionslager in der nähe von Osnabrück";
+
+                        if (angriffsort.equals("1")) {
+
+                            game.spieler1.karmapunkte = -10;  
+                            System.out.println("--------------------------------------"); 
+                            System.out.println("Du hast dich entschieden" + Leipzig + "anzugreifen.");
+                            System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte); 
+                            System.out.println("--------------------------------------"); 
+                            ao++;
+     
+                        }
+
+                        else if (angriffsort.equals("2")) {
+
+                            game.spieler1.karmapunkte = 0;
+                            System.out.println("--------------------------------------"); 
+                            System.out.println("Du hast dich entschieden" + Osnabrück + "anzugreifen."); 
+                            System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte);
+                            System.out.println("--------------------------------------"); 
+                            ao++;
+
+                        }
+
+                        else {
+
+                            System.out.println("Falsche Eingabe");
+                            continue;
+                        }
                     }
 
-                    else if (input.equals("2")) {
 
-                        game.spieler1.karmapunkte = 10;
-                    }
+                if (game.spieler1.karmapunkte == -10) {
+
+                    System.out.println("--------------------------------------"); 
+                    System.out.println(""); //Text der Story für Satellittenbasis 
+                    System.out.println("--------------------------------------"); 
+
+                }
+                    
+                if (game.spieler1.karmapunkte == 0) {
+
+                    System.out.println("--------------------------------------"); 
+                    System.out.println(""); //Story Munitionslager
+                    System.out.println("--------------------------------------"); 
+
+
+                    System.out.println("--------------------------------------"); 
+                    System.out.println("Dein Team ist Sauer auf dich, da ein Mann verloren gegangen ist");
+                    System.out.println("Du kannst dich nun entscheiden, wie du handeln möchtest");
+                    System.out.println("Sei dir bewusst, dass jede Entscheidung einen andere auswirkung hat");
+                    System.out.println("--------------------------------------"); 
+
+
+                    int schuldentscheidung  = 0; // sollte geändert werden
+                    while (schuldentscheidung < 1) {
+                     
+                    System.out.println("--------------------------------------"); 
+                    System.out.println("\t" + "Schreibe --1-- um zu sagen, dass es deine Schuld war"  );
+                    System.out.println("\t" + "Schreibe --2-- um die Schuld auf den Truppenleiter zu schieben");   
+                    System.out.println("");
+                    System.out.println("Wenn du --karmapunkte-- schreibst, siehst du deine Karmapunkte");  
+                    System.out.println("Wenn du --hilfe-- schreibst, siehst du die hilfe ");
+                    System.out.println("--------------------------------------"); 
 
                     
 
+                        if (input.equals("1")) {
+
+                            System.out.println("--------------------------------------"); 
+                            System.out.println("Du hast dich entschieden, dass du die Schuld trägst"); 
+                            System.out.println("--------------------------------------"); 
+                            game.spieler1.karmapunkte = -20;
+                            break;
+
+                        }
+
+                        else if (input.equals("2")) {
+
+                            System.out.println("--------------------------------------"); 
+                            System.out.println("Du schiebst die Schuld auf den Truppleiter"); 
+                            System.out.println("--------------------------------------"); 
+                            game.spieler1.karmapunkte = -10;
+                            break;
+
+                        }
+
+                        else if (input.equals("karmapunkte")) {
+
+                            game.spieler1.showkarmapunkte();
+                            continue;
+                            
+
+                        }
+
+                        else if (input.equals("hilfe")) {
+
+                            game.showhilfe();
+                            continue;
+
+                        }
+
+                        else {
+
+                            System.out.println("Falsche Eingabe!");
+                            continue;
+
+                        }
+                    }
+
+                }
 
                           
                     
@@ -274,7 +381,7 @@ public class Main {
             }
 
 
-            
+
             //Story Delta-5
             else if (team.teamname.equals ("Delta-5")){
 
@@ -321,11 +428,15 @@ public class Main {
                 
             }
 
+        
             
+
+
+
+    
 
             else {
                 System.out.println("Du hast kein Team gewählt."); 
-
             }
             
 
