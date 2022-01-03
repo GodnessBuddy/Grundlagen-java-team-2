@@ -25,7 +25,7 @@ public class Main {
         
         //Game 
         Game game = new Game(new Player("", 100));
-            game.setHilfe("Hilfe");
+            game.setHilfe("Hier steht die Hilfe.");
             game.showhilfe();
             game.spieler1.karmapunkte = 0;
             //System.out.print(game.spieler1.name); 
@@ -209,13 +209,13 @@ public class Main {
                 System.out.println("--------------------------------------");      
                 System.out.println("Zuerst lernst du das team kennen, falls dieses dich nicht interessiert, dann schreibe --weiter--");
                 System.out.println("schreibe --teammitglieder um die Namen deines Teammitglieder zu sehen");
-                System.out.println("schreibe --advantages-- um die Vorteile dieses Teams zu sehen");
-                System.out.println("schreibe --disadvantages-- um die Nachteile dieses Teams zu sehen");
+                System.out.println("schreibe --advantage-- um die Vorteile dieses Teams zu sehen");
+                System.out.println("schreibe --disadvantage-- um die Nachteile dieses Teams zu sehen");
                 System.out.println("--------------------------------------");
 
 
 
-
+                //Abfrage nach Teammitglieder, advantages, disadvantages
                 String inputteam = in.nextLine();
                 
                     if (inputteam.equals("teammitglieder")){
@@ -236,10 +236,14 @@ public class Main {
                     else if (inputteam.equals("weiter")){
                         m++;  
                     }
+                    else {
+                        System.out.println("Falsche Eingabe!");
+                        continue;
+                    }
                 }
 
                     System.out.println("--------------------------------------");  
-                    System.out.println(""); //Diskussion mit dem Team, was man angreift 
+                    System.out.println("Diskussion was man angreift"); //Diskussion mit dem Team, was man angreift 
                     System.out.println("--------------------------------------");  
 
 
@@ -265,7 +269,7 @@ public class Main {
 
                         if (angriffsort.equals("1")) {
 
-                            game.spieler1.karmapunkte = -10;  
+                            game.spieler1.karmapunkte = -10; //Karmapunkte werden auf -10 gesetzt 
                             System.out.println("--------------------------------------"); 
                             System.out.println("Du hast dich entschieden" + Leipzig + "anzugreifen.");
                             System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte); 
@@ -276,7 +280,7 @@ public class Main {
 
                         else if (angriffsort.equals("2")) {
 
-                            game.spieler1.karmapunkte = 0;
+                            game.spieler1.karmapunkte = 0; // Karmapunkte werden auf 0 gesetzt.
                             System.out.println("--------------------------------------"); 
                             System.out.println("Du hast dich entschieden" + Osnabrück + "anzugreifen."); 
                             System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte);
@@ -292,20 +296,28 @@ public class Main {
                         }
                     }
 
+                System.out.println(game.spieler1.karmapunkte); //kurzer Test (kann später gelöscht werden) 
 
-                if (game.spieler1.karmapunkte == -10) {
+
+
+                //Entscheidung Satellitenbasis (Karmapunkte = -10)
+                if (game.spieler1.karmapunkte==-10) {
 
                     System.out.println("--------------------------------------"); 
-                    System.out.println(""); //Text der Story für Satellittenbasis 
+                    System.out.println("Hier ist die Story für die Satellitenbasis"); //Text der Story für Satellitenbasis 
                     System.out.println("--------------------------------------"); 
 
                 }
-                    
-                if (game.spieler1.karmapunkte == 0) {
+                
+                
+                //Entscheidung für Munitionslager (Karmapunkte = 0)
+                if (game.spieler1.karmapunkte==0) {
+
 
                     System.out.println("--------------------------------------"); 
-                    System.out.println(""); //Story Munitionslager
+                    System.out.println("Hier steht die Story fürs Munitionslager"); //Story Munitionslager
                     System.out.println("--------------------------------------"); 
+
 
 
                     System.out.println("--------------------------------------"); 
@@ -315,74 +327,89 @@ public class Main {
                     System.out.println("--------------------------------------"); 
 
 
-                    int schuldentscheidung  = 0; // sollte geändert werden
-                    while (schuldentscheidung < 1) {
+                    int se  = 0; // se = Schuldentscheidung
+                    while (se < 1) {
                      
-                    System.out.println("--------------------------------------"); 
-                    System.out.println("\t" + "Schreibe --1-- um zu sagen, dass es deine Schuld war"  );
-                    System.out.println("\t" + "Schreibe --2-- um die Schuld auf den Truppenleiter zu schieben");   
-                    System.out.println("");
-                    System.out.println("Wenn du --karmapunkte-- schreibst, siehst du deine Karmapunkte");  
-                    System.out.println("Wenn du --hilfe-- schreibst, siehst du die hilfe ");
-                    System.out.println("--------------------------------------"); 
+                        System.out.println("--------------------------------------"); 
+                        System.out.println("\t" + "Schreibe --1-- um zu sagen, dass es deine Schuld war"  );
+                        System.out.println("\t" + "Schreibe --2-- um die Schuld auf den Truppenleiter zu schieben");   
+                        System.out.println("");
+                        System.out.println("Wenn du --karmapunkte-- schreibst, siehst du deine Karmapunkte");  
+                        System.out.println("Wenn du --hilfe-- schreibst, siehst du die hilfe ");
+                        System.out.println("--------------------------------------"); 
 
                     
+                        String schuldentscheidung = in.nextLine(); //Scanner für Schuldentscheidung
 
-                        if (input.equals("1")) {
+                        if (schuldentscheidung.equals("1")) {
 
                             System.out.println("--------------------------------------"); 
                             System.out.println("Du hast dich entschieden, dass du die Schuld trägst"); 
                             System.out.println("--------------------------------------"); 
-                            game.spieler1.karmapunkte = -20;
-                            break;
-
+                            game.spieler1.karmapunkte = -20; //Karmapunkte auf -20
+                            se++;
                         }
 
-                        else if (input.equals("2")) {
+                        else if (schuldentscheidung.equals("2")) {
 
                             System.out.println("--------------------------------------"); 
                             System.out.println("Du schiebst die Schuld auf den Truppleiter"); 
                             System.out.println("--------------------------------------"); 
-                            game.spieler1.karmapunkte = -10;
-                            break;
-
+                            game.spieler1.karmapunkte = -10; //Karmapunkte auf -10
+                            se++;
                         }
 
-                        else if (input.equals("karmapunkte")) {
+                        else if (schuldentscheidung.equals("karmapunkte")) {
 
-                            game.spieler1.showkarmapunkte();
+                            game.spieler1.showkarmapunkte(); //zeigt Karmapunkte
                             continue;
-                            
-
                         }
 
-                        else if (input.equals("hilfe")) {
+                        else if (schuldentscheidung.equals("hilfe")) {
 
-                            game.showhilfe();
+                            game.showhilfe(); //zeigt Hilfe
                             continue;
-
                         }
 
                         else {
 
                             System.out.println("Falsche Eingabe!");
                             continue;
-
                         }
                     }
 
+                    
+
+                }   
+
+                System.out.println("Hat geklappt" + game.spieler1.karmapunkte); // Einfacher Test (sollte gelöscht werden)
+
+
+                //Abfrage der Karmapunkte, für den Verlauf des Spieles.
+                if (game.spieler1.karmapunkte == 0) {
+
+
                 }
 
+                else if (game.spieler1.karmapunkte == -10) {
+                
+                
+                }
+
+                else if (game.spieler1.karmapunkte == -20 ) {
+
+
+                }
                           
                     
     
                
                 
-            }
+            } //Story Ende Bravo-6 
 
 
 
-            //Story Delta-5
+            //Story Delta-5 falls dafür Entschieden 
             else if (team.teamname.equals ("Delta-5")){
 
                 
@@ -398,11 +425,11 @@ public class Main {
                 System.out.println("--------------------------------------");
                 System.out.println("Zuerst lernst du das team kennen, falls dieses dich nicht interessiert, dann schreibe --weiter--");
                 System.out.println("schreibe --teammitglieder um die Namen deines Teammitglieder zu sehen");
-                System.out.println("schreibe --advantages-- um die Vorteile dieses Teams zu sehen");
-                System.out.println("schreibe --disadvantages-- um die Nachteile dieses Teams zu sehen");
+                System.out.println("schreibe --advantage-- um die Vorteile dieses Teams zu sehen");
+                System.out.println("schreibe --disadvantage-- um die Nachteile dieses Teams zu sehen");
                 System.out.println("--------------------------------------");
                 
-
+            //Abfrage nach advantages, disadvantages, Teammitglieder
                 String inputteam = in.nextLine(); 
 
                 int m = 1;
@@ -424,9 +451,14 @@ public class Main {
                     else if (inputteam.equals("weiter")){
                         m++;  
                     }
+                    else {
+                        System.out.println("Falsche Eingabe!");
+                        continue;
+                    }
+
                 }
                 
-            }
+            } //story Ende Delta 5
 
         
             
