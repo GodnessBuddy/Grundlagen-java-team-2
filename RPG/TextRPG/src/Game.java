@@ -5,6 +5,7 @@ public class Game {
     private String hilfe;
     public String weiter;
     public Player spieler1;
+    private String falscheeingabe;
 
 
     //Methoden
@@ -16,6 +17,13 @@ public class Game {
         this.hilfe = pHilfe;
     }
 
+    public void showfalsecommand() {
+        System.out.println(falscheeingabe);
+    }
+
+    public void setfalsecommand(String pFalscheeingabe){
+        this.falscheeingabe = pFalscheeingabe;
+    }
     
      //Konstruktor
      public Game(Player pPlayer){
