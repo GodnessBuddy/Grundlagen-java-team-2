@@ -665,19 +665,144 @@ public class Testmain {
                         System.out.println("--------------------------------------"); 
                         System.out.println("Dein Team spricht mit dir über deine Entscheidungen");
                         System.out.println("--------------------------------------"); 
+                        
+
+                        while (game.spieler1.karmapunkte == -40) {
+
+                            System.out.println("Du kannst dich entscheiden ob du ihnen über deine Vergangenheit erzählst, dass dir die Mission sehr wichtig ist.");
+                            System.out.println("Oder du schweigst, um die Mission nicht  zu gefährden.");
+                            System.out.println("Schreibe --1-- um über deine Vergangenheit zu erzählen."); 
+                            System.out.println("Schreibe --2-- um zu schweigen."); 
+                            System.out.println("--------------------------------------"); 
+
+                                if (in.nextLine().equals("1")) {
+
+                                    System.out.println("--------------------------------------"); 
+                                    System.out.println("Erzählt die Geschichte"); 
+                                    System.out.println("--------------------------------------"); 
+                                    game.spieler1.karmapunkte = -30;
+                                }
+
+                                else if (in.nextLine().equals("2")) { // Fehler 2 wird nicht erkannt
+ 
+                                    System.out.println("--------------------------------------"); 
+                                    System.out.println("Du schweigst."); 
+                                    System.out.println("--------------------------------------"); 
+                                    game.spieler1.karmapunkte = -50;
+                                }
+
+                                else {
+
+                                    game.showfalsecommand();
+                                    continue;
+                                }
+
+                        }  
                     }
+
                     //Karmapunkte sind bei -10
                     else if (game.spieler1.karmapunkte == -10) {
 
                         System.out.println("--------------------------------------"); 
                         System.out.println("Gespräch mit Team über deine Entscheidungen, bitten weniger Risiko einzugehen"); 
                         System.out.println("--------------------------------------"); 
+
+                        while (game.spieler1.karmapunkte == -10) {
+
+                            System.out.println("--------------------------------------"); 
+                            System.out.println("Dein Team bittet dich weniger Risiko einzugehen."); 
+                            System.out.println("--------------------------------------"); 
+                            System.out.println("--------------------------------------"); 
+                            System.out.println("Schreibe --1-- um weniger Risiko einzugehen."); 
+                            System.out.println("Schreibe --2-- um nicht darauf zu reagieren."); 
+                            System.out.println("--------------------------------------"); 
+
+                                if (in.nextLine().equals("1")){
+
+                                    System.out.println("--------------------------------------"); 
+                                    System.out.println("Du gehsts weniger Risiko ein"); 
+                                    System.out.println("--------------------------------------"); 
+                                    game.spieler1.karmapunkte = 0;
+                                }
+                                else if (in.nextLine().equals("2")) {
+
+                                    System.out.println("--------------------------------------"); 
+                                    System.out.println("Du reagierst darauf nicht"); 
+                                    System.out.println("--------------------------------------"); 
+                                    game.spieler1.karmapunkte = -20;
+                                }
+                                else {
+
+                                    game.showfalsecommand();
+                                    continue;
+                                }
+                        }
+                        
+                    }
+
+                    //Karmapunkte sind bei 0
+                    else if (game.spieler1.karmapunkte == 0) {
+
+                        System.out.println("--------------------------------------"); 
+                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("--------------------------------------"); 
+                        break;
+                    }
+
+                    //Karmapunkte sind bei +10
+                    else if (game.spieler1.karmapunkte == 10) {
+
+                        System.out.println("--------------------------------------"); 
+                        System.out.println("Team vertraut dir mehr"); 
+                        System.out.println("--------------------------------------"); 
+                        System.out.println("Du redest mit dem Truppleiter und er fragt dich wieso du das alles tust."); 
+                        System.out.println("Du kannst dich entscheiden, ob du über die Vorgeschichte redest oder nicht.");
+                        System.out.println(""); 
+
+                        //while loop 
+                        int tr = 0; 
+
+                        while (tr < 1) {
+
+                            System.out.println("Schreib --1-- um seriös zu bleiben und ihm nicht die Wahrheit zu erzählen");
+                            System.out.println("Schreibe --2-- um über deine Vorgeschichte zu berichten.");  
+                            System.out.println("--------------------------------------"); 
+
+                            // Scanner
+
+                            if(in.nextLine().equals("1")) {
+
+                                System.out.println("--------------------------------------"); 
+                                System.out.println("Du bleibst seriös"); 
+                                System.out.println("--------------------------------------"); 
+                                break;
+                            }
+                            else if(in.nextLine().equals("2")){
+
+                                System.out.println("--------------------------------------"); 
+                                System.out.println("Du erzählst dem Truppleiter deine Vorgeschichte"); 
+                                System.out.println("--------------------------------------"); 
+                                break;
+                            }
+                            else {
+
+                                game.showfalsecommand();
+                                continue;
+                            }
+                            
+
+                        }
+
+
+                        
                     }
 
 
 
 
-                } //Karmapunkte Abfrage ende 
+                } //Karmapunkte Abfrage ende
+                
+                
 
 
                 
