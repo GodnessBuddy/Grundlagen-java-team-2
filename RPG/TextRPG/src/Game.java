@@ -6,6 +6,7 @@ public class Game {
     public String weiter;
     public Player spieler1;
     private String falscheeingabe;
+    private String strich;
 
 
     //Methoden
@@ -25,7 +26,14 @@ public class Game {
         this.falscheeingabe = pFalscheeingabe;
     }
 
-    
+    public void showstrich() { 
+        System.out.println(strich);
+    }
+
+    public void setstrich(String pstrich) {
+        this.strich = pstrich;
+    }
+     
     //Konstruktor
     public Game(Player pPlayer){
         spieler1 = pPlayer;
