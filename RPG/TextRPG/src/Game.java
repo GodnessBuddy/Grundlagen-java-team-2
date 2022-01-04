@@ -24,9 +24,10 @@ public class Game {
     public void setfalsecommand(String pFalscheeingabe){
         this.falscheeingabe = pFalscheeingabe;
     }
+
     
-     //Konstruktor
-     public Game(Player pPlayer){
+    //Konstruktor
+    public Game(Player pPlayer){
         spieler1 = pPlayer;
         
      }
