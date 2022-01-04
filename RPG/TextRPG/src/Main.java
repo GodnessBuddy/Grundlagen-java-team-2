@@ -654,7 +654,12 @@ public class Main {
                 }//Story für Leipzig ende
 
 
-                //Karmapunkte abfrage
+                /*Karmapunkte abfrage
+
+
+
+
+                */
                 int kpa = 0; // int Karmapunkte abfrage 
 
                 while (kpa < 1) {
@@ -669,13 +674,17 @@ public class Main {
 
                         while (game.spieler1.karmapunkte == -40) {
 
+                            
+
                             System.out.println("Du kannst dich entscheiden ob du ihnen über deine Vergangenheit erzählst, dass dir die Mission sehr wichtig ist.");
                             System.out.println("Oder du schweigst, um die Mission nicht  zu gefährden.");
                             System.out.println("Schreibe --1-- um über deine Vergangenheit zu erzählen."); 
                             System.out.println("Schreibe --2-- um zu schweigen."); 
                             System.out.println("--------------------------------------"); 
 
-                                if (in.nextLine().equals("1")) {
+                            String inputkarma = in.nextLine(); //Inputkarma nur für das nächste If- Statement
+
+                                if (inputkarma.equals("1")) {
 
                                     System.out.println("--------------------------------------"); 
                                     System.out.println("Erzählt die Geschichte"); 
@@ -683,7 +692,7 @@ public class Main {
                                     game.spieler1.karmapunkte = -30;
                                 }
 
-                                else if (in.nextLine().equals("2")) { // Fehler 2 wird nicht erkannt
+                                else if (inputkarma.equals("2")) { 
  
                                     System.out.println("--------------------------------------"); 
                                     System.out.println("Du schweigst."); 
@@ -707,7 +716,10 @@ public class Main {
                         System.out.println("Gespräch mit Team über deine Entscheidungen, bitten weniger Risiko einzugehen"); 
                         System.out.println("--------------------------------------"); 
 
+                        //While looop
+                        //Wenn Karmapunkte nicht mehr -10 hört er auf
                         while (game.spieler1.karmapunkte == -10) {
+
 
                             System.out.println("--------------------------------------"); 
                             System.out.println("Dein Team bittet dich weniger Risiko einzugehen."); 
@@ -717,14 +729,16 @@ public class Main {
                             System.out.println("Schreibe --2-- um nicht darauf zu reagieren."); 
                             System.out.println("--------------------------------------"); 
 
-                                if (in.nextLine().equals("1")){
+                            String inputkarma = in.nextLine(); //Inputkarma nur für das nächste If- Statement
+
+                                if (inputkarma.equals("1")){
 
                                     System.out.println("--------------------------------------"); 
                                     System.out.println("Du gehsts weniger Risiko ein"); 
                                     System.out.println("--------------------------------------"); 
                                     game.spieler1.karmapunkte = 0;
                                 }
-                                else if (in.nextLine().equals("2")) {
+                                else if (inputkarma.equals("2")) {
 
                                     System.out.println("--------------------------------------"); 
                                     System.out.println("Du reagierst darauf nicht"); 
@@ -738,15 +752,6 @@ public class Main {
                                 }
                         }
                         
-                    }
-
-                    //Karmapunkte sind bei 0
-                    else if (game.spieler1.karmapunkte == 0) {
-
-                        System.out.println("--------------------------------------"); 
-                        System.out.println("Planung nächste Mission"); 
-                        System.out.println("--------------------------------------"); 
-                        break;
                     }
 
                     //Karmapunkte sind bei +10
@@ -769,15 +774,16 @@ public class Main {
                             System.out.println("--------------------------------------"); 
 
                             // Scanner
+                            String inputkarma = in.nextLine(); //Inputkarma nur für das nächste If- Statement
 
-                            if(in.nextLine().equals("1")) {
+                            if(inputkarma.equals("1")) {
 
                                 System.out.println("--------------------------------------"); 
                                 System.out.println("Du bleibst seriös"); 
                                 System.out.println("--------------------------------------"); 
                                 break;
                             }
-                            else if(in.nextLine().equals("2")){
+                            else if(inputkarma.equals("2")){
 
                                 System.out.println("--------------------------------------"); 
                                 System.out.println("Du erzählst dem Truppleiter deine Vorgeschichte"); 
@@ -792,17 +798,65 @@ public class Main {
                             
 
                         }
+                        
 
+                        System.out.println("--------------------------------------"); 
+                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("--------------------------------------"); 
+                        break;
 
                         
                     }
 
 
+                    //Bei dieser Karmapunktenabfrage kommt es direkt zur Planung
+                    //Karmapunkte sind bei 0
+                    else if (game.spieler1.karmapunkte == 0) {
+
+                        System.out.println("--------------------------------------"); 
+                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("--------------------------------------"); 
+                        break;
+                    }
 
 
-                } //Karmapunkte Abfrage ende
+                    /*Karmapunkte sind bei -50 dann kommt es zur Planung der Mission
+                    Das hier passierte nachdem man sich entschied die Vorgeschichte nicht zu erwähnen (Line  667-704)
+                    */
 
+                    else if (game.spieler1.karmapunkte == -50) {
 
+                        System.out.println("--------------------------------------"); 
+                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("--------------------------------------");  
+                        break;  
+                    }
+
+                    /*Karmapunkte sind bei -30 dann kommt es zur Planung der Mission
+                    Das hier passierte nachdem man sich entschied die Vorgeschichte zu erwähnen (Line  667-704)
+                    */
+                    else if (game.spieler1.karmapunkte == -30) {
+
+                        System.out.println("--------------------------------------"); 
+                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("--------------------------------------"); 
+                        break;
+                    }
+
+                    /* Karmapunkte bei -20. Passiert da, wo man nicht auf den Vorschlag wegen des Risikos eingeht. 
+                    Line (708- 744) 
+                    */
+                    else if(game.spieler1.karmapunkte == -20) {
+
+                        System.out.println("--------------------------------------"); 
+                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("--------------------------------------"); 
+                        break;  
+                    }
+
+                } //Karmapunkte Abfrage ende 
+
+                //Ab Hier fängt die Planung der nächsten Mission statt.
                 
 
             } //story Ende Delta 5
