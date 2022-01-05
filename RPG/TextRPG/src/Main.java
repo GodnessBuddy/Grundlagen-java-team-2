@@ -19,7 +19,10 @@ public class Main {
  
         //Game 
         Game game = new Game(new Player("", 100));
-            game.setHilfe("Hier steht die Hilfe.");     // setzt die Hilfe
+            game.setHilfe("In dem Story Spiel THE REVENGE kannst du selber entscheiden, wie die Story weiter geht.\n" +
+                        "Für jede Entscheidung können dir Karmapunkte abgezogen oder draufgerechnet werden. \n" +
+                        "Wähle weise, denn je weniger Karmapunkte du hast, desto schwerer wird es für dich zu überleben.");     // setzt die Hilfe
+                        
                                                         // game.showhilfe();   zeigt die Hilfe
             game.spieler1.karmapunkte = 0;
             game.setfalsecommand("Falsche Eingabe!");   // setzt die Falsche Eingabe 
@@ -60,8 +63,9 @@ public class Main {
             }
             
             // player Name der in der nächsten Zeile gelesen wird 
-            ;
+            game.showstrich();;
             System.out.println("Wie willst du heißen?:");
+
     
                 game.spieler1.name = in.nextLine();
                 
@@ -105,26 +109,13 @@ public class Main {
                  
             }
 
-        // Input
-        String input = in.nextLine();
-        
-        // Abfrage für Hilfe/Karmapunkte 
-        if(input.equals("karmapunkte")) {
-            game.spieler1.showkarmapunkte();
-        }
-        
-        else if(input.equals("hilfe")){
-            game.showhilfe();
-        }
-
-
 
         // Story Start
 
         // Einleitung in das Spiel
             game.showstrich();
             System.out.println("Einleitung");
-            System.out.println("Hier Steht die Einleitung");
+            System.out.println("Es ist 2088 in Deutschland. Deutschland ist ein Land in dem nur Krieg herscht."); //geht noch weiter
             game.showstrich();
 
             System.out.println("Du kannst dich nun zwischen 2 Teams entscheiden");
