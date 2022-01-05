@@ -136,7 +136,7 @@ public class Main {
             System.out.println("");
             System.out.println("Team Delta 5:");
             System.out.println("\t" + "Der Truppleiter, welcher dir direkt unterstellt wäre, heißt heißt Jenz Frust und gibt deine Befehle an das Team weiter.");
-            System.out.println("\t" + "Die Namen der Teammitglieder lauten: Tina, Charlkotte, Peter, Vlad, Dimitri, Achmed, Klaus und Hanz.");
+            System.out.println("\t" + "Die Namen der Teammitglieder lauten: Tina, Charlotte, Peter, Vlad, Dimitri, Achmed, Klaus und Hanz.");
             System.out.println("\t" + "Dieses Team ist sehr taktisch und sehr fokusiert.");
             System.out.println("");
 
@@ -173,7 +173,7 @@ public class Main {
             if(team.teamname.equals ("Bravo-6")) {
 
                 team.teammitglieder = "Jimmy, Riger, Jessica, Eugene, Anastasia, Norman, Stephen und Bernd";
-                team.advantage = "stealth";
+                team.advantage = "stealth Möglichkeit";
                 team.disadvantage = "Differenzen mit dem Truppleiter"; 
 
                 game.showstrich();
@@ -228,10 +228,10 @@ public class Main {
 
                     game.showstrich(); 
                     System.out.println("Du kannst dich nun zwischen 2 verschiedenen Orten entscheiden, die du angreifen möchtest.");
-                    System.out.println("Die erste möglichkeit währe die Satellittenbasis nähe Leipzig.");
+                    System.out.println("Die erste möglichkeit währe die Satellittenbasis nähe Leipzig, welche schwerer, dafür strategisch wichtiger wäre einzunehmen.");
                     System.out.println("\t" + "Schreibe --1-- um diesen Angriff zu starten.");   
                     System.out.println("");  
-                    System.out.println("Die zweite Möglichkeit ist das Munitionslager nähe Osnabrück");
+                    System.out.println("Die zweite Möglichkeit ist das Munitionslager nähe Osnabrück, welche leichter, dafür weniger strategisch wichtig wäre einzunehmen.");
                     System.out.println("\t"+ "Schreibe --2-- um diesen Angriff zu starten.");        
                     game.showstrich(); 
 
