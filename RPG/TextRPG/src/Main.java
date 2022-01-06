@@ -335,9 +335,33 @@ public class Main {
 
                 // Abfrage der Karmapunkte, für den Verlauf des Spieles.
                 if (game.spieler1.karmapunkte == 0) {
+                    game.showstrich();
+                    System.out.println("Da Osnabrück euch nicht viel gebracht hat, kommt die Diskussion auf, ob Leipzig nicht vielleicht doch besser gewesen wäre: \n");
+                    System.out.println("Eugene: Wir hätten Leipzig angreifen sollen, das wäre vielleicht schwieriger gewesen, aber ist doch egal \nwenigstens hätte es uns etwas gebracht.");
+                    System.out.println("Du: Red nicht so einen Blödsinn. Leipzig wäre viel zu gefährlich gewesen. \nBesser so, als wenn wir einen Mann verlieren oder Sonstiges.");
+                    System.out.println("Anastasia: Ich sehe das genauso wie Eugene, Leipzig wäre besser gewesen.");
+                    System.out.println("Riger: Regt euch ab, wir haben uns jetzt so entschieden und das wars. \nDann hat es uns halt nicht so viel gebracht, wenigstens leben wir alle noch");
+                    game.showstrich();
+                    System.out.println("Das war die Story für Bravo 6");
                 }
 
                 else if (game.spieler1.karmapunkte == -10) {
+                    game.showstrich();
+                    System.out.println("Du redest mit dem Truppleiter, dieser ist jedoch sehr sauer auf dich und rastet aus \nDas Gespräch eskaliert und du musst eine Entscheidung treffen:");
+                    System.out.println("\nOption 1: Du verteidigst dich (mit Worten)");
+                    System.out.println("\nOption 2: Du ignorierst ihn");
+                    System.out.println("\nOption 3: Du bringst ihn um");
+                    String schuldentscheidung = in.nextLine();
+                    if (schuldentscheidung.equals("1")) {
+                        
+                    }
+                    if (schuldentscheidung.equals("2")) {
+                        
+                    }
+                    if (schuldentscheidung.equals("3")) {
+                        
+                    }
+
                 }
 
                 else if (game.spieler1.karmapunkte == -20 ) {
