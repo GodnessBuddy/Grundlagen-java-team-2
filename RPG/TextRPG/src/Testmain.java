@@ -803,7 +803,151 @@ public class Testmain {
                 } //Karmapunkte Abfrage ende
                 
                 
+                //Nächste Mission (Bremen / Berlin)
 
+                    game.showstrich();
+                    System.out.println("Du kannst dich zwischen zwei verschiedenen Zwischenstützpunkten entscheiden.");
+                    System.out.println("");
+                    System.out.println("1. Der Zwischenstützpunkt in Bremen.");
+                    System.out.println("Dieser Zwischenstützpunkt ist verantwortlich für die Nahrungsversorgung und ist schwerer anzugreifen, da er von vielen Wachen beschützt wird");
+                    System.out.println("");
+                    System.out.println ("2. Der Zwischenstützpunkt in Berlin.");
+                    System.out.println("Dieser Zwischenstützpunkt ist ein Drogenlabor, wo mit sie Geld machen. Er ist etwas leichter anzugreifen, da dort weniger Wachen stehen. \n " +
+                                       "Trotzdem ist ein sehr schwieriges Ziel.");
+                   
+
+                    int zsp = 0; //int zwischenstützpunkt für while schleife
+                    while (zsp < 1) {
+
+                        System.out.println("");
+                        System.out.println("Schreibe --1-- um dich für Bremen zu entscheiden.");
+                        System.out.println("Schreibe --2-- um dich für Berlin zu entscheiden.");
+                        game.showstrich();
+
+                        String zwischenstützpunkt = in.nextLine();
+
+                        //Abfrage der verschiedenen Möglichkeiten 
+
+                            // Story Bremen Anfang
+                            if (zwischenstützpunkt.equals("1")) {
+
+                                game.showstrich();
+                                System.out.println("Du greifst mit" + team.teammitglieder + "Bremen an");
+                                game.showstrich();
+
+
+                                        //Zwischenstützpunkt Story bei -30 Karmapunkten Anfang
+                                    if (game.spieler1.karmapunkte == -30) {
+
+                                        game.showstrich();
+                                        System.out.println("Story Angriff");
+                                        game.showstrich();
+                                        System.out.println("Bei dem Angriff sterben vier deiner Leute");
+
+                                    }//Zwischenstützpunkt Story bei -30 Karmapunkten ende
+
+
+
+                                        //Zwischenstützpunkt Story bei -20 Karmapunkten Anfang
+                                    else if (game.spieler1.karmapunkte == -20) {
+
+                                        game.showstrich();
+                                        System.out.println("Story Angriff");
+                                        game.showstrich();
+                                        System.out.println("Bei dem Angriff sterben vier deiner Leute");
+
+                                    }//Zwischenstützpunkt Story bei -20 Karmapunkten ende
+
+
+
+                                        //Zwischenstützpunkt Story bei -10 Karmapunkten Anfang
+                                    else if (game.spieler1.karmapunkte == 0) {
+
+                                        game.showstrich();
+                                        System.out.println("Story Angriff");
+                                        game.showstrich();
+                                        System.out.println("Bei dem Angriff sterben vier deiner Leute");
+
+                                    }//Zwischenstützpunkt Story bei -10 Karmapunkten ende
+
+
+
+                                     //Zwischenstützpunkt Story bei 0 Karmapunkten Anfang 
+                                    else if (game.spieler1.karmapunkte == 0) {
+
+                                        game.showstrich();
+                                        System.out.println("Story Angriff");
+                                        game.showstrich();
+                                        System.out.println("Bei dem Angriff sterben vier deiner Leute");
+
+                                    }//Zwischenstützpunkt Story bei 0 Karmapunkten ende
+
+
+
+
+                                
+
+                            }//Story Bremen ende
+
+
+
+                            //Story Berlin Anfang
+                            else if (zwischenstützpunkt.equals("2")) {
+
+                                game.showstrich();
+                                System.out.println("Du greifst mit" + team.teammitglieder + "Berlin an");
+
+
+                                        //Zwischenstützpunkt Story bei -30 Karmapunkten Anfang
+                                    if (game.spieler1.karmapunkte == -30) {
+
+                                        
+
+
+
+                                    }//Zwischenstützpunkt Story bei -30 Karmapunkten ende
+
+
+
+                                        //Zwischenstützpunkt Story bei -20 Karmapunkten Anfang
+                                    else if (game.spieler1.karmapunkte == -20) {
+
+
+
+                                    }//Zwischenstützpunkt Story bei -20 Karmapunkten ende
+
+
+
+                                        //Zwischenstützpunkt Story bei -10 Karmapunkten Anfang
+                                    else if (game.spieler1.karmapunkte == 0) {
+
+
+
+                                    }//Zwischenstützpunkt Story bei -10 Karmapunkten ende
+
+
+                                    
+                                     //Zwischenstützpunkt Story bei 0 Karmapunkten Anfang 
+                                    else if (game.spieler1.karmapunkte == 0) {
+
+
+
+                                    }//Zwischenstützpunkt Story bei 0 Karmapunkten ende
+
+
+
+                            }//Story Berlin ende
+
+                            //bei Falscher eingabe
+                            else {
+                                game.showfalsecommand();
+                                continue;
+                            }
+                        
+
+                    }
+
+    
 
                 
 
@@ -826,7 +970,7 @@ public class Testmain {
 
 
 
-
+       
 
 
 
