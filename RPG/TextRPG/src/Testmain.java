@@ -843,7 +843,6 @@ public class Testmain {
                                         System.out.println("Story Angriff");
                                         game.showstrich();
                                         System.out.println("Bei dem Angriff sterben vier deiner Leute");
-
                                     }//Zwischenstützpunkt Story bei -30 Karmapunkten ende
 
 
@@ -855,7 +854,6 @@ public class Testmain {
                                         System.out.println("Story Angriff");
                                         game.showstrich();
                                         System.out.println("Bei dem Angriff sterben vier deiner Leute");
-
                                     }//Zwischenstützpunkt Story bei -20 Karmapunkten ende
 
 
@@ -866,8 +864,6 @@ public class Testmain {
                                         game.showstrich();
                                         System.out.println("Story Angriff");
                                         game.showstrich();
-                                        System.out.println("Bei dem Angriff sterben vier deiner Leute");
-
                                     }//Zwischenstützpunkt Story bei -10 Karmapunkten ende
 
 
@@ -878,9 +874,17 @@ public class Testmain {
                                         game.showstrich();
                                         System.out.println("Story Angriff");
                                         game.showstrich();
-                                        System.out.println("Bei dem Angriff sterben vier deiner Leute");
-
                                     }//Zwischenstützpunkt Story bei 0 Karmapunkten ende
+
+
+
+                                    //Zwischenstützpunkt Story bei +10 Karmapunkten Anfang
+                                    else if (game.spieler1.karmapunkte == 10) {
+
+                                        game.showstrich();
+                                        System.out.println("Story Angriff");
+                                        game.showstrich();
+                                    }//Zwischenstützpunkt Story bei 10 Karmapunkten ende
 
 
 
