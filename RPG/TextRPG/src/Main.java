@@ -241,7 +241,7 @@ public class Main {
 
                     else if (angriffsort.equals("2")) {
 
-                        game.spieler1.karmapunkte = 0; // Karmapunkte werden auf 0 gesetzt.
+                        game.spieler1.karmapunkte = 10; // Karmapunkte werden auf 10 gesetzt.
                         game.showstrich(); 
                         System.out.println("Du hast dich entschieden das Munitionslager in der nähe von Osnabrück anzugreifen."); 
                         System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte);
@@ -331,20 +331,20 @@ public class Main {
                     }
                 }   
 
-                System.out.println("Hat geklappt" + game.spieler1.karmapunkte); // Einfacher Test (sollte gelöscht werden)
+                 // Abfrage der Karmapunkte, für den Verlauf des Spieles.
 
-                // Abfrage der Karmapunkte, für den Verlauf des Spieles.
-                if (game.spieler1.karmapunkte == 0) {
+                 //Entscheidung Line 242 - 250 
+                 if (game.spieler1.karmapunkte == 10) {
                     game.showstrich();
                     System.out.println("Da Osnabrück euch nicht viel gebracht hat, kommt die Diskussion auf, ob Leipzig nicht vielleicht doch besser gewesen wäre: \n");
                     System.out.println("Eugene: Wir hätten Leipzig angreifen sollen, das wäre vielleicht schwieriger gewesen, aber ist doch egal \nwenigstens hätte es uns etwas gebracht.");
-                    System.out.println("Du: Red nicht so einen Blödsinn. Leipzig wäre viel zu gefährlich gewesen. \nBesser so, als wenn wir einen Mann verlieren oder Sonstiges.");
+                    System.out.println(game.spieler1.name + ": Red nicht so einen Blödsinn. Leipzig wäre viel zu gefährlich gewesen. \nBesser so, als wenn wir einen Mann verlieren oder Sonstiges.");
                     System.out.println("Anastasia: Ich sehe das genauso wie Eugene, Leipzig wäre besser gewesen.");
                     System.out.println("Riger: Regt euch ab, wir haben uns jetzt so entschieden und das wars. \nDann hat es uns halt nicht so viel gebracht, wenigstens leben wir alle noch");
                     game.showstrich();
                     System.out.println("Das war die Story für Bravo 6");
                 }
-
+                
                 else if (game.spieler1.karmapunkte == -10) {
                     game.showstrich();
                     System.out.println("Du redest mit dem Truppleiter, dieser ist jedoch sehr sauer auf dich und rastet aus \nDas Gespräch eskaliert und du musst eine Entscheidung treffen:");
@@ -366,7 +366,278 @@ public class Main {
 
                 else if (game.spieler1.karmapunkte == -20 ) {
                 }
+
+              
+                
+
+
+
+                
+                //Nächste Mission (Bremen / Berlin)
+
+                game.showstrich();
+                System.out.println("Du kannst dich zwischen zwei verschiedenen Zwischenstützpunkten entscheiden.");
+                System.out.println("");
+                System.out.println("1. Der Zwischenstützpunkt in Bremen.");
+                System.out.println("Dieser Zwischenstützpunkt ist verantwortlich für die Nahrungsversorgung und ist schwerer anzugreifen, da er von vielen Wachen beschützt wird");
+                System.out.println("");
+                System.out.println ("2. Der Zwischenstützpunkt in Berlin.");
+                System.out.println("Dieser Zwischenstützpunkt ist ein Drogenlabor, wo mit sie Geld machen. Er ist etwas leichter anzugreifen, da dort weniger Wachen stehen. \n " +
+                                   "Trotzdem ist ein sehr schwieriges Ziel.");
+               
+
+                int zsp = 0; //int zwischenstützpunkt für while schleife
+                while (zsp < 1) {
+
+                    System.out.println("");
+                    System.out.println("Schreibe --1-- um dich für Bremen zu entscheiden.");
+                    System.out.println("Schreibe --2-- um dich für Berlin zu entscheiden.");
+                    game.showstrich();
+
+                    String zwischenstützpunkt = in.nextLine();
+
+                    //Abfrage der verschiedenen Möglichkeiten 
+
+                    // Story Bremen Anfang
+                    if (zwischenstützpunkt.equals("1")) { 
+
+                        game.showstrich();
+                        System.out.println("Du greifst mit" + team.teammitglieder + "Berlin an");
+
+
+                            //Zwischenstützpunkt Story bei -30 Karmapunkten Anfang
+                            if (game.spieler1.karmapunkte == -30) {
+
+                                game.showstrich();
+                                System.out.println("Story Angriff");
+                                game.showstrich();
+                                System.out.println("Bei dem Angriff sterben vier deiner Leute");
+                                System.out.println("Nach der Mission bringt dich dein Team um, da sie dir nicht mehr vertrauen.");
+                                System.out.println("Du bist Gestorben");
+                                game.showstrich();
+
+                                System.exit(0);
+                            }//Zwischenstützpunkt Story bei -30 Karmapunkten ende
+
+
+
+                                //Zwischenstützpunkt Story bei -20 Karmapunkten Anfang
+                            else if (game.spieler1.karmapunkte == -20) {
+
+                                game.showstrich();
+                                System.out.println("Story Angriff");
+                                game.showstrich();
+                                System.out.println("Bei dem Angriff sterben vier deiner Leute");
+                                game.showstrich();
+                            }//Zwischenstützpunkt Story bei -20 Karmapunkten ende
+
+
+
+                                //Zwischenstützpunkt Story bei -10 Karmapunkten Anfang
+                            else if (game.spieler1.karmapunkte == 0) {
+
+                                game.showstrich();
+                                System.out.println("Story Angriff");
+                                game.showstrich();
+                                System.out.println("Der Truppleiter sagt, dass du gelogen hast.");
+                                game.showstrich();
+                            }//Zwischenstützpunkt Story bei -10 Karmapunkten ende
+
+
+
+                             //Zwischenstützpunkt Story bei 0 Karmapunkten Anfang 
+                            else if (game.spieler1.karmapunkte == 0) {
+
+                                game.showstrich();
+                                System.out.println("Story Angriff");
+                                game.showstrich();
+                            }//Zwischenstützpunkt Story bei 0 Karmapunkten ende
+
+
+
+                            //Zwischenstützpunkt Story bei +10 Karmapunkten Anfang
+                            else if (game.spieler1.karmapunkte == 10) {
+
+                                game.showstrich();
+                                System.out.println("Story Angriff");
+                                game.showstrich();
+
+                                System.out.println("Der Truppleiter hinterfragt während deiner Mission deine Authorität");
+                                System.out.println("Du kannst dich entscheiden, ob du ihn umbringst oder ob du eine Gespräch mit ihm führst.");
+                                game.showstrich();
+
+                                int b = 0; 
+
+                                while (b < 0) {
+
+                                    String input = in.nextLine();
+
+                                    System.out.println("\n Wenn du --1-- schreibst, dann bringtst du den Truppleiter um.");
+                                    System.out.println("\n Wenn du --2-- schreibst, dann führt ihr beide ein klärendes gespräch");
+                                    game.showstrich();
+
+                                    if (input.equals("1")) {
+
+                                        System.out.println("Du bringst deinen Truppleiter um");
+                                        game.spieler1.karmapunkte = -40;
+
+                                    }
+
+                                    else if (input.equals("2")) {
+                                        
+                                        System.out.println("klärendes Gespräch");
+                                        game.spieler1.karmapunkte = 20;
+                                    
+                                    }
+
+                                    else {
+                                        game.showfalsecommand();
+                                    }
+
+                                }
+
+                            }//Zwischenstützpunkt Story bei +10 Karmapunkten ende
+
+                        
+                        }//Story Bremen ende
+
+                    // Story Berlin Anfang
+                    else if (zwischenstützpunkt.equals("2")) {
+
+                        game.showstrich();
+                        System.out.println("Du greifst mit" + team.teammitglieder + "Bremen an");
+                        game.showstrich();
+
+
+                            //Zwischenstützpunkt Story bei -30 Karmapunkten Anfang
+                             if (game.spieler1.karmapunkte == -30) {
+
+                                game.showstrich();
+                                System.out.println("Auf dem Hinweg bringen dich deine Leute um");
+                                game.showstrich();
+                            }//Zwischenstützpunkt Story bei -30 Karmapunkten ende
+
+
+
+                            //Zwischenstützpunkt Story bei -20 Karmapunkten Anfang
+                            else if (game.spieler1.karmapunkte == -20) {
+
+                                game.showstrich();
+                                System.out.println("Story Angriff");
+                                game.showstrich();
+                                System.out.println("Dein Team möchte dich nichtmehr haben.");
+                                System.out.println("Du kannst dich entscheiden ob du die Mission alleine weiterführst oder ob du doch mit ihnen mitgehst");
+
+                                int b = 0;
+
+                                while (b < 1) {
+
+                                    game.showstrich();
+                                    System.out.println("Schreibe --1-- um mit deinen Team mitzugehen");
+                                    System.out.println("Schreibe --2-- um die Mission alleine auszuführen.");
+                                    game.showstrich();
+
+                                    String input = in.nextLine();
+
+                                    if (input.equals("1")) {
+
+                                        System.out.println("Du gehst mit deinem Team mit");
+                                        System.out.println("Sie bringen dich um"); 
+                                        System.exit(0);
+                                    }
+                                    
+                                    else if (input.equals("2")) {
+
+                                        System.out.println("Du führst die restliche Mission alleine aus");
+                                    }
+
+                                    else {
+                                        game.showfalsecommand();
+                                    }
+                                } 
+
+                            }//Zwischenstützpunkt Story bei -20 Karmapunkten ende
+
+
+
+                            //Zwischenstützpunkt Story bei -10 Karmapunkten Anfang
+                            else if (game.spieler1.karmapunkte == 0) {
+
+                                game.showstrich();
+                                System.out.println("Story Angriff");
+                                game.showstrich();
+                                game.spieler1.karmapunkte = 10;
+                            }//Zwischenstützpunkt Story bei -10 Karmapunkten ende
+
+
+
+                            //Zwischenstützpunkt Story bei 0 Karmapunkten Anfang 
+                            else if (game.spieler1.karmapunkte == 0) {
+
+                                game.showstrich();
+                                System.out.println("Story Angriff");
+                                game.showstrich();
+                            }//Zwischenstützpunkt Story bei 0 Karmapunkten ende
+
+
+
+                            //Zwischenstützpunkt Story bei +10 Karmapunkten Anfang
+                            else if (game.spieler1.karmapunkte == 10) {
+
+                                game.showstrich();
+                                System.out.println("Story Angriff");
+                                game.showstrich();
+
+                                System.out.println("Der Truppleiter hinterfragt während deiner Mission deine Authorität");
+                                System.out.println("Du kannst dich entscheiden, ob du ihn umbringst oder ob du eine Gespräch mit ihm führst.");
+                                game.showstrich();
+
+                                int b = 0; 
+
+                                while (b < 0) {
+
+                                    String input = in.nextLine();
+
+                                    System.out.println("\n Wenn du --1-- schreibst, dann bringtst du den Truppleiter um.");
+                                    System.out.println("\n Wenn du --2-- schreibst, dann führt ihr beide ein klärendes gespräch");
+                                    game.showstrich();
+
+                                    if (input.equals("1")) {
+
+                                        System.out.println("Du bringst deinen Truppleiter um");
+                                        game.spieler1.karmapunkte = -40;
+
+                                    }
+
+                                    else if (input.equals("2")) {
+                                        
+                                        System.out.println("klärendes Gespräch");
+                                        game.spieler1.karmapunkte = 20;
+                                    
+                                    }
+
+                                    else {
+                                        game.showfalsecommand();
+                                    }
+
+                                }
+                                
+                            }//Zwischenstützpunkt Story bei 10 Karmapunkten ende
+
+                    }//Story Berlin ende
+
+
+                        //bei Falscher eingabe der Zielortentscheidung
+                        else {
+                            game.showfalsecommand();
+                            continue;
+                        }
+                    
+
+                }
+
             } // Story Ende Bravo-6 
+
 
             // Story Delta-5 falls dafür Entschieden 
             else if (team.teamname.equals ("Delta-5")){
