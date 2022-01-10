@@ -1,6 +1,8 @@
 
 import java.time.chrono.HijrahEra;
 import java.util.Scanner;
+
+import javax.lang.model.util.ElementKindVisitor7;
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 
 public class Main {
@@ -402,7 +404,7 @@ public class Main {
                     if (zwischenstützpunkt.equals("1")) { 
 
                         game.showstrich();
-                        System.out.println("Du greifst mit" + team.teammitglieder + "Berlin an");
+                        System.out.println("Du greifst mit" + team.teammitglieder + "Bremen an");
 
 
                             //Zwischenstützpunkt Story bei -30 Karmapunkten Anfang
@@ -505,7 +507,7 @@ public class Main {
                     else if (zwischenstützpunkt.equals("2")) {
 
                         game.showstrich();
-                        System.out.println("Du greifst mit" + team.teammitglieder + "Bremen an");
+                        System.out.println("Du greifst mit" + team.teammitglieder + "Berlin an");
                         game.showstrich();
 
 
@@ -1035,8 +1037,246 @@ public class Main {
                 }// Karmapunkte Abfrage ende 
 
                 // Ab Hier fängt die Planung der nächsten Mission statt.
+
+                  //Nächste Mission (Bremen / Berlin)
+
+                  game.showstrich();
+                  System.out.println("Du kannst dich zwischen zwei verschiedenen Zwischenstützpunkten entscheiden.");
+                  System.out.println("");
+                  System.out.println("1. Der Zwischenstützpunkt in Bremen.");
+                  System.out.println("Dieser Zwischenstützpunkt ist verantwortlich für die Nahrungsversorgung und ist schwerer anzugreifen, da er von vielen Wachen beschützt wird");
+                  System.out.println("");
+                  System.out.println ("2. Der Zwischenstützpunkt in Berlin.");
+                  System.out.println("Dieser Zwischenstützpunkt ist ein Drogenlabor, wo mit sie Geld machen. Er ist etwas leichter anzugreifen, da dort weniger Wachen stehen. \n " +
+                                     "Trotzdem ist ein sehr schwieriges Ziel.");
+
+
+                    int zsp = 0; //int zwischenstützpunkt für while schleife
+                    while (zsp < 1) {
+
+                        System.out.println("");
+                        System.out.println("Schreibe --1-- um dich für Bremen zu entscheiden.");
+                        System.out.println("Schreibe --2-- um dich für Berlin zu entscheiden.");
+                        game.showstrich();
+
+                        String zwischenstützpunkt = in.nextLine();
+
+                        //Abfrage der verschiedenen Möglichkeiten 
+
+                        // Story Bremen Anfang
+                        if (zwischenstützpunkt.equals("1")) { 
+                        Scanner enter = new Scanner(System.in);
+                        game.showstrich();
+                        System.out.println("Du greifst mit" + team.teammitglieder + "Bremen an");
+                        System.out.println("Dies wird ein Helikopterangriff");
+                        System.out.println("Was als nächstes passieren wird, wird jedoch nicht von dir, sondern von deinen Karmapunkten \nbzw. deiner Beziehung zu deinem Team bestimmt");
+                        enter.nextLine();
+                        game.showstrich();
+                        
+                        if (game.spieler1.karmapunkte == -50) {
+                            System.out.println("Dein Team wirft dich aus dem Helikopter und du stirbst");
+                            game.showstrich();
+                            System.out.println("Game Over");
+                            System.exit(0);
+                        }
+                        else if (game.spieler1.karmapunkte == -30) {
+                            System.out.println("Die Eroberung des Stützpunktes ist gut verlaufen \nIhr fahrt fort, mit der Planung eurer letzten Mission");
+                            game.showstrich();
+                            System.out.println("Dies war die Story für Delta 5");
+                            System.exit(0);
+                        }
+                        else if (game.spieler1.karmapunkte == -20) {
+                            System.out.println("Ihr geht mit viel Risiko in die Mission hinein");
+                            System.out.println("Schon bald nachdem ihr ankommt, gerät dein ganzes Team in Gefahr und wird gefangen genommen \n");
+                            System.out.println("Du kannst dich entscheiden: \n");
+                            System.out.println("Option 1: Du gehst volles Risiko und versuchst dein ganzes Team zu retten");
+                            System.out.println("Option 2: Du siehst, dass du drei deiner Leute einfach befreien kannst und befreist ausschließlich diese");
+                            int bremen = in.nextInt();
+                            if (bremen == 1) {
+                                System.out.println("Du hattest extremes Glück und konntest dein gesamtes Team befreien");
+                                System.out.println("Ihr fahrt fort mit der Einnahme des Stützpunktes und plant von dort aus eure letze Mission");
+                                game.spieler1.karmapunkte = game.spieler1.karmapunkte + 30;
+
+                            }
+                            else if (bremen == 2){
+                                System.out.println("Du schaffst es die drei Personen zu retten");
+                                System.out.println("Ihr übernehmt die Basis zu viert aber eure Kameraden überleben dies nicht");
+                                game.spieler1.karmapunkte = game.spieler1.karmapunkte + 10;
+                                System.out.println("");
+                            }
+
+                        }
+                        else if (game.spieler1.karmapunkte == 0) {
+                            System.out.println("Dein Team"
+                        }
+                        else if (game.spieler1.karmapunkte == 10) {
+                        }
+                        
+                        } //Story Bremen ende
+
+
+
+                        //Story Berlin Anfang
+                        else if (zwischenstützpunkt.equals("2")) {
+
+                            game.showstrich();
+                            System.out.println("Du hast dich  entschiden mit deinem Team, das Drogenlabor in Berlin anzugreifen \n" +
+                                                "Ihr fahrt mit gepanzerten Fahrzeugen dort hin.");
+                            game.showstrich();
+
+                            
+                                //Story Berlin bei -50 Karmapunkten anfang
+                                if (game.spieler1.karmapunkte == -50) {
+
+                                    game.showstrich();
+                                    System.out.println("Auf den hinweg bringt dich dein Team um.");
+                                    System.out.println("Du bist Gestorben"); 
+                                    System.exit(0);
+                                    game.showstrich();
+
+
+                                } //Story Berlin bei -50 Karmapunkten ende
+
+
+                                //Story Berlin bei -30 Karmapunkten anfang
+                                else if (game.spieler1.karmapunkte == -30) {
+                                    
+                                    
+                                } //Story Berlin bei -30 Karmapunkten ende 
+
+
+                                //Story Berlin bei -20 Karmapunkten anfang 
+                                else if (game.spieler1.karmapunkte ==-20) {
+                                   
+                                   game.showstrich();
+                                   System.out.println("Story Angriff");
+                                   game.showstrich();
+                                   System.out.println("Während des Angriffes ist ein Teammitglied in großer gefahr. \n" +
+                                                        "Er wird von mehren Personen in schach gehalten und kann von alleine nicht dort raus. \n"+ 
+                                                        "Wenn du ihn rettest, dann geht dabei sehr viel Munition verloren und auch die gepanzerten fahrzeuge"); 
+
+                                        //While loop für die Entscheidung ob du das Teammitglied rettest.
+                                        int b = 0; 
+                                        while (b < 1) {
+                                            
+                                            game.showstrich();
+                                            System.out.println("Schreibe --1-- um ihn zu retten");
+                                            System.out.println("Schreibe --2-- um ihn nicht zu retten");
+                                            game.showstrich();
+                                            
+                                            String rettung = in.nextLine();
+
+                                                if (rettung.equals("1")) {
+                                                   
+                                                    game.showstrich();
+                                                    System.out.println("Du hast dich entschieden ihn zu retten");
+                                                    game.showstrich();
+                                                    game.spieler1.karmapunkte = -10;
+
+                                                    zsp++;
+                                                }
+                                                 
+                                                else if (rettung.equals("2")) {
+                                                   
+                                                    game.showstrich();
+                                                    System.out.println("Du hast dich entschieden ihn nicht zu retten");
+                                                    game.showstrich();
+
+                                                    zsp++;
+                                                }
+                                                
+                                                else {
+                                                    game.showfalsecommand();
+                                                    continue;
+                                                }
+
+                                        }//while loop ende 
+
+                                }//Story Berlin bei -20 Karmapunkten ende 
+                                
+
+                                //Story Berlin bei 0 Karmapunkten anfang
+                                else if (game.spieler1.karmapunkte == 0) {
+                                    
+                                    game.showstrich();
+                                    System.out.println("");
+                                    game.showstrich();
+                                    
+                                    game.spieler1.karmapunkte = 20;
+                                    zsp++;
+                                }//Story Berlin bei 0 Karmapunkten ende
+
+                                
+                                //Story Berlin bei 10 Karmapunkten anfang
+                                else if (game.spieler1.karmapunkte == 10) {
+
+                                    game.showstrich();
+                                    System.out.println("Deine geliebte gerät ihn aussichtslose schwierigkeiten \n" +
+                                                        "Ohne irgendeine hilfe, wird sie aus der Situation nicht herrauskommen und sterben.\n"+
+                                                        "Sei dir bewusst, dass es ein sehr hohes risiko gibt, dass du stirbst wenn du sie rettest.");
+                                    game.showstrich();
+
+                                    
+                                        //while loop
+                                        int b = 0;
+                                        while (b < 1) {
+                                            
+                                            System.out.println("Schreibe --1-- um ihr zu helfen");
+                                            System.out.println("Schreibe --2-- um ihr nicht zu helfen");
+
+                                                String rettung = in.nextLine();
+                                                
+                                                //Entscheidung sie zu retten
+                                                if (rettung.equals("1")) {
+
+                                                    game.showstrich();
+                                                    System.out.println("Du versuchtst sie zu retten. \n" +
+                                                                        "Du schaffst es sie in Sicherheit zu bringen aber dann wird dir in den Rücken geschossen.");
+                                                    game.showstrich();
+                                                    System.out.println("Du bist Gestorben");
+                                                    game.showstrich();
+                                                    System.exit(0);
+                                                }
+
+                                                else if (rettung.equals("2")) {
+
+                                                }
+
+                                                else {
+                                                    game.showfalsecommand();
+                                                    continue;
+                                                }
+                                                
+                                        }//while loop ende
+
+
+                                }//Story Berlin bei 10 Karmapunkten ende
+                                
+
+
+                        }//Story Berlin ende
+                        
+                        else {
+                            game.showfalsecommand();
+                        }//Bei falscher eingabe
+
+                    }//Zwischenstützpunkt story ende 
+
+
+
+
+
+
+
+
+
                 
             }// story Ende Delta 5
+
+
+
+
+
 
             else {
                 System.out.println("Du hast kein Team gewählt."); 
