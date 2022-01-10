@@ -692,7 +692,14 @@ public class Main {
                 }
                 
                 game.showstrich();  
-                System.out.println("Diskussion was man angreift"); // Diskussion mit dem Team, was man angreift 
+                System.out.println("Jens:"+ "\t" + "Wir müssen bei der nächsten Mission gut planen, was wir angreifen um einen strategischen Vorteil zu erlangen. \n"+
+                                   "Klaus:"+ "\t"+ "Wir wäre es denn mit der Satellitenbasis in Leipzig? \n" + 
+                                   "Charlotte:"+ "\t" + "Sie ist zwat sehr gut bewacht, aber damit schädigen wir ihr Kommunikationssystem.\n" +
+                                    game.spieler1.name + ":\t" + "Ich finde es besser wenn wir nicht so viel Risiko eingehen und das Munitionslager in Osnabrück angreifen \n" +
+                                    "Jens:" + "\t Ja, aber damit haben wir nicht so einen strategischen Vorteil. \n" +
+                                    "Tina:" + "\t Ich bin auch der Meinung von" + game.spieler1.name + "\n" +
+                                    game.spieler1.name + ":\t" + "Dort "
+                                    ); // Diskussion mit dem Team, was man angreift 
                 game.showstrich();  
 
                 // ao = Angriffsortabfrage  für  Delta 5   
@@ -1103,13 +1110,33 @@ public class Main {
                                 System.out.println("Ihr übernehmt die Basis zu viert aber eure Kameraden überleben dies nicht");
                                 game.spieler1.karmapunkte = game.spieler1.karmapunkte + 10;
                                 System.out.println("");
+                                System.exit(0);
                             }
 
                         }
                         else if (game.spieler1.karmapunkte == 0) {
-                            System.out.println("Dein Team"
+                            System.out.println("Die Übernahme verläuft reibungslos, jedoch wirst du von einem Soldaten, der sich versteckt hat aus einem Hinterhalt überfallen");
+                            System.out.println("Da dein Team dir jedoch vertraut, hilft es dir und erledigt den Feind");
+                            game.showstrich();
+                            System.out.println("Damit wurde der Stützpunkt in Bremen erfolgreich übernommen");
                         }
                         else if (game.spieler1.karmapunkte == 10) {
+                            System.out.println("Bei der Übernahme wird dein Teamleiter gefangen genommen \nWenn du ihn rettest könnte das gefährlich werden");
+                            game.showstrich();
+                            System.out.println("Option 1: Du rettest ihn nicht und ihr fahrt mit der Übernahme fort ");
+                            System.out.println("Option 2: Du rettest ihn und brichst die Operation kurzzeitig ab");
+                            int bremen10 = in.nextInt();
+                            if (bremen10 == 1) {
+                               System.out.println("Dein Teamleiter stirbt, aber die Mission ist erfolgreich");
+                               System.out.println("Trotz Allem denkt dein Team, dass du dich richtig entschieden hast");
+                                System.exit(0);
+
+                            }
+                            else if (bremen10 == 2){
+                                
+                                System.exit(0);
+                            }
+                            
                         }
                         
                         } //Story Bremen ende
@@ -1240,6 +1267,11 @@ public class Main {
 
                                                 else if (rettung.equals("2")) {
 
+                                                    game.showstrich();
+                                                    System.out.println("Du ziehtst deine Mission vor und rettest sie nicht.");
+                                                    game.showstrich();
+                                                    
+                                                    zsp++;
                                                 }
 
                                                 else {
@@ -1261,6 +1293,8 @@ public class Main {
                         }//Bei falscher eingabe
 
                     }//Zwischenstützpunkt story ende 
+
+                    //letzte Mission anfang 
 
 
 
