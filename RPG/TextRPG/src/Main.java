@@ -344,31 +344,78 @@ public class Main {
                     System.out.println("Anastasia: Ich sehe das genauso wie Eugene, Leipzig wäre besser gewesen.");
                     System.out.println("Riger: Regt euch ab, wir haben uns jetzt so entschieden und das wars. \nDann hat es uns halt nicht so viel gebracht, wenigstens leben wir alle noch");
                     game.showstrich();
-                    System.out.println("Das war die Story für Bravo 6");
+                    
                 }
                 
-                else if (game.spieler1.karmapunkte == -10) {
-                    game.showstrich();
+                   else if (game.spieler1.karmapunkte == -10) {
+                    int karma1 = 0;
+                    while (karma1 < 1){
+                           game.showstrich();
                     System.out.println("Du redest mit dem Truppleiter, dieser ist jedoch sehr sauer auf dich und rastet aus \nDas Gespräch eskaliert und du musst eine Entscheidung treffen:");
                     System.out.println("\nOption 1: Du verteidigst dich (mit Worten)");
                     System.out.println("\nOption 2: Du ignorierst ihn");
                     System.out.println("\nOption 3: Du bringst ihn um");
                     String schuldentscheidung = in.nextLine();
                     if (schuldentscheidung.equals("1")) {
-                        
+                        game.showstrich();
+                        System.out.println("Du entscheidest dich dazu, dich zu verteidigen \nNach einiger Zeit beruhigt sich dein Teamleiter");
+                        System.out.println("Er sieht ein, dass das jetzt eh nichts mehr an der Lage ändert und entschuldigt sich für seinen Ausraster.");
+                        System.out.println("Dein Team respektiert dich für deine Vorgehensweise");
+                        game.spieler1.karmapunkte = game.spieler1.karmapunkte + 10;
+                        game.showstrich();
+                        System.out.println("Deine Karmapunkte:" + game.spieler1.karmapunkte);
+                        game.showstrich();
+                        karma1 = 1;
                     }
                     if (schuldentscheidung.equals("2")) {
+                        System.out.println("Du nimmst ihn nicht ernst und gehst weg, ohne ihm Beachtung zu schenken \nDas macht ihn jedoch nur noch saurer");
+                        System.out.println("Dein Verhalten regt ihn so sehr auf, dass er sich nicht zusammenreißen kann \nEr bringt dich um...");
+                        game.showstrich();
+                        System.out.println("GAME OVER");
+                        karma1 = 1;
+                        System.exit(0);
                         
                     }
                     if (schuldentscheidung.equals("3")) {
+                        System.out.println("Weil du die unnötigen Anschuldigungen von deinem Teamleiter nicht mehr ertragen kannst \nrastest du aus und bringst ihn um");
+                        System.out.println("Dieses Verhalten schockiert dein Team \nSie verlieren jeglichen Respekt vor dir");
+                        game.spieler1.karmapunkte = game.spieler1.karmapunkte - 20;
+                        game.showstrich();
+                        System.out.println("Deine Karmapunkte:" + game.spieler1.karmapunkte);
+                        game.showstrich();
+                        karma1 = 1;
                         
                     }
-
-                }
-
+                    else {
+                        game.showfalsecommand();
+                    }
+                    }
+                   }
+                    
+                    
                 else if (game.spieler1.karmapunkte == -20 ) {
-                }
-
+                    System.out.println("Da Vieles schief gelaufen ist, hinterfragt dein Team deine Entscheidungen \nSie wollen den Grund dafür wissen, warum du dich für Leipzig entschieden hast");
+                    game.showstrich();
+                    System.out.println("Option 1: Du antwortest ihnen nicht");
+                    System.out.println("Option 2: Du legst ihnen deine Gründe dar");
+                    game.showstrich();
+                    String antwort = in.nextLine();
+                    if (antwort.equals("1")) {
+                        System.out.println("Da du ihnen nicht geantwortet hast sind sie sauer auf dich \nSie wollen unbedingt Antworten, immerhin ist einer von euch gestorben");
+                        System.out.println("Da sie alle an dir zweifeln, wirst du immer mehr aus deinem Team ausgeschlossen");
+                        game.spieler1.karmapunkte = game.spieler1.karmapunkte - 10;
+                        game.showstrich();
+                        System.out.println("Deine Karmapunkte:" + game.spieler1.karmapunkte);
+                        game.showstrich();
+                    }
+                    if (antwort.equals("2")) {
+                        System.out.println("Deine Teamkameraden werfen dir vor, dass du an dem Tod eures Mannes Schuld bist \nDu sagst ihnen, dass du nicht wolltest, dass es so weit kommt. \nDes Weiteren entschuldigst du dich dafür, wie du dich entschieden hat und zeigst Reue");
+                        System.out.println("Du begründest dein Verhalten damit, dass du in Osnabrück keine Aussichten auf Erfolg gesehen hast \nDeine Teammitglieder verstehen dich und verzeihen dir");
+                        game.spieler1.karmapunkte = game.spieler1.karmapunkte + 10;
+                        game.showstrich();
+                        System.out.println("Deine Karmapunkte:" + game.spieler1.karmapunkte);
+                        game.showstrich();
+                    }
               
                 
 
@@ -698,7 +745,8 @@ public class Main {
                                     game.spieler1.name + ":\t" + "Ich finde es besser wenn wir nicht so viel Risiko eingehen und das Munitionslager in Osnabrück angreifen \n" +
                                     "Jens:" + "\t Ja, aber damit haben wir nicht so einen strategischen Vorteil. \n" +
                                     "Tina:" + "\t Ich bin auch der Meinung von" + game.spieler1.name + "\n" +
-                                    game.spieler1.name + ":\t" + "Dort "
+                                    game.spieler1.name + ":\t" + "Dort haben wir einer geringere chance zu verlieren." +
+                                    "Jens:" + "\t Wir benötigen diesen Vorteil! Sonst wird das nie was."
                                     ); // Diskussion mit dem Team, was man angreift 
                 game.showstrich();  
 
@@ -708,10 +756,10 @@ public class Main {
 
                     game.showstrich(); 
                     System.out.println("Du kannst dich nun zwischen 2 verschiedenen Orten entscheiden, die du angreifen möchtest.");
-                    System.out.println("Die erste möglichkeit währe die Satellittenbasis nähe Leipzig.");
+                    System.out.println("Die erste möglichkeit währe die Satellittenbasis nähe Leipzig, welches schwerer, dafür strategisch wichtig wäre einzunehmen.");
                     System.out.println("\t" + "Schreibe --1-- um diesen Angriff zu starten.");   
                     System.out.println("");  
-                    System.out.println("Die zweite Möglichkeit ist das Munitionslager nähe Osnabrück");
+                    System.out.println("Die zweite Möglichkeit ist das Munitionslager nähe Osnabrück, welches leichter, dafür weniger strategisch wichtig wäre einzunehmen.");
                     System.out.println("\t"+ "Schreibe --2-- um diesen Angriff zu starten.");        
                     game.showstrich(); 
 
@@ -726,6 +774,20 @@ public class Main {
                         System.out.println("Du hast dich entschieden das Satelitenbasis in der nähe von Leipzig anzugreifen.");
                         System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte); 
                         game.showstrich(); 
+                        System.out.println("Story: \n" + "\n" +
+                                            "Ihr seit auf den Weg die Satellitenbasis anzugreifen. während des Angriffes bemerkst du und ein paar Teammitglieder,\n" +
+                                            "dass dein Truppführer in schwierigkeiten gerät.");
+                        System.out.println(game.spieler1.name + "\t" + ": Dort hinter der Ecke sind Gegner! Ich gib euch rückendeckung! \n" + 
+                                            "Petr:" + "\t" + "Geht es dir gut Jens? \n" +
+                                            "Jens:" + "\t" + "Ja nur ich stecke hier in ein paar kleinen Schwierigkeiten. Diese Typen halten mich hier in Schach. \n"+
+                                            "Du siehst dich um und hörst aus verschieden Richtungen Schüsse. Daraufhin wirftst du dich auf den Boden.\n" +
+                                            "In der Zwischenzeit haben sich deine Teammitglieder zu Jens vorgekämpft.\n" + 
+                                             game.spieler1.name + ":\t" + "Ich komme auch zu euch um euch zu helfen!\n" +
+                                            "Als ihr versucht euren Truppleiter aus der Situation herauszu bekommen, wird ihm in den Rücken geschossen." +
+                                            "Jens:" + "\t" + "Scheiße! Ich bin verwundet." + 
+                                            "Vlad:"  + "\t" + "Komm wir bringen dich heraus" +
+                                            "Du und dein Team schafft es die restlichen Gegner in der Satellitenbasis auszuschalten. Der Truppleiter ist zwar Kampfunfähig, \n" +
+                                            "aber er ist sonst Ok.");
                         ao++;
                     }
                     // Falls eingabe 2: (Osnabrück)
@@ -736,6 +798,14 @@ public class Main {
                         System.out.println("Du hast dich entschieden das Munitionslager in der nähe von Osnabrück anzugreifen."); 
                         System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte);
                         game.showstrich(); 
+                        System.out.println("Als ihr beim Munitonslager angekommen seit bemerkt ihr, dass dieses nicht sehr gut bewacht ist\n"+
+                                            "Achmed: \t Hier ist ja nichts los. Vallah das wird einfach.\n" +
+                                            "Charlotte: \t Ja komm wir legen die um und dann habe wir das einfach eingenommen\n" +
+                                            game.spieler1.name + ": \t Ich habs euch ja gesagt, dass das einfach wird.\n"+
+                                            "Jens: \t Ja aber dafür haben wir einen weniger strategischen Vorteil.\n"+
+                                            "Dein Team schaltet alle Gegner aus und übernehmen das ganze Munitionslager.\n"+ 
+                                            "Tina: \t Boss wir sind echt froh, dass wir doch hier hingegangen sind. Wer weiß was alles hätte in Leipzig passieren können.\n" +
+                                            "Du und dein sind sehr Froh und ihr feiert den restlichen Abend."    );
                         ao++;
                     }
 
@@ -750,7 +820,10 @@ public class Main {
                 if (game.spieler1.karmapunkte == -10) {
 
                     game.showstrich(); 
-                    System.out.println("Das Team ist sauer auf dich.");
+                    System.out.println("Das Team ist sauer auf dich, weil sie lieber Osnabrück angreifen wollten.\n" + 
+                                        "Achmed:  \t Schau dir das doch mal an, was du getan hast. Wegen deiner Entscheidung gehts es Jens richtig schlecht.\n Warum macht man so ne Scheiße!\n" +
+                                        "Dimitri: \t Ist ernsthaft so.");
+                    game.showstrich();
                     System.out.println("Du kannst dich nun entscheiden wie du handelst.");  
                     System.out.println(""); 
                     game.showstrich(); 
@@ -772,7 +845,11 @@ public class Main {
 
                             game.spieler1.karmapunkte = -20;
                             game.showstrich(); 
-                            System.out.println("du redest dich heraus. Team wird sauer"); 
+                            System.out.println(
+                                game.spieler1.name + ":\t Es ist doch nicht meine Schuld, wenn Jens selber hier hin wollte. \n Dann muss er auch mal die Konsequenzen daraus ziehen." +
+                                "Hanz:  \t Ja, aber du bist die Person die die Entscheidungen trifft.\n" +
+                                game.spieler1.name + ":\t Es ist aber nicht meine Schul!\n"
+                            );
                             game.showstrich(); 
                             break;
                         }
@@ -781,8 +858,13 @@ public class Main {
 
                             game.spieler1.karmapunkte = 0;
                             game.showstrich(); 
-                            System.out.println("du wirkst deeskalierend"); 
-                            game.showstrich(); 
+                            System.out.println(
+                                game.spieler1.name + ":\t Ok Leute hört mal zu. Ich wusste von vornerein, dass es hier schwieriger sein wird.\n Deswegen nimm ich die Konsequenzen auf mich.\n" +
+                                "Tina: \t Mehr als dich Entschuldigen kannst du ja nicht.\n" +
+                                "Klaus: \t Es ist trotzdem sehr gut, dass du dich Entschuldigst. So bleibt die Teammoral bestehen.\n"
+                                    
+                            ); 
+                            game.showstrich();
                             break;
                         }
 
@@ -809,7 +891,9 @@ public class Main {
                     if (game.spieler1.karmapunkte == -20) {
 
                         game.showstrich(); 
-                        System.out.println("Achmet geht mit einem Messer auf dich los.");
+                        System.out.println("Achmed geht mit einem Messer auf dich los." + 
+                            "Achmed: \t Wegen dir ist alles schlecht gelaufen! Du tauchst hier auf und tust auf Boss! \n Was denkst du eigentlich wer du bist!"
+                        );
                         System.out.println(""); 
 
                         int aa = 0; // int aa = achmetangriff
@@ -827,7 +911,11 @@ public class Main {
                             // Wenn du dich verteidigst
                             if (achmetentscheidung.equals("1")) {
 
-                                System.out.println("Du verteidigst dich");
+                                System.out.println(
+                                    game.spieler1.name + ":\t Achmed beruhig dich. Ich hab dir nichts getan.\n" +
+                                    "Du versucht ihn sein Messer aus der Hand zu schlagen. \n Dir gelingt dieses und du bringst ihn zu Boden.\n Nach ein Paar Minuteb hat er sich wieder beruhigt.\n" +
+                                    "Achmed: \t Ich hätte das nicht tun sollen."
+                                );
                                 game.spieler1.karmapunkte = -10;
                                 break;
                             }
@@ -835,14 +923,20 @@ public class Main {
                             // Wenn du nichts tust
                             else if (achmetentscheidung.equals("2")) {
 
-                                System.out.print("Du bist Gestorben");
+                                System.out.print("Achmed greift dich an und trifft dich mit dem Messer.\n Dein Team kann dir nicht mehr helfen." +
+                                    "Game over"
+                                );
                                 System.exit(0);
                             }
 
                             // Wenn du Ihn umnbringst
                             else if (achmetentscheidung.equals("3")) {
 
-                                System.out.println("Du hast Achmet umgebracht");
+                                System.out.println("Als Achmed mit dem Messer auf dich losgeht zückst du deine Waffe.\n"+
+                                    "Vlad: Nein!\n" +
+                                    "Du betätigst den Abdruck und ein lauter Knall ertönt.\n"+
+                                    "Achmed fällt auf den Boden und deine Teammitglieder "
+                                );
                                 game.spieler1.karmapunkte = -40; 
                                 break;
                             }
@@ -1072,6 +1166,7 @@ public class Main {
 
                         // Story Bremen Anfang
                         if (zwischenstützpunkt.equals("1")) { 
+                        zsp = 1;
                         Scanner enter = new Scanner(System.in);
                         game.showstrich();
                         System.out.println("Du greifst mit" + team.teammitglieder + "Bremen an");
@@ -1089,29 +1184,40 @@ public class Main {
                         else if (game.spieler1.karmapunkte == -30) {
                             System.out.println("Die Eroberung des Stützpunktes ist gut verlaufen \nIhr fahrt fort, mit der Planung eurer letzten Mission");
                             game.showstrich();
-                            System.out.println("Dies war die Story für Delta 5");
-                            System.exit(0);
+                            
                         }
                         else if (game.spieler1.karmapunkte == -20) {
                             System.out.println("Ihr geht mit viel Risiko in die Mission hinein");
                             System.out.println("Schon bald nachdem ihr ankommt, gerät dein ganzes Team in Gefahr und wird gefangen genommen \n");
                             System.out.println("Du kannst dich entscheiden: \n");
-                            System.out.println("Option 1: Du gehst volles Risiko und versuchst dein ganzes Team zu retten");
+                            int bremen20 = 0;
+                            while (bremen20 < 1) {
+                                System.out.println("Option 1: Du gehst volles Risiko und versuchst dein ganzes Team zu retten");
                             System.out.println("Option 2: Du siehst, dass du drei deiner Leute einfach befreien kannst und befreist ausschließlich diese");
                             int bremen = in.nextInt();
                             if (bremen == 1) {
+                                
                                 System.out.println("Du hattest extremes Glück und konntest dein gesamtes Team befreien");
                                 System.out.println("Ihr fahrt fort mit der Einnahme des Stützpunktes und plant von dort aus eure letze Mission");
                                 game.spieler1.karmapunkte = game.spieler1.karmapunkte + 30;
+                                bremen20 = 1;
+                                
 
                             }
                             else if (bremen == 2){
+                                
                                 System.out.println("Du schaffst es die drei Personen zu retten");
                                 System.out.println("Ihr übernehmt die Basis zu viert aber eure Kameraden überleben dies nicht");
                                 game.spieler1.karmapunkte = game.spieler1.karmapunkte + 10;
-                                System.out.println("");
-                                System.exit(0);
+                                System.out.println("Trotz dessen fahrt ihr fort, indem ihr eure letzte Mission plant");
+                                bremen20 = 1;
+                                
+                                }
+                            else {
+                                game.showfalsecommand();
                             }
+                            }
+                            
 
                         }
                         else if (game.spieler1.karmapunkte == 0) {
@@ -1121,7 +1227,9 @@ public class Main {
                             System.out.println("Damit wurde der Stützpunkt in Bremen erfolgreich übernommen");
                         }
                         else if (game.spieler1.karmapunkte == 10) {
-                            System.out.println("Bei der Übernahme wird dein Teamleiter gefangen genommen \nWenn du ihn rettest könnte das gefährlich werden");
+                            int bremengut = 0;
+                           while (bremengut < 1) {
+                                System.out.println("Bei der Übernahme wird dein Teamleiter gefangen genommen \nWenn du ihn rettest könnte das gefährlich werden");
                             game.showstrich();
                             System.out.println("Option 1: Du rettest ihn nicht und ihr fahrt mit der Übernahme fort ");
                             System.out.println("Option 2: Du rettest ihn und brichst die Operation kurzzeitig ab");
@@ -1129,13 +1237,26 @@ public class Main {
                             if (bremen10 == 1) {
                                System.out.println("Dein Teamleiter stirbt, aber die Mission ist erfolgreich");
                                System.out.println("Trotz Allem denkt dein Team, dass du dich richtig entschieden hast");
-                                System.exit(0);
+                              bremengut = 1;
+                              
+                              game.showstrich();
 
                             }
                             else if (bremen10 == 2){
+                                System.out.println("Du und dein Team versuchen den Teamleiter zu retten \nzu erst verläuft alles wie geplant, doch dann macht einer deiner Kameraden einen essenziellen Fehler");
+                                System.out.println("Durch diesen Fehler passiert es, dass der Feind auf euch aufmerksam wird. \nDu musst unter dem hohen Druck eine Entscheidung treffen und entscheidest dich dazu, dass dein Team die Mission fortsetzen soll");
+                                System.out.println("Dadurch seid ihr jedoch gezwungen euch zu opfern. \nIhr schafft es den Teamleiter zu retten, aber du und drei deiner Kollegen sterben");
+                                game.showstrich();
+                                System.out.println("Game Over");
+                                bremengut = 1;
                                 
                                 System.exit(0);
                             }
+                            else {
+                                game.showfalsecommand();
+                            }
+                           }
+                            
                             
                         }
                         
