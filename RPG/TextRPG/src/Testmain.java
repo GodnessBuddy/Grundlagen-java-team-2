@@ -931,9 +931,74 @@ public class Testmain {
                     }
 
                 }// Karmapunkte Abfrage ende 
-
-                // Ab Hier fängt die Planung der nächsten Mission statt.
                 
+                game.showstrich(); 
+                System.out.println("Du kannst dich nun zwischen 2 verschiedenen Taktiken entscheiden, wie du angreifen möchtest.");
+                System.out.println("");
+                System.out.println("Die erste Taktik wäre vom Hafen aus anzugreifen.");
+                System.out.println("\t" + "Schreibe --1-- um diese Taktik zu wählen.");   
+                System.out.println("");  
+                System.out.println("Die zweite Taktik wäre vom Flughafen aus anzugreifen");
+                System.out.println("\t"+ "Schreibe --2-- um diese Taktik zu wählen.");        
+                game.showstrich(); 
+
+                // Hauptangriff vom Hafen aus
+                // Karmaabfrage
+                if(game.spieler1.karmapunkte == -20) { //Karmapunkte sind -20
+
+                    int ae = 0;  // int für Loop für Anführer Exekution
+
+                    while (ae < 0) {
+                        game.showstrich();
+                        System.out.println("Storytelling");
+                        System.out.println("Du hast die Wahl ob ihr den Anführer exekutiert, oder ob ihr ihn verschohnt.");
+                        System.out.println("Schreibe --leben-- wenn du ihn verschonen willst.");
+                        System.out.println("");
+                        System.out.println("Schreibe --tot-- wenn du ihn exekutieren willst");
+                        game.showstrich();
+                    
+                        String execution = in.nextLine();
+
+                        if (execution.equals("leben")){
+
+                            System.out.println("");
+                            ae++;
+                        }
+
+                        else if (execution.equals("tot")){
+                            System.out.println("");
+                            ae++;
+                        }
+
+                        else {
+                            game.showfalsecommand();
+                            continue;
+                        }
+
+                    }
+
+                    
+                }
+                
+                else if(game.spieler1.karmapunkte == +10) { //Karmapunkte sind -10
+
+
+                }
+            
+                else if(game.spieler1.karmapunkte == -10) { //Karmapunkte sind -10
+
+
+                }
+                
+                else if(game.spieler1.karmapunkte == +20) { //Karmapunkte sind +20
+
+
+                }
+
+                else if(game.spieler1.karmapunkte == 0) { //Karmapunkte sind 0
+
+
+                }
             }// story Ende Delta 5
 
             else {
