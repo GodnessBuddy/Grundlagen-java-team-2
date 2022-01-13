@@ -75,7 +75,7 @@ public class Main {
             int e = 0;
 
             // Einführung
-            while(e <1000) {
+            while(e <1) {
                 
                 game.showstrich();
                 System.out.println("Dein Name ist:" + " " +  game.spieler1.name);
@@ -90,22 +90,19 @@ public class Main {
 
                     // Fehler der noch behoben werden muss (weiter muss 2 mal eingabe Taste)
                     if (input.equals("weiter")) {
-                        break;  
+                        e++;  
 
                     }else if (input.equals("hilfe")) {
-                        e++;
                         continue;
                     
 
                     } else if (input.equals("karmapunkte")) {
                         game.spieler1.showkarmapunkte();
-                        e++;
                         continue;
                     } 
 
                     else {
                         game.showfalsecommand();
-                        e++;
                         continue;  
                     }
                  
@@ -416,6 +413,7 @@ public class Main {
                         System.out.println("Deine Karmapunkte:" + game.spieler1.karmapunkte);
                         game.showstrich();
                     }
+                }
               
                 
 
@@ -700,9 +698,9 @@ public class Main {
                     game.showstrich();
 
                 // int m für den loop für die andvantages usw
-                int m = 0;
+                int ad = 0;
 
-                while(m < 1){
+                while(ad < 1){
 
                     game.showstrich();
                     System.out.println("Zuerst lernst du das team kennen, falls dieses dich nicht interessiert, dann schreibe --weiter--");
@@ -730,7 +728,7 @@ public class Main {
                     }
     
                     else if (inputteam.equals("weiter")){
-                        m++;  
+                        ad++;  
                     }
                     else {
                         game.showfalsecommand();
@@ -751,11 +749,12 @@ public class Main {
                 game.showstrich();  
 
                 // ao = Angriffsortabfrage  für  Delta 5   
-                int ao = 0;
-                while (ao < 1) {
+                int aoa = 0;
+                while (aoa < 1) {
 
                     game.showstrich(); 
                     System.out.println("Du kannst dich nun zwischen 2 verschiedenen Orten entscheiden, die du angreifen möchtest.");
+                    game.showstrich();
                     System.out.println("Die erste möglichkeit währe die Satellittenbasis nähe Leipzig, welches schwerer, dafür strategisch wichtig wäre einzunehmen.");
                     System.out.println("\t" + "Schreibe --1-- um diesen Angriff zu starten.");   
                     System.out.println("");  
@@ -788,7 +787,7 @@ public class Main {
                                             "Vlad:"  + "\t" + "Komm wir bringen dich heraus" +
                                             "Du und dein Team schafft es die restlichen Gegner in der Satellitenbasis auszuschalten. Der Truppleiter ist zwar Kampfunfähig, \n" +
                                             "aber er ist sonst Ok.");
-                        ao++;
+                        aoa++;
                     }
                     // Falls eingabe 2: (Osnabrück)
                     else if (angriffsort.equals("2")) {
@@ -806,7 +805,7 @@ public class Main {
                                             "Dein Team schaltet alle Gegner aus und übernehmen das ganze Munitionslager.\n"+ 
                                             "Tina: \t Boss wir sind echt froh, dass wir doch hier hingegangen sind. Wer weiß was alles hätte in Leipzig passieren können.\n" +
                                             "Du und dein sind sehr Froh und ihr feiert den restlichen Abend."    );
-                        ao++;
+                        aoa++;
                     }
 
                     else {
@@ -1190,21 +1189,23 @@ public class Main {
                             System.out.println("Ihr geht mit viel Risiko in die Mission hinein");
                             System.out.println("Schon bald nachdem ihr ankommt, gerät dein ganzes Team in Gefahr und wird gefangen genommen \n");
                             System.out.println("Du kannst dich entscheiden: \n");
+
                             int bremen20 = 0;
                             while (bremen20 < 1) {
                                 System.out.println("Option 1: Du gehst volles Risiko und versuchst dein ganzes Team zu retten");
-                            System.out.println("Option 2: Du siehst, dass du drei deiner Leute einfach befreien kannst und befreist ausschließlich diese");
-                            int bremen = in.nextInt();
-                            if (bremen == 1) {
+                                System.out.println("Option 2: Du siehst, dass du drei deiner Leute einfach befreien kannst und befreist ausschließlich diese");
+
+                                String bremen = in.nextLine();
+                                if (bremen.equals("1")) {
                                 
-                                System.out.println("Du hattest extremes Glück und konntest dein gesamtes Team befreien");
-                                System.out.println("Ihr fahrt fort mit der Einnahme des Stützpunktes und plant von dort aus eure letze Mission");
-                                game.spieler1.karmapunkte = game.spieler1.karmapunkte + 30;
-                                bremen20 = 1;
+                                    System.out.println("Du hattest extremes Glück und konntest dein gesamtes Team befreien");
+                                    System.out.println("Ihr fahrt fort mit der Einnahme des Stützpunktes und plant von dort aus eure letze Mission");
+                                    game.spieler1.karmapunkte = game.spieler1.karmapunkte + 30;
+                                    bremen20 = 1;
                                 
 
-                            }
-                            else if (bremen == 2){
+                                }
+                                else if (bremen.equals("2")){
                                 
                                 System.out.println("Du schaffst es die drei Personen zu retten");
                                 System.out.println("Ihr übernehmt die Basis zu viert aber eure Kameraden überleben dies nicht");
@@ -1213,9 +1214,9 @@ public class Main {
                                 bremen20 = 1;
                                 
                                 }
-                            else {
-                                game.showfalsecommand();
-                            }
+                                else {
+                                    game.showfalsecommand();
+                                }
                             }
                             
 
@@ -1227,35 +1228,40 @@ public class Main {
                             System.out.println("Damit wurde der Stützpunkt in Bremen erfolgreich übernommen");
                         }
                         else if (game.spieler1.karmapunkte == 10) {
-                            int bremengut = 0;
-                           while (bremengut < 1) {
-                                System.out.println("Bei der Übernahme wird dein Teamleiter gefangen genommen \nWenn du ihn rettest könnte das gefährlich werden");
+
+                        
+
+                            System.out.println("Bei der Übernahme wird dein Teamleiter gefangen genommen \nWenn du ihn rettest könnte das gefährlich werden");
                             game.showstrich();
+
+                            int bremengut = 0;
+                            while (bremengut < 1) {//loop
                             System.out.println("Option 1: Du rettest ihn nicht und ihr fahrt mit der Übernahme fort ");
                             System.out.println("Option 2: Du rettest ihn und brichst die Operation kurzzeitig ab");
-                            int bremen10 = in.nextInt();
-                            if (bremen10 == 1) {
-                               System.out.println("Dein Teamleiter stirbt, aber die Mission ist erfolgreich");
-                               System.out.println("Trotz Allem denkt dein Team, dass du dich richtig entschieden hast");
-                              bremengut = 1;
-                              
-                              game.showstrich();
 
-                            }
-                            else if (bremen10 == 2){
-                                System.out.println("Du und dein Team versuchen den Teamleiter zu retten \nzu erst verläuft alles wie geplant, doch dann macht einer deiner Kameraden einen essenziellen Fehler");
-                                System.out.println("Durch diesen Fehler passiert es, dass der Feind auf euch aufmerksam wird. \nDu musst unter dem hohen Druck eine Entscheidung treffen und entscheidest dich dazu, dass dein Team die Mission fortsetzen soll");
-                                System.out.println("Dadurch seid ihr jedoch gezwungen euch zu opfern. \nIhr schafft es den Teamleiter zu retten, aber du und drei deiner Kollegen sterben");
+                            int bremen10 = in.nextInt();
+                                if (bremen10 == 1) {
+                                    System.out.println("Dein Teamleiter stirbt, aber die Mission ist erfolgreich");
+                                    System.out.println("Trotz Allem denkt dein Team, dass du dich richtig entschieden hast");
+                                    bremengut = 1;
+                              
                                 game.showstrich();
-                                System.out.println("Game Over");
-                                bremengut = 1;
+
+                                }
+                                else if (bremen10 == 2){
+                                    System.out.println("Du und dein Team versuchen den Teamleiter zu retten \nzu erst verläuft alles wie geplant, doch dann macht einer deiner Kameraden einen essenziellen Fehler");
+                                    System.out.println("Durch diesen Fehler passiert es, dass der Feind auf euch aufmerksam wird. \nDu musst unter dem hohen Druck eine Entscheidung treffen und entscheidest dich dazu, dass dein Team die Mission fortsetzen soll");
+                                    System.out.println("Dadurch seid ihr jedoch gezwungen euch zu opfern. \nIhr schafft es den Teamleiter zu retten, aber du und drei deiner Kollegen sterben");
+                                    game.showstrich();
+                                    System.out.println("Game Over");
+                                    bremengut = 1;
                                 
-                                System.exit(0);
-                            }
-                            else {
-                                game.showfalsecommand();
-                            }
-                           }
+                                    System.exit(0);
+                                }
+                                else {
+                                    game.showfalsecommand();
+                                }
+                            }//While loop ende 
                             
                             
                         }
@@ -1441,4 +1447,5 @@ public class Main {
         //Scanner schließen warning
         in.close();
     } //schluss der Main Methode
-} 
+}
+
