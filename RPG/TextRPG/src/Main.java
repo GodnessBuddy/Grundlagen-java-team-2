@@ -114,7 +114,8 @@ public class Main {
         // Einleitung in das Spiel
             game.showstrich();
             System.out.println("Einleitung");
-            System.out.println("Es ist 2088 in Deutschland. Deutschland ist ein Land in dem nur Krieg herscht."); //geht noch weiter
+            System.out.println("Es ist 2088 in Deutschland. Deutschland ist ein Land in dem nur Krieg herscht.\n"+
+                                "Frau + 2 Söhne erschossen von Soldaten."); //geht noch weiter
             game.showstrich();
 
             System.out.println("Du kannst dich nun zwischen 2 Teams entscheiden");
@@ -742,9 +743,10 @@ public class Main {
                                    "Charlotte:"+ "\t" + "Sie ist zwat sehr gut bewacht, aber damit schädigen wir ihr Kommunikationssystem.\n" +
                                     game.spieler1.name + ":\t" + "Ich finde es besser wenn wir nicht so viel Risiko eingehen und das Munitionslager in Osnabrück angreifen \n" +
                                     "Jens:" + "\t Ja, aber damit haben wir nicht so einen strategischen Vorteil. \n" +
-                                    "Tina:" + "\t Ich bin auch der Meinung von" + game.spieler1.name + "\n" +
-                                    game.spieler1.name + ":\t" + "Dort haben wir einer geringere chance zu verlieren." +
-                                    "Jens:" + "\t Wir benötigen diesen Vorteil! Sonst wird das nie was."
+                                    "Tina:" + "\t Ich bin auch der Meinung von" + " " + game.spieler1.name + ".\n" +
+                                    game.spieler1.name + ":\t" + "Dort haben wir einer geringere chance zu verlieren.\n" +
+                                    "Jens:" + "\t Wir benötigen diesen Vorteil! Sonst wird das nie was.\n" +
+                                    "Tina:" + "\t"   + game.spieler1.name + " " + "Was ist deine Entscheidung?\n"
                                     ); // Diskussion mit dem Team, was man angreift 
                 game.showstrich();  
 
@@ -770,11 +772,25 @@ public class Main {
 
                         game.spieler1.karmapunkte = -10; // Karmapunkte werden auf -10 gesetzt 
                         game.showstrich(); 
-                        System.out.println("Du hast dich entschieden das Satelitenbasis in der nähe von Leipzig anzugreifen.");
+                        System.out.println("Du hast dich entschieden, die Satellitenbasis in der nähe von Leipzig anzugreifen.");
                         System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte); 
                         game.showstrich(); 
+                        System.out.println("In der Nacht bevor du und dein Team Die Satellitenbasis angreift, trifst du noch Tina, die in deiner Hütte wartet.\n" +
+                                            "Tina:" +"\t" + "Na, was bringt dich eigentlich hier zu uns? \n" +
+                                            game.spieler1.name + ": \t Ach, in der letzten Zeit ist alles schief gelaufen. Ich wusste einfach nichtmehr was ich noch tun kann. \n" +
+                                            "Tina: \t Ja. Diese Welt ist echt schrecklich wie sie momentan ist.\n" +
+                                            "\n "+
+                                            "Für eine kurze Zeit herscht Stille in dem Zelt. Du selber weißt nicht, was du sagen willst. Du guckst ihr für \n" +
+                                            "einige Sekunden an und bemerkst, dass sie dich auch zurück anschaut. Nach einer kurzen Zeit steht sie wieder auf. \n" + 
+                                            "\n" +
+                                            "Tina: \t So, Ich sollte auch so langsam mal schlafen gehen. Morgen wird ein langer und anstrengender Tag. Ciao. \n" +
+                                            game.spieler1.name + ":\t Tschüss. Angenehme Nacht noch."
+                        );
+                        game.showstrich();
+
+                            
                         System.out.println("Story: \n" + "\n" +
-                                            "Ihr seit auf den Weg die Satellitenbasis anzugreifen. während des Angriffes bemerkst du und ein paar Teammitglieder,\n" +
+                                            "Am nächsten Morgen seit auf den Weg die Satellitenbasis anzugreifen. während des Angriffes bemerkst du und ein paar Teammitglieder,\n" +
                                             "dass dein Truppführer in schwierigkeiten gerät.");
                         System.out.println(game.spieler1.name + "\t" + ": Dort hinter der Ecke sind Gegner! Ich gib euch rückendeckung! \n" + 
                                             "Petr:" + "\t" + "Geht es dir gut Jens? \n" +
@@ -796,14 +812,31 @@ public class Main {
                         game.showstrich(); 
                         System.out.println("Du hast dich entschieden das Munitionslager in der nähe von Osnabrück anzugreifen."); 
                         System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte);
+                        game.showstrich();
+                        System.out.println("In der Nacht bevor du und dein Team das Munitionslager angreift, trifst du noch Tina, die in deiner Hütte wartet.\n" +
+                                            "Tina:" +"\t" + "Na, was bringt dich eigentlich hier zu uns? \n" +
+                                            game.spieler1.name + ": \t Ach, in der letzten Zeit ist alles schief gelaufen. Ich wusste einfach nichtmehr was ich noch tun kann. \n" +
+                                            "Tina: \t Ja. Diese Welt ist echt schrecklich wie sie momentan ist.\n" +
+                                            "\n" +
+                                            "Für eine kurze Zeit herscht Stille in dem Zelt. Du selber weißt nicht, was du sagen willst. Du guckst ihr für \n" +
+                                            "einige Sekunden an und bemerkst, dass sie dich auch zurück anschaut. Nach einer kurzen Zeit steht sie wieder auf. \n" + 
+                                            "\n"+
+                                            "Tina: \t So, Ich sollte auch so langsam mal schlafen gehen. Morgen wird ein langer und anstrengender Tag. Ciao. \n" +
+                                            game.spieler1.name + ":\t Tschüss. Angenehme Nacht noch."
+                        );
                         game.showstrich(); 
+
                         System.out.println("Als ihr beim Munitonslager angekommen seit bemerkt ihr, dass dieses nicht sehr gut bewacht ist\n"+
+                                            "\n" +
                                             "Achmed: \t Hier ist ja nichts los. Vallah das wird einfach.\n" +
                                             "Charlotte: \t Ja komm wir legen die um und dann habe wir das einfach eingenommen\n" +
                                             game.spieler1.name + ": \t Ich habs euch ja gesagt, dass das einfach wird.\n"+
                                             "Jens: \t Ja aber dafür haben wir einen weniger strategischen Vorteil.\n"+
+                                            "\n" +
                                             "Dein Team schaltet alle Gegner aus und übernehmen das ganze Munitionslager.\n"+ 
+                                            "\n" +
                                             "Tina: \t Boss wir sind echt froh, dass wir doch hier hingegangen sind. Wer weiß was alles hätte in Leipzig passieren können.\n" +
+                                            "\n" +
                                             "Du und dein sind sehr Froh und ihr feiert den restlichen Abend."    );
                         aoa++;
                     }
@@ -823,6 +856,10 @@ public class Main {
                                         "Achmed:  \t Schau dir das doch mal an, was du getan hast. Wegen deiner Entscheidung gehts es Jens richtig schlecht.\n Warum macht man so ne Scheiße!\n" +
                                         "Dimitri: \t Ist ernsthaft so.");
                     game.showstrich();
+
+                    int he = 0; // int für entscheidung wie du handelst
+
+                    while (he < 1){
                     System.out.println("Du kannst dich nun entscheiden wie du handelst.");  
                     System.out.println(""); 
                     game.showstrich(); 
@@ -833,9 +870,7 @@ public class Main {
                     System.out.println("Wenn du --hilfe-- schreibst, siehst du die hilfe ");
                     game.showstrich(); 
 
-                    int he = 0; // int für entscheidung wie du handelst
-
-                    while (he < 1){
+                    
                         
                         String handelsentscheidung = in.nextLine();
 
@@ -847,9 +882,11 @@ public class Main {
                             System.out.println(
                                 game.spieler1.name + ":\t Es ist doch nicht meine Schuld, wenn Jens selber hier hin wollte. \n Dann muss er auch mal die Konsequenzen daraus ziehen." +
                                 "Hanz:  \t Ja, aber du bist die Person die die Entscheidungen trifft.\n" +
-                                game.spieler1.name + ":\t Es ist aber nicht meine Schul!\n"
+                                game.spieler1.name + ":\t Es ist aber nicht meine Schuld!\n"
                             );
                             game.showstrich(); 
+                            System.out.println("Dein Team ist sehr sauer auf dich, da du dich so schlech verhälst.");
+                                            
                             break;
                         }
                         // wenn 2, dann Karmapunkte auf 0 wieder
@@ -860,9 +897,9 @@ public class Main {
                             System.out.println(
                                 game.spieler1.name + ":\t Ok Leute hört mal zu. Ich wusste von vornerein, dass es hier schwieriger sein wird.\n Deswegen nimm ich die Konsequenzen auf mich.\n" +
                                 "Tina: \t Mehr als dich Entschuldigen kannst du ja nicht.\n" +
-                                "Klaus: \t Es ist trotzdem sehr gut, dass du dich Entschuldigst. So bleibt die Teammoral bestehen.\n"
-                                    
-                            ); 
+                                "Klaus: \t Es ist trotzdem sehr gut, dass du dich Entschuldigst. So bleibt die Teammoral bestehen.");
+                            game.showstrich();
+                            System.out.println("Wegen deiner Entscheidug, deeskalierend zu wirken, beruhigst du deine Teammitglieder");
                             game.showstrich();
                             break;
                         }
@@ -912,8 +949,14 @@ public class Main {
 
                                 System.out.println(
                                     game.spieler1.name + ":\t Achmed beruhig dich. Ich hab dir nichts getan.\n" +
-                                    "Du versucht ihn sein Messer aus der Hand zu schlagen. \n Dir gelingt dieses und du bringst ihn zu Boden.\n Nach ein Paar Minuteb hat er sich wieder beruhigt.\n" +
-                                    "Achmed: \t Ich hätte das nicht tun sollen."
+                                    "Achmed: \t Doch! Du wirst uns noch in den Tod reiten wenn du so weiter machst. \n " +
+                                    "Du versucht ihn sein Messer aus der Hand zu schlagen. \n Dir gelingt dieses und du bringst ihn zu Boden.\n Nach ein Paar Minuten hat er sich wieder beruhigt.\n" +
+                                    "Achmed: \t Ich hätte das nicht tun sollen.\n" +
+                                    game.spieler1.name + ": \t Alles gut. Jeder hat mal seine kurzen Phasen, wo er agressive wird. \n" +
+                                    "In dem Moment bemerkst du wie Jens in seinen Rollstuhl zu euch kommt. \n" +
+                                    "Jens: \t Was ist hier denn los! Da liegt man einmal auf dem Krankenbett um sich zu entspannen. \n Warum liegt hier ein Messer?"+
+                                    "Charlotte: \t Achmed hat" + game.spieler1.name + "mit dem Messer angegriffen. \n Er hat sich aber wieder beruhigt. \n" +
+                                    "Jens: \t Warum macht man sowas. Sowas möchte ich nicht nochmal mit erleben. \n Später bringt ihr euch alle noch gegenseitig um."
                                 );
                                 game.spieler1.karmapunkte = -10;
                                 break;
@@ -931,12 +974,15 @@ public class Main {
                             // Wenn du Ihn umnbringst
                             else if (achmetentscheidung.equals("3")) {
 
+                                game.spieler1.karmapunkte = -40;
                                 System.out.println("Als Achmed mit dem Messer auf dich losgeht zückst du deine Waffe.\n"+
                                     "Vlad: Nein!\n" +
                                     "Du betätigst den Abdruck und ein lauter Knall ertönt.\n"+
-                                    "Achmed fällt auf den Boden und deine Teammitglieder "
+                                    "Achmed fällt auf den Boden und deine Teammitglieder rennen direkt zu ihm. \n" +
+                                    "Hanz: \t Warum hast du das getan! \n"+
+                                    "Du schaust dich um und dir wird auf einmal bewusst, dass du gerade einen Menschen umgebracht hast."
                                 );
-                                game.spieler1.karmapunkte = -40; 
+                                game.spieler1.showkarmapunkte();
                                 break;
                             }
 
@@ -962,6 +1008,12 @@ public class Main {
                         game.showstrich(); 
                         System.out.println("Dein Team spricht mit dir über deine Entscheidungen");
                         game.showstrich(); 
+                        System.out.println("Klaus: \t Warum mustest du einfach Achmed umbringen? \n" +
+                                            "Peter: \t Wiese machst du so ne Scheiße! Hättest du dich einfach nicht verteidigen können? \n" + 
+                                            "Für einen Moment schweigst du, weil du selber erstmal drauf klar kommen muss, was du gerade getan hast. \n" +
+                                            "Vlad: \t Hast du noch was zu sagen?" 
+                        );
+                        game.showstrich();
                         
                         while (game.spieler1.karmapunkte == -40) {
 
@@ -975,18 +1027,45 @@ public class Main {
 
                             if (inputkarma.equals("1")) {
 
+                                game.spieler1.karmapunkte = -30;//Setz die Karmapunkte auf -30, für die Entscheidung (+10)
                                 game.showstrich(); 
-                                System.out.println("Erzählt die Geschichte"); 
-                                game.showstrich(); 
-                                game.spieler1.karmapunkte = -30;
+                                System.out.println("Erzählt die Geschichte: \n" +
+                                                    game.spieler1.name + ": \t Ihr müsst wissen, dass mir die Mission echt sehr wichtig ist. \n" +
+                                                    "Ihr müsst wissen, dass ich wegen dieses Krieges alles verloren habe. \n" + 
+                                                    "Du atmest einmal kurz ein.\n" +
+                                                    "\n"+
+                                                    game.spieler1.name + ": \t Alles begann vor etwa 2 Jahren. Damals als der Krieg begann,\n" +
+                                                    "saß ich mit meiner Familie zuhause. Auf einmal hörrte man sehr laute Geräusche. \n" +
+                                                    "Ich sah nach draußen, und es war die Hölle los. Überall flogen Bomben in Häuser. \n" +
+                                                    "Die Menschen rennten überall auf der Straße. Ich befahl meiner Fraun und meinen Zwei Kindern aus dem Haus zu flüchten.\n"+
+                                                    "Das schaften wir auch, aber dann wurden wir von mehreren Soldaten aufgehalten. \n" +
+                                                    "Sie befiehlten uns stehen zu bleiben, dass wir mit ihnen mitkommen als Gefangene. \n" +
+                                                    "Aber ich Vollidiot wollte das nicht, und dann haben sie um sich geschossen. \n"+
+                                                    "\n"+
+                                                    "Dir kommen ein paar tränen \n" +
+                                                    game.spieler1.name + ":\t Und dann haben sie meine Frau und meine Söhne erschossen.\n" +
+                                                    "Daraufhin, habe ich meine Pistole gezückt, und alle Soldaten erschossen. \n" +
+                                                    "Mir ist die Mission so wichtig, weil ich meine Familie rechen will! \n " +
+                                                    "Tina: \t Ja, und wir werden dir dabei Helfen! \n" +
+                                                    "Peter: \t Ja, wir werden sie alle für ihre Taten zahlen lassen!"
+                                );
+                                game.showstrich();
+                                game.spieler1.showkarmapunkte();
+
+                                
                             }
 
                             else if (inputkarma.equals("2")) { 
  
+                                game.spieler1.karmapunkte = -50; //Setzt die Karmapunkte auf -50 (-10)
                                 game.showstrich(); 
-                                System.out.println("Du schweigst."); 
+                                System.out.println("Du schweigst.\n" +
+                                                    "Vlad: \t Alles Klar, dann hat sich das ja erledigt."
+                                ); 
                                 game.showstrich(); 
-                                game.spieler1.karmapunkte = -50;
+                                game.spieler1.showkarmapunkte();
+                                game.showstrich();
+                                
                             }
 
                             else {
@@ -1001,7 +1080,11 @@ public class Main {
                     else if (game.spieler1.karmapunkte == -10) {
 
                         game.showstrich(); 
-                        System.out.println("Gespräch mit Team über deine Entscheidungen, bitten weniger Risiko einzugehen"); 
+                        System.out.println("Dimitri: \t" + game.spieler1.name + " " +"Wäre es vermutlich nicht schlauer, wenn wir weniger Risikio eingehen würden?\n" +
+                                            "Klaus: \t Ja, dann würde vielleicht nicht so etwas mit Jens nochmal passieren. \n"+
+                                            "Wer weiß wie es beim nächsten mal ausgehen wird.\n " +
+                                            "Nicht das noch einer daran stirbt."
+                        ); 
                         game.showstrich(); 
 
                         // While looop
@@ -1023,13 +1106,18 @@ public class Main {
                                 System.out.println("Du gehsts weniger Risiko ein"); 
                                 game.showstrich(); 
                                 game.spieler1.karmapunkte = 0;
+                                game.spieler1.showkarmapunkte();
                             }
                             else if (inputkarma.equals("2")) {
 
                                 game.showstrich(); 
-                                System.out.println("Du reagierst darauf nicht"); 
+                                System.out.println("Du reagierst darauf nicht\n"+
+                                                    "Du gehst trotzdem mehr Risiko ein."
+                                ); 
                                 game.showstrich(); 
                                 game.spieler1.karmapunkte = -20;
+                                game.spieler1.showkarmapunkte();
+                                game.showstrich();
                             }
                             else {
 
@@ -1043,9 +1131,21 @@ public class Main {
                     else if (game.spieler1.karmapunkte == 10) {
 
                         game.showstrich(); 
-                        System.out.println("Team vertraut dir mehr"); 
+                        System.out.println("Durch deine Entscheidungen Osnabrück anzugreifen, vetraut dir dein Team mehr\n"+
+                                            "Dadurch förderst du auch die Teammoral."
+                        ); 
                         game.showstrich(); 
-                        System.out.println("Du redest mit dem Truppleiter und er fragt dich wieso du das alles tust."); 
+                        System.out.println("Als du gerade in dem Munitionslager herum läufst, siehst du Jens.\n" +
+                                            game.spieler1.name + ": \t Moin Jens!\n" +
+                                            "Jens: \t Guten Tag" + " " + game.spieler1.name + " " + "Das war doch besser, \n" +
+                                            "dass wir Osnabrück angegriffen haben.\n" +
+                                            game.spieler1.name + ": \t Ja. Hier ist es wenigsten sehr einfach gewesen, das Lager einzunehmen.\n" +
+                                            "Jens: \t Das Stimmt. Kann ich dich mal was fragen?\n" + 
+                                            game.spieler1.name + ": \t Ja Natürlich. Du kannst mich alles fragen.\n" + 
+                                            "Jens: \t Wieso machst du das eigentlich alles. Hat das einen bestimmten Grund?" 
+                        
+                        );
+                        game.showstrich(); 
                         System.out.println("Du kannst dich entscheiden, ob du über die Vorgeschichte redest oder nicht.");
                         game.showstrich(); 
 
@@ -1066,12 +1166,32 @@ public class Main {
                                 game.showstrich(); 
                                 System.out.println("Du bleibst seriös"); 
                                 game.showstrich(); 
+                                System.out.println(  game.spieler1.name + ": \t Nein. Ich mache das nur um mir die Zeit zu vertreiben. \n " +
+                                                    "Jens: \t Oh....alles klar. Später treffen wir uns noch, um unseren nächstes Angriff zu planen.\n" +
+                                                    game.spieler1.name + ": \t Ich werde da sein." 
+                                
+                                );
+                                game.showstrich();
                                 break;
                             }
                             else if(inputkarma.equals("2")){
 
                                 game.showstrich(); 
-                                System.out.println("Du erzählst dem Truppleiter deine Vorgeschichte"); 
+                                System.out.println(game.spieler1.name + ": \t Ja, es gibt einen Grund.\n" +
+                                                    "Jens:  \t Dürfte ich den wissen?" + 
+                                                    game.spieler1.name + ": \t Natürlich. Es begann alles vor einem Jahr. Dann als der Krieg begann.\n"+ 
+                                                    "Damals war ich mit meiner Frau und meinen Söhnen in unserem Haus.\n"+ 
+                                                    "Auf einmal sah ich, wie Bomben abgewurfen wurden. Dann sind wir direkt aus unserem Haus gerannt.\n" +
+                                                    "Die Menschen rennten überall auf der Straße.\n"+
+                                                    "Als wir draußen waren, wurden wir von mehreren Soldaten aufgehalten. \n" +
+                                                    "Sie befiehlten uns stehen zu bleiben, dass wir mit ihnen mitkommen als Gefangene. \n" +
+                                                    "Aber ich wollte das nicht, und dann haben sie um sich geschossen, weil ich so ausgerastet bin. \n"+
+                                                    "\n"+
+                                                    "Dir kommen ein paar tränen \n" +
+                                                    game.spieler1.name + ":\t Und dann haben sie meine Frau und meine Söhne erschossen.\n" +
+                                                    "Daraufhin, habe ich meine Pistole gezückt, und alle Soldaten erschossen. \n" +
+                                                    "Ich will einfach, dass dieser Dumme Krieg aufhört und auch noch meine Familie rächen!" 
+                                ); 
                                 game.showstrich(); 
                                 break;
                             }
@@ -1093,8 +1213,9 @@ public class Main {
                     else if (game.spieler1.karmapunkte == 0) {
 
                         game.showstrich(); 
-                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("Planung nächste Mission mit deinem Team."); 
                         game.showstrich(); 
+
                         break;
                     }
 
