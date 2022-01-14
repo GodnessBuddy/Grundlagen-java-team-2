@@ -249,6 +249,5 @@ Hier ist ein Beispiel für ein Klassendiagramm. Oben sieht man die vorgegebenen 
 
 
 
-
-
+![PogO](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/docs/PogO-transparent.png)
 
