@@ -21,7 +21,7 @@ public class Player {
    
 
     public void showkarmapunkte() {
-        System.out.println("Deine Karmapunkte sind =" + "\t" + karmapunkte);
+        System.out.println("Deine Karmapunkte sind =" + " "  + karmapunkte);
     }
 
     
