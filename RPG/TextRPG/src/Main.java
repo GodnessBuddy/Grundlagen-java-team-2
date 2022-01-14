@@ -1203,8 +1203,29 @@ public class Main {
                         }
                         
                         game.showstrich(); 
-                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("Planung nächste Mission mit deinem Team."); 
                         game.showstrich(); 
+                        System.out.println("Jens: \t Zu erst einmal, mir geht es den Umständen gut. \n" +
+                                            "Wahrscheinlich aber werde ich euch nicht viel helfen können.\n" +
+                                            "Charlotte: \t Alles gut Jens, wenn wir wieder angreifen, dann werden wir dafür sorgen, \n"+
+                                            "dass dir nichts geschieht. \n" +
+                                            "Jens: \t Das ist echt sehr Nett von euch allen.\n" +
+                                            "Hanz: \t Was machen wir denn als nächstes? \n" +
+                                            game.spieler1.name + ": \t Wir können uns wieder aussuchen, was wir angreifen.\n"+
+                                            "Tina: \t Das gute ist, dass die Gegner jetzt geschwächt sind, da wir ihre Kommunikation gestört haben. \n"+
+                                            "Dimitri: \t Welche Möglichkeiten stehen denn zur Auswahl? \n" +
+                                            "Jens: \t Wir können entweder die Nahrungsversorgung in Bremen angreifen oder \n" +
+                                            "die Drogenlabore in Berlin. Damit schädigen wir ihre Geld einkommen. \n" +
+                                            game.spieler1.name + ": \t Wir müssen bedenken, dass Bremen schwerer anzugreifen ist als Berlin." +
+                                            "Vlad: \t Stimmt. \n" +
+                                            game.spieler1.name + ": \t  Wenn wir Bremen angreifen würden, dann würden wir mit einen Helikopter dort hinfliegen.\n" +
+                                            "Klaus: \t Und wir würden wir die Drogenlabore angreifen?\n" +
+                                            game.spieler1.name + ": \t Mit gepanzerten Fahrzeugen." +
+                                            "Klaus: \t Ok.\t" +
+                                            game.spieler1.name + ": \t Was meint ihr.\n" +
+                                            "Achmed: \t Das entscheidest du und nicht wir. Wir haben vollstes vertrauen in dir \n"
+                        );
+                        game.showstrich();
                         break;
                     }
 
@@ -1215,6 +1236,27 @@ public class Main {
                         game.showstrich(); 
                         System.out.println("Planung nächste Mission mit deinem Team."); 
                         game.showstrich(); 
+                        System.out.println("Jens: \t Zu erst einmal, mir geht es den Umständen gut. \n" +
+                                            "Wahrscheinlich aber werde ich euch nicht viel helfen können.\n" +
+                                            "Charlotte: \t Alles gut Jens, wenn wir wieder angreifen, dann werden wir dafür sorgen, \n"+
+                                            "dass dir nichts geschieht. \n" +
+                                            "Jens: \t Das ist echt sehr Nett von euch allen.\n" +
+                                            "Hanz: \t Was machen wir denn als nächstes? \n" +
+                                            game.spieler1.name + ": \t Wir können uns wieder aussuchen, was wir angreifen.\n"+
+                                            "Tina: \t Das gute ist, dass die Gegner jetzt geschwächt sind, da wir ihre Kommunikation gestört haben. \n"+
+                                            "Dimitri: \t Welche Möglichkeiten stehen denn zur Auswahl? \n" +
+                                            "Jens: \t Wir können entweder die Nahrungsversorgung in Bremen angreifen oder \n" +
+                                            "die Drogenlabore in Berlin. Damit schädigen wir ihre Geld einkommen. \n" +
+                                            game.spieler1.name + ": \t Wir müssen bedenken, dass Bremen schwerer anzugreifen ist als Berlin." +
+                                            "Vlad: \t Stimmt. \n" +
+                                            game.spieler1.name + ": \t  Wenn wir Bremen angreifen würden, dann würden wir mit einen Helikopter dort hinfliegen.\n" +
+                                            "Klaus: \t Und wir würden wir die Drogenlabore angreifen?\n" +
+                                            game.spieler1.name + ": \t Mit gepanzerten Fahrzeugen." +
+                                            "Klaus: \t Ok.\t" +
+                                            game.spieler1.name + ": \t Was meint ihr.\n" +
+                                            "Achmed: \t Das entscheidest du und nicht wir. Wir haben vollstes vertrauen in dir \n"
+                        );
+                        game.showstrich();
 
                         break;
                     }
@@ -1238,8 +1280,29 @@ public class Main {
                     else if (game.spieler1.karmapunkte == -30) {
 
                         game.showstrich(); 
-                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("Planung nächste Mission mit deinem Team."); 
                         game.showstrich(); 
+                        System.out.println("Jens: \t Zu erst einmal, mir geht es den Umständen gut. \n" +
+                                            "Wahrscheinlich aber werde ich euch nicht viel helfen können.\n" +
+                                            "Charlotte: \t Alles gut Jens, wenn wir wieder angreifen, dann werden wir dafür sorgen, \n"+
+                                            "dass dir nichts geschieht. \n" +
+                                            "Jens: \t Das ist echt sehr Nett von euch allen.\n" +
+                                            "Hanz: \t Was machen wir denn als nächstes? \n" +
+                                            game.spieler1.name + ": \t Wir können uns wieder aussuchen, was wir angreifen.\n"+
+                                            "Tina: \t Das gute ist, dass die Gegner jetzt geschwächt sind, da wir ihre Kommunikation gestört haben. \n"+
+                                            "Dimitri: \t Welche Möglichkeiten stehen denn zur Auswahl? \n" +
+                                            "Jens: \t Wir können entweder die Nahrungsversorgung in Bremen angreifen oder \n" +
+                                            "die Drogenlabore in Berlin. Damit schädigen wir ihre Geld einkommen. \n" +
+                                            game.spieler1.name + ": \t Wir müssen bedenken, dass Bremen schwerer anzugreifen ist als Berlin." +
+                                            "Vlad: \t Stimmt. \n" +
+                                            game.spieler1.name + ": \t  Wenn wir Bremen angreifen würden, dann würden wir mit einen Helikopter dort hinfliegen.\n" +
+                                            "Klaus: \t Und wir würden wir die Drogenlabore angreifen?\n" +
+                                            game.spieler1.name + ": \t Mit gepanzerten Fahrzeugen." +
+                                            "Klaus: \t Ok.\t" +
+                                            game.spieler1.name + ": \t Was meint ihr.\n" +
+                                            "Achmed: \t Das entscheidest du und nicht wir.\n"
+                        );
+                        game.showstrich();
                         break;
                     }
 
@@ -1250,7 +1313,7 @@ public class Main {
                     else if(game.spieler1.karmapunkte == -20) {
 
                         game.showstrich(); 
-                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("Du planst die nächste Mission alleine."); 
                         game.showstrich(); 
                         break;  
                     }
