@@ -220,18 +220,14 @@ Eine **Klasse** wird als Bauplan für Objekte benutzt. Sie gibt die verschiedene
 <br>
 
 ---
-### Klassendiagramme
+### Klassendiagramme / Objektdiagramme
 <br>
 Hier ist ein Beispiel für ein Klassendiagramm. Oben sieht man die vorgegebenen Eigenschaften und unten die vorgegebenen Methoden.
 
 
-|**Mensch**|
-|---|
-|- name: string <br> - Lebenspunkte: double <br> - Groeße(cm): int <br> - Gewicht(kg): double|
-|+ setName() : string <br> + setGewicht(): int <br> + SetGroeße(): int | 
  
 ---
-### Objektdiagramme
+
 
 
 
@@ -249,5 +245,5 @@ Hier ist ein Beispiel für ein Klassendiagramm. Oben sieht man die vorgegebenen 
 
 
 
-![PogO](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/docs/PogO-transparent.png)
+![PogO]()
 
