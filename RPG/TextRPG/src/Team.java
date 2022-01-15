@@ -5,5 +5,4 @@ public class Team {
     public String teammitglieder;
     public String advantage;
     public String disadvantage;
-
 }

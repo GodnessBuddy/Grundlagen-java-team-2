@@ -5,7 +5,6 @@
 public class Player {
     
     //Attribute der Klasse Player
-
     public int karmapunkte; //Karmapunkt
     public String name; //Spieler name
 
@@ -16,13 +15,7 @@ public class Player {
     }
    
     //Methoden
-
-
-   
-
     public void showkarmapunkte() {
         System.out.println("Deine Karmapunkte sind =" + " "  + karmapunkte);
     }
-
-    
 }
