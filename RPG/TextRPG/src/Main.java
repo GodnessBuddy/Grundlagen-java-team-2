@@ -1571,7 +1571,7 @@ public class Main {
                                                                         "Dann schießt ihr alle um euch, so das sich die Gegner verstecken müssen.\n"+
                                                                         "Du rennst zu Hanz und rettest ihn aus der Situation.\n"+
                                                                         "In der Zeit haben es deine Teammitglieder geschaft, die Soldaten fest zu nehmen.\n"+
-                                                                        "Ihr fahrt mit der Übernahme fort.\n"+
+                                                                        "Ihr fahrt mit der Übernahme fort."
                                                     
                                                     );
                                                     game.showstrich();
@@ -1583,8 +1583,11 @@ public class Main {
                                                 else if (rettung.equals("2")) {
                                                    
                                                     game.showstrich();
-                                                    System.out.println("Du hast dich entschieden ihn nicht zu retten"); +
-                                                                        "Daraufhin, \n"+
+                                                    System.out.println("Du hast dich entschieden ihn nicht zu retten" +
+                                                                        "Daraufhin, übernehmen du und dein Team das Drogenlabor. \n"+
+                                                                        "Ihr findet später Hanz tot in seiner Zellle vor.\n"+
+                                                                        "Am Abend trauert ihr um ihn."
+                                                    );
                                                     game.showstrich();
 
                                                     zsp++;
@@ -1604,7 +1607,16 @@ public class Main {
                                 else if (game.spieler1.karmapunkte == 0) {
                                     
                                     game.showstrich();
-                                    System.out.println("");
+                                    System.out.println("Als ihr ankommt haben du und dein Team eine sehr hohe Motivation.\n"+
+                                                        "\n"+
+                                                        "Hanz: \tDas wird doch ein Kinderspiel \n"+
+                                                        "Charlotte: \t Ja, das wird es. \n"+
+                                                        "\n"+
+                                                        "Ihr übernehmt das ganze Drogenlabor mit links. \n"+
+                                                        "Keiner von deinen Teammitglieder kommt in einer schwierige Situation und\n"+
+                                                        "ihr freut euch über euren gelungenen Angriff."
+                                    
+                                    );
                                     game.showstrich();
                                     
                                     game.spieler1.karmapunkte = 20;
@@ -1636,7 +1648,10 @@ public class Main {
 
                                                     game.showstrich();
                                                     System.out.println("Du versuchtst sie zu retten. \n" +
-                                                                        "Du schaffst es sie in Sicherheit zu bringen aber dann wird dir in den Rücken geschossen.");
+                                                                        "Du schaffst es sie in Sicherheit zu bringen.\n" +
+                                                                         "Als du aber versuchst zu ihr zu kommen, wird dir in den Bauch geschossen.\n"+
+                                                                         "Du fällst zu Boden und das letzte was du siehst, ist wie Tina versucht dich noch am leben zu halten."
+                                                                         );
                                                     game.showstrich();
                                                     System.out.println("Du bist Gestorben");
                                                     game.showstrich();
@@ -1646,7 +1661,9 @@ public class Main {
                                                 else if (rettung.equals("2")) {
 
                                                     game.showstrich();
-                                                    System.out.println("Du ziehtst deine Mission vor und rettest sie nicht.");
+                                                    System.out.println("Du ziehtst deine Mission vor und rettest sie nicht.\n" +
+                                                                        "Du und dein Team übernehmen das Drogenlabor \n"
+                                                    );
                                                     game.showstrich();
                                                     
                                                     zsp++;
