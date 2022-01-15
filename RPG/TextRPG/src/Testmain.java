@@ -531,11 +531,194 @@ public class Testmain {
                             game.showfalsecommand();
                             continue;
                         }
-                    
+                }
 
+
+
+
+
+
+
+
+
+
+
+
+                game.showstrich();
+                System.out.println("Du und dein Team greifen Hamburg vom Haven aus an. Ihr fahrt auf leisen, elektrischen Schnellbooten, unbemerkt in den Haven.");
+                System.out.println("Dadurch habt ihr den Überraschungsmoment auf eurer Seite, allerdings habt ihr nicht viel Schutz auf den Booten.");
+                game.showstrich();
+
+                // Karmaabfrage
+                if(game.spieler1.karmapunkte == -20) { //Karmapunkte sind -20
+                   
+                    game.showstrich();
+                    System.out.println("Du bist dabei die Mission zu planen und merkst wie schwer es wird. Du bekommst.");
+
+                    int ae = 0;  // int für Loop für Entscheidung ob aufgeben
+
+                    while (ae < 1) {
+
+                        game.showstrich();
+                        System.out.println("Du stehst vor der Entscheidung die Mission durchzuziehen, oder ob du aufgibst.");
+                        System.out.println("Schreibe --1-- wenn du das Risiko eingehen willst.");
+                        System.out.println("Schreibe --2-- wenn du aufgeben willst und ein normales Leben leben willst.");
+                        game.showstrich();
+                    
+                        String entscheidung = in.nextLine();
+
+                        if (entscheidung.equals("1")){
+
+                            System.out.println("Du gehst das Risiko ein... und stirbst, beim Versuch den Anführer zu töten.");
+                            System.exit(0);
+                        }
+
+                        else if (entscheidung.equals("2")){
+
+                            System.out.println("Du gibst auf und lebst ein Leben. Allerdings hast du keine Rache für deine Familie bekommen.");
+                            game.spieler1.karmapunkte = -10;
+                            ae++;
+                        }
+
+                        else {
+
+                            game.showfalsecommand();
+                            continue;
+                        }
+                    }
+                }
+                
+                else if(game.spieler1.karmapunkte == -30) { //Karmapunkte sind -30
+
+                    game.showstrich();
+                    System.out.println("Dein Team ist stark demotiviert und eure Mitgliederzahl ist auch schon stark dezimiert.");
+                    System.out.println("Ihr überlegt ob ihr weitermachen wollt, oder euch zurückzieht.");
+                    
+                    int zb = 0; //int für loop für es zu Ende bringen
+
+                    while (zb < 1) {
+
+                        game.showstrich();
+                        System.out.println("Ihr habt Angst zu sterben.");
+                        System.out.println("Du kannst dich entscheiden ob du das Risiko eingehen willst und die Mission zu ende bringen willst, oder das Team schützen  willst.");
+                        System.out.println("Schreibe --1-- wenn du es zu Ende bringen willst.");
+                        System.out.println("Schreibe --2-- wenn du die Mission abbrechen und dein Team schützen willst.");
+                        game.showstrich();
+
+                        String entscheidung = in.nextLine();
+                        
+                        if (entscheidung.equals("1")){
+
+                            System.out.println("Du willst die Mission zu Ende bringen.");
+                            game.spieler1.karmapunkte = +10;
+                            zb++;
+                        }
+
+                        else if (entscheidung.equals("2")){
+
+                            System.out.println("Du brichst die Mission ab um dein Team zu schützen");
+                            game.spieler1.karmapunkte = -10;
+                            zb++;
+                        }
+
+                        else {
+
+                            game.showfalsecommand();
+                            continue;
+                        }
+                    }
+                }
+            
+                else if(game.spieler1.karmapunkte == -10) { //Karmapunkte sind -10
+
+                    game.showstrich();
+                    System.out.println("Es ist unwahrscheinlich, dass ihr die Mission mit so wenig Kämpfern schafft");
+                    
+                    int zb = 0; // Int für den loop für die Enstscheidung
+
+                    while (zb < 1){
+
+                        game.showstrich();
+                        System.out.println("Du bist dir unsicher ob du die Mission zu Ende bringen kannst und kannst dich nun entscheiden.");
+                        System.out.println("Schreibe --1-- wenn du es zu Ende bringen willst.");
+                        System.out.println("Schreibe --2-- wenn du die Mission abbrechen und dein Team schützen willst.");
+                        game.showstrich();
+
+                        String entscheidung = in.nextLine();
+
+                        if (entscheidung.equals("1")){
+
+                            System.out.println("Du willst die Mission zu Ende bringen.");
+                            System.out.println("Du stirbst");
+                            game.spieler1.karmapunkte = -10;
+                            System.exit(0);
+                        }
+
+                        else if (entscheidung.equals("2")){
+
+                            System.out.println("Du brichst die Mission ab um dein Team zu schützen");
+                            game.spieler1.karmapunkte = 10;
+                            zb++;
+                        }
+
+                        else {
+
+                            game.showfalsecommand();
+                            continue;
+                        }
+                    }
+                }
+                
+                else if(game.spieler1.karmapunkte == +20) { //Karmapunkte sind +20
+
+                    game.showstrich();
+                    System.out.println("Du und dein Team seit sehr motiviert");
+                    System.out.println("Mit großer Motivation und starken Teamgeist, nehmt ihr ohne Probleme Berlin ein und ahbt nur wenige, leicht Verletzte.");
+                }
+
+                else if(game.spieler1.karmapunkte == 0) { //Karmapunkte sind 0
+
+                    game.showstrich();
+                    System.out.println("Dein Team hat wegend der vorherigen Aktion, wenig Munition und kommt in einen Hinterhalt");
+
+                    int zb = 0; // Int für den loop für die Entscheidung
+
+                    while (zb < 1){
+                
+                        game.showstrich();
+                        System.out.println("Du hast die Wahl, ob du es alleine zu Ende bringst und dein Team zurück lässt, oder bei deinen Team bleibst, aber ihr euch zurückziehen müsst.");
+                        System.out.println("Schreibe --1-- wenn du dein Team in Stich lassen willst, um die Mission zu beenden.");
+                        System.out.println("Schreibe --2-- wenn du dein Team retten willst, ihr euch dafür zurückziehen müsst und damit die Mission abbrecht.");
+                        game.showstrich();
+
+                        String entscheidung = in.nextLine();
+                        
+                        if (entscheidung.equals("1")){
+
+                            System.out.println("Du lässt dein Team in Stich. Sie sterben. Du kämpfst dich alleine durch und Bringst den Anführer um.");
+                            game.spieler1.karmapunkte = -30;
+                            zb++;
+                        }
+
+                        else if (entscheidung.equals("2")){
+
+                            System.out.println("Du zeihst dich mit deinem Team zurück, ihr brecht die Mission ab. Du bekommst keine Rache, dafür überlebt allerdings das Team.");
+                            game.spieler1.karmapunkte = 40;
+                            zb++;
+                        }
+                    }
                 }
 
             } // Story Ende Bravo-6 
+
+
+
+
+
+
+
+
+
 
             // Story Delta-5 falls dafür Entschieden 
             else if (team.teamname.equals ("Delta-5")){
@@ -933,7 +1116,7 @@ public class Testmain {
                 }// Karmapunkte Abfrage ende 
                 
                 game.showstrich();
-                System.out.println("Du un dein greif Hamburg vom Flughaven aus an. Ihr lasst euch aus einen gepanzerten Helikopter abseilen.");
+                System.out.println("Du und dein Team greifen Hamburg vom Flughaven aus an. Ihr lasst euch aus einen gepanzerten Helikopter abseilen.");
                 System.out.println("Dadurch seit ihr bei der Ankunft zwar geschützt, allerdings haben die Gegner den Helikopter gehört und sind über euren Angriff informiert.");
                 game.showstrich();
 
@@ -949,21 +1132,20 @@ public class Testmain {
 
                         game.showstrich();
                         System.out.println("Du hast die Wahl ob ihr den Anführer exekutiert, oder ob ihr ihn verschohnt.");
-                        System.out.println("Schreibe --leben-- wenn du ihn verschonen willst.");
-                        System.out.println("");
-                        System.out.println("Schreibe --tot-- wenn du ihn exekutieren willst");
+                        System.out.println("Schreibe --1-- wenn du ihn verschonen willst.");
+                        System.out.println("Schreibe --2-- wenn du ihn exekutieren willst");
                         game.showstrich();
                     
                         String execution = in.nextLine();
 
-                        if (execution.equals("leben")){
+                        if (execution.equals("1")){
 
                             System.out.println("Du lässt den Führer am leben...");
                             game.spieler1.karmapunkte = -10;
                             ae++;
                         }
 
-                        else if (execution.equals("tot")){
+                        else if (execution.equals("2")){
 
                             System.out.println("Du lässt den Gegner exekutieren...");
                             game.spieler1.karmapunkte = -20;
@@ -990,20 +1172,20 @@ public class Testmain {
                         game.showstrich();
                         System.out.println("Du hast Angst dein Team zu verlieren.");
                         System.out.println("Du kannst dich entscheiden ob du das Risiko eingehen willst und die Mission zu ende bringen willst, oder das Team schützen  willst.");
-                        System.out.println("Schreibe --beenden-- wenn du es zu Ende bringen willst.");
-                        System.out.println("Schreibe --abbrechen-- wenn du die Mission abbrechen und dein Team schützen willst.");
+                        System.out.println("Schreibe --1-- wenn du es zu Ende bringen willst.");
+                        System.out.println("Schreibe --2-- wenn du die Mission abbrechen und dein Team schützen willst.");
                         game.showstrich();
 
                         String entscheidung = in.nextLine();
                         
-                        if (entscheidung.equals("beenden")){
+                        if (entscheidung.equals("1")){
 
                             System.out.println("Du willst die Mission zu Ende bringen.");
                             game.spieler1.karmapunkte = 10;
                             zb++;
                         }
 
-                        else if (entscheidung.equals("abbrechen")){
+                        else if (entscheidung.equals("2")){
 
                             System.out.println("Du brichst die Mission ab um dein Team zu schützen");
                             game.spieler1.karmapunkte = 30;
@@ -1023,19 +1205,19 @@ public class Testmain {
                     game.showstrich();
                     System.out.println("Es ist unwahrscheinlich, dass ihr die Mission mit so wenig Kämpfern schafft");
                     
-                    int zb = 0;
+                    int zb = 0; // Int für den loop für die Enstscheidung
 
                     while (zb < 1){
 
                         game.showstrich();
-                        System.out.println("Du bist dir unsciher ob du die Mission zu Ende bringen kannst und kannst dich nun entscheiden.");
-                        System.out.println("Schreibe --beenden-- wenn du es zu Ende bringen willst.");
-                        System.out.println("Schreibe --abbrechen-- wenn du die Mission abbrechen und dein Team schützen willst.");
+                        System.out.println("Du bist dir unsicher ob du die Mission zu Ende bringen kannst und kannst dich nun entscheiden.");
+                        System.out.println("Schreibe --1-- wenn du es zu Ende bringen willst.");
+                        System.out.println("Schreibe --2-- wenn du die Mission abbrechen und dein Team schützen willst.");
                         game.showstrich();
 
                         String entscheidung = in.nextLine();
 
-                        if (entscheidung.equals("beenden")){
+                        if (entscheidung.equals("1")){
 
                             System.out.println("Du willst die Mission zu Ende bringen.");
                             System.out.println("Du stirbst");
@@ -1043,7 +1225,7 @@ public class Testmain {
                             System.exit(0);
                         }
 
-                        else if (entscheidung.equals("abbrechen")){
+                        else if (entscheidung.equals("2")){
 
                             System.out.println("Du brichst die Mission ab um dein Team zu schützen");
                             game.spieler1.karmapunkte = 10;
@@ -1062,17 +1244,81 @@ public class Testmain {
 
                     game.showstrich();
                     System.out.println("Du und dein Team seit sehr motiviert");
-
+                    System.out.println("Mit großer Motivation und starken Teamgeist, nehmt ihr ohne Probleme Berlin ein und ahbt nur wenige, leicht Verletzte.");
                 }
 
                 else if(game.spieler1.karmapunkte == 0) { //Karmapunkte sind 0
 
+                    game.showstrich();
+                    System.out.println("Dein Team hat wegend der vorherigen Aktion, wenig Munition und kommt in einen Hinterhalt");
 
+                    int zb = 0; // Int für den loop für die Entscheidung
+
+                    while (zb < 1){
+                
+                        game.showstrich();
+                        System.out.println("Du hast die Wahl, ob du es alleine zu Ende bringst und dein Team zurück lässt, oder bei deinen Team bleibst, aber ihr euch zurückziehen müsst.");
+                        System.out.println("Schreibe --1-- wenn du dein Team in Stich lassen willst, um die Mission zu beenden.");
+                        System.out.println("Schreibe --2-- wenn du dein Team retten willst, ihr euch dafür zurückziehen müsst und damit die Mission abbrecht.");
+                        game.showstrich();
+
+                        String entscheidung = in.nextLine();
+                        
+                        if (entscheidung.equals("1")){
+
+                            System.out.println("Du lässt dein Team in Stich. Sie sterben. Du kämpfst dich alleine durch und Bringst den Anführer um.");
+                            game.spieler1.karmapunkte = -30;
+                            zb++;
+                        }
+
+                        else if (entscheidung.equals("2")){
+
+                            System.out.println("Du zeihst dich mit deinem Team zurück, ihr brecht die Mission ab. Du bekommst keine Rache, dafür überlebt allerdings das Team.");
+                            game.spieler1.karmapunkte = 40;
+                            zb++;
+                        }
+                    }
                 }
-            }// story Ende Delta 5
+            } // story Ende Delta 5
 
             else {
                 System.out.println("Du hast kein Team gewählt."); 
+            }
+
+            if (game.spieler1.karmapunkte >0){
+
+                game.showstrich();
+                game.showstrich();
+                System.out.println("Danke fürs spielen, du hast dich gut geschlagen. Deine Kamrapunkte, die nun dein Score sind, sind im positiven Bereich.");
+                System.out.println("Dein Score ist:" + game.spieler1.karmapunkte);
+                System.out.println("Du hast also wenige schlechte Entscheidungen getroffen.");
+                game.showstrich();
+                game.showstrich();
+                System.exit(0);
+            }
+
+            else if (game.spieler1.karmapunkte <0){
+
+                game.showstrich();
+                game.showstrich();
+                System.out.println("Danke fürs spielen, du hast dich allerdings nicht  gut geschlagen. Deine Kamrapunkte, die nun dein Score sind, sind im negativen Bereich.");
+                System.out.println("Dein Score ist:" + game.spieler1.karmapunkte);
+                System.out.println("Du ahst also einige schlechte Entscheidungen getroffen.");
+                game.showstrich();
+                game.showstrich();
+                System.exit(0);
+            }
+
+            else {
+
+                game.showstrich();
+                game.showstrich();
+                System.out.println("Danke fürs spielen, du hast dich ganz okay geschlagen. Deine Kamrapunkte, die nun dein Score sind, neutral, so wie am Anfang.");
+                System.out.println("Dein Score ist:" + game.spieler1.karmapunkte);
+                System.out.println("Du ahst also einige schlechte Entscheidungen getroffen.");
+                game.showstrich();
+                game.showstrich();
+                System.exit(0);
             }
         // Ende des Spiels  
 
