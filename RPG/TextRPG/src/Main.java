@@ -1146,7 +1146,7 @@ public class Main {
                         
                         );
                         game.showstrich(); 
-                        System.out.println("Du kannst dich entscheiden, ob du über die Vorgeschichte redest oder nicht.");
+                        System.out.println("Du kannst dich entscheiden, ob du über deine Vorgeschichte redest oder nicht.");
                         game.showstrich(); 
 
                         // while loop 
@@ -1268,7 +1268,7 @@ public class Main {
                     else if (game.spieler1.karmapunkte == -50) {
 
                         game.showstrich(); 
-                        System.out.println("Planung nächste Mission"); 
+                        System.out.println("Planung nächste Mission alleine."); 
                         game.showstrich();  
                         break;  
                     }
@@ -1359,31 +1359,59 @@ public class Main {
                         game.showstrich();
                         
                         if (game.spieler1.karmapunkte == -50) {
-                            System.out.println("Dein Team wirft dich aus dem Helikopter und du stirbst");
+                            System.out.println("Auf den Hinweg nach Bremen, bemerkst du , wie deine Teammitglieder dich böse angucken. \n" +
+                                                "Vlad: \t So wollen wir es hinter uns bringen? \n" +
+                                                " \n" +
+                                                "Du guckst verwundert, denn ihr seit noch nicht in Bremen. \n Daraufhin steht Vlad auf und geht auf dich zu.\n " + 
+                                                "\n" +
+                                                "Vlad: \t Ab hier endet deine Reise.\n" +
+                                                "\n" +
+                                                "Er hällt dich fest und zieht dich zur Tür. Hanz und Klaus helfen ihm dabei. \n"+
+                                                "Danach werfen sie dich aus dem Helikopter."
+                            );                    
                             game.showstrich();
                             System.out.println("Game Over");
                             System.exit(0);
                         }
                         else if (game.spieler1.karmapunkte == -30) {
-                            System.out.println("Die Eroberung des Stützpunktes ist gut verlaufen \nIhr fahrt fort, mit der Planung eurer letzten Mission");
+                            System.out.println("Als ihr ankommt seht ihr, dass die Gegner nicht auf euren Angriff vorbereitet sind. \n" +
+                                                "Durch ihre geschwächte Kommunikation, sind nur sehr wenige Soldaten dort positioniert.\n" +
+                                                "Ihr steigt aus euren Helikopter aus. \n" +
+                                                "\n" +
+                                                game.spieler1.name + ": \t Kommt leute, wir nehmen die Soldaten nur hier fest. \n" +
+                                                "Die hälfte des Teams geht ins Gebäude, und die andere folgt mir. \n"+
+                                                "Dimitri: \t Alles klar Boss. Dann wollen wir mal.\n"
+                            );
+                            game.showstrich();
+                            System.out.println("Durch eure gute Strategie nimmt ihr 10 Soldaten fest und übernimmt das Gebäude der Nahrungsversorgung.");
                             game.showstrich();
                             
                         }
                         else if (game.spieler1.karmapunkte == -20) {
-                            System.out.println("Ihr geht mit viel Risiko in die Mission hinein");
-                            System.out.println("Schon bald nachdem ihr ankommt, gerät dein ganzes Team in Gefahr und wird gefangen genommen \n");
+                            System.out.println("Ihr geht mit viel Risiko in die Mission hinein \n" + 
+                                                "Charlotte: \t komm wir werden das Schaffen. Wie sollen wir vorgehen" + " " + game.spieler1.name + "?" +
+                                                game.spieler1.name + ": \t Ihr geht ins Hauptgebäude. Ich kümmere um die Soldaten draußen. " +
+                                                " \n" +
+                                                "Du überwältigtst alle Gegner draußen. Als du aber ins Gebäude rennst,\n" + 
+                                                "siehst du wie dein ganzes Team in schwierigkeiten steckt. \n" 
+                                                
+                            
+                            );
+                            System.out.println("Dein Team ist gefangen genommen worden. \n"+
+                                                "Du siehst, wie drei deiner Leuter einfach zu befreien sind, da sie nicht so gut bewacht werden."
+                            );
                             System.out.println("Du kannst dich entscheiden: \n");
 
                             int bremen20 = 0;
                             while (bremen20 < 1) {
-                                System.out.println("Option 1: Du gehst volles Risiko und versuchst dein ganzes Team zu retten");
-                                System.out.println("Option 2: Du siehst, dass du drei deiner Leute einfach befreien kannst und befreist ausschließlich diese");
+                                System.out.println("Schreibe --1-- um zu versuchen, dein ganzes Team zu retten.");
+                                System.out.println("Schreibe --2-- um nur drei deiner Leute zu befreien.");
 
                                 String bremen = in.nextLine();
                                 if (bremen.equals("1")) {
                                 
-                                    System.out.println("Du hattest extremes Glück und konntest dein gesamtes Team befreien");
-                                    System.out.println("Ihr fahrt fort mit der Einnahme des Stützpunktes und plant von dort aus eure letze Mission");
+                                    System.out.println("Du hattest extremes Glück und konntest dein gesamtes Team befreien.");
+                                    System.out.println("Ihr fahrt fort mit der Einnahme des Stützpunktes und plant von dort aus eure letze Mission.");
                                     game.spieler1.karmapunkte = game.spieler1.karmapunkte + 30;
                                     bremen20 = 1;
                                 
@@ -1391,10 +1419,10 @@ public class Main {
                                 }
                                 else if (bremen.equals("2")){
                                 
-                                System.out.println("Du schaffst es die drei Personen zu retten");
-                                System.out.println("Ihr übernehmt die Basis zu viert aber eure Kameraden überleben dies nicht");
+                                System.out.println("Du schaffst es die Tina, Klaus und Vlad zu retten.");
+                                System.out.println("Ihr übernehmt die Basis zu viert aber eure Kameraden überleben dies nicht.");
                                 game.spieler1.karmapunkte = game.spieler1.karmapunkte + 10;
-                                System.out.println("Trotz dessen fahrt ihr fort, indem ihr eure letzte Mission plant");
+                                System.out.println("Trotz dessen fahrt ihr fort, indem ihr eure letzte Mission plant.");
                                 bremen20 = 1;
                                 
                                 }
@@ -1406,10 +1434,10 @@ public class Main {
 
                         }
                         else if (game.spieler1.karmapunkte == 0) {
-                            System.out.println("Die Übernahme verläuft reibungslos, jedoch wirst du von einem Soldaten, der sich versteckt hat aus einem Hinterhalt überfallen");
-                            System.out.println("Da dein Team dir jedoch vertraut, hilft es dir und erledigt den Feind");
+                            System.out.println("Die Übernahme verläuft reibungslos, jedoch wirst du von einem Soldaten, der sich versteckt hat aus einem Hinterhalt überfallen.");
+                            System.out.println("Da dein Team dir jedoch vertraut, hilft es dir und erledigt den Feind.");
                             game.showstrich();
-                            System.out.println("Damit wurde der Stützpunkt in Bremen erfolgreich übernommen");
+                            System.out.println("Damit wurde der Stützpunkt in Bremen erfolgreich übernommen.");
                         }
                         else if (game.spieler1.karmapunkte == 10) {
 
@@ -1420,12 +1448,15 @@ public class Main {
 
                             int bremengut = 0;
                             while (bremengut < 1) {//loop
-                            System.out.println("Option 1: Du rettest ihn nicht und ihr fahrt mit der Übernahme fort ");
-                            System.out.println("Option 2: Du rettest ihn und brichst die Operation kurzzeitig ab");
+                            System.out.println("Schreibe --1-- um ihn nicht zu retten. Ihr fahrt aber mit der Übernahme fort ");
+                            System.out.println("Schreibe --2-- um deinen Truppleiter zu retten.");
 
                             int bremen10 = in.nextInt();
                                 if (bremen10 == 1) {
-                                    System.out.println("Dein Teamleiter stirbt, aber die Mission ist erfolgreich");
+                                    System.out.println("Als du versuchst, deinen Truppleiter zu befreien, bemerkst du wie ein Soldat um sich schießt. \n" +
+                                                        "Du selber schaffst es aus der schlimmen Situation. Jens aber konnte es nicht mehr schaffen."
+                                    
+                                    );
                                     System.out.println("Trotz Allem denkt dein Team, dass du dich richtig entschieden hast");
                                     bremengut = 1;
                               
@@ -1435,8 +1466,9 @@ public class Main {
                                 else if (bremen10 == 2){
                                     System.out.println("Du und dein Team versuchen den Teamleiter zu retten \nzu erst verläuft alles wie geplant, doch dann macht einer deiner Kameraden einen essenziellen Fehler");
                                     System.out.println("Durch diesen Fehler passiert es, dass der Feind auf euch aufmerksam wird. \nDu musst unter dem hohen Druck eine Entscheidung treffen und entscheidest dich dazu, dass dein Team die Mission fortsetzen soll");
-                                    System.out.println("Dadurch seid ihr jedoch gezwungen euch zu opfern. \nIhr schafft es den Teamleiter zu retten, aber du und drei deiner Kollegen sterben");
+                                    System.out.println("Dadurch seid ihr jedoch gezwungen euch zu opfern. \nIhr schafft es den Teamleiter zu retten, aber du seler stirbst dabei.");
                                     game.showstrich();
+                                    System.out.println("Aus dank, führt dein Team die Mission weiter fohrt, um dir gerecht zu werden.");
                                     System.out.println("Game Over");
                                     bremengut = 1;
                                 
@@ -1467,8 +1499,20 @@ public class Main {
                                 if (game.spieler1.karmapunkte == -50) {
 
                                     game.showstrich();
-                                    System.out.println("Auf den hinweg bringt dich dein Team um.");
-                                    System.out.println("Du bist Gestorben"); 
+                                    System.out.println("Auf den hinweg fährt dein Team einen komplett anderen Weg als geplant.\n" +
+                                                        "\n"+
+                                                        game.spieler1.name + ": \t Hää. Wo fahrt ihr hin.\n" +
+                                                        "Dimitri: \t Zu deinem Ende.\n" +
+                                                        "\n" +
+                                                        "Sie steigen alle aus den Wagen aus, und zerren dich dort heraus.\n" +
+                                                        "\n"+
+                                                        "Klaus:\t Weil wir dir nicht mehr vertrauen, wirst du hier bleiben und nirgendwo sonst mehr hingehen." +
+                                                        "\n"+
+                                                        "Sie ketten dich an einen Baum uns steigen wieder in die gapenzerten Fahrzeuge."
+
+                                    );
+                                    game.showstrich();
+                                    System.out.println("Game over"); 
                                     System.exit(0);
                                     game.showstrich();
 
@@ -1478,6 +1522,20 @@ public class Main {
 
                                 //Story Berlin bei -30 Karmapunkten anfang
                                 else if (game.spieler1.karmapunkte == -30) {
+                                    
+                                    System.out.println("Als ihr ankommt seht ihr, dass die Gegner nicht auf euren Angriff vorbereitet sind. \n" +
+                                                        "Durch ihre geschwächte Kommunikation sind nur 5 Soldaten dort, die den Haupteingang bewachen..\n" +
+                                                        "Ihr steigt aus euren Fahrzeugen aus. \n" +
+                                                        "\n"+ 
+                                                        "Klaus: \t Das wir ein heiden Spaß.\n"+
+                                                        "\n"+
+                                                        "Charlotte lenkt die Soldaten ab, und ihr kommt von den Seiten und nimmt sie alles fest.\n" +
+                                                        "Dann öffnen sie für euch die Tür, und ihr übernimmt das komplette Drogenlabor."
+                                                        
+                                     );
+                                    game.showstrich();
+                                    System.out.println("");
+                                    game.showstrich();
                                     
                                     
                                 } //Story Berlin bei -30 Karmapunkten ende 
@@ -1489,7 +1547,7 @@ public class Main {
                                    game.showstrich();
                                    System.out.println("Story Angriff");
                                    game.showstrich();
-                                   System.out.println("Während des Angriffes ist ein Teammitglied in großer gefahr. \n" +
+                                   System.out.println("Während des Angriffes ist Hanz in großer gefahr. \n" +
                                                         "Er wird von mehren Personen in schach gehalten und kann von alleine nicht dort raus. \n"+ 
                                                         "Wenn du ihn rettest, dann geht dabei sehr viel Munition verloren und auch die gepanzerten fahrzeuge"); 
 
@@ -1509,6 +1567,14 @@ public class Main {
                                                     game.showstrich();
                                                     System.out.println("Du hast dich entschieden ihn zu retten");
                                                     game.showstrich();
+                                                    System.out.println("Ihr versucht mit den gepanzerten Fahrzeugen, durch die Wand des Drogenlabors. \n"+
+                                                                        "Dann schießt ihr alle um euch, so das sich die Gegner verstecken müssen.\n"+
+                                                                        "Du rennst zu Hanz und rettest ihn aus der Situation.\n"+
+                                                                        "In der Zeit haben es deine Teammitglieder geschaft, die Soldaten fest zu nehmen.\n"+
+                                                                        "Ihr fahrt mit der Übernahme fort.\n"+
+                                                    
+                                                    );
+                                                    game.showstrich();
                                                     game.spieler1.karmapunkte = -10;
 
                                                     zsp++;
@@ -1517,7 +1583,8 @@ public class Main {
                                                 else if (rettung.equals("2")) {
                                                    
                                                     game.showstrich();
-                                                    System.out.println("Du hast dich entschieden ihn nicht zu retten");
+                                                    System.out.println("Du hast dich entschieden ihn nicht zu retten"); +
+                                                                        "Daraufhin, \n"+
                                                     game.showstrich();
 
                                                     zsp++;
@@ -1549,7 +1616,7 @@ public class Main {
                                 else if (game.spieler1.karmapunkte == 10) {
 
                                     game.showstrich();
-                                    System.out.println("Deine geliebte gerät ihn aussichtslose schwierigkeiten \n" +
+                                    System.out.println("Tina gerät ihn aussichtslose schwierigkeiten \n" +
                                                         "Ohne irgendeine hilfe, wird sie aus der Situation nicht herrauskommen und sterben.\n"+
                                                         "Sei dir bewusst, dass es ein sehr hohes risiko gibt, dass du stirbst wenn du sie rettest.");
                                     game.showstrich();
