@@ -223,6 +223,13 @@ Eine **Klasse** wird als Bauplan für Objekte benutzt. Sie gibt die verschiedene
 ### Klassendiagramme / Objektdiagramme
 <br>
 Hier ist ein Beispiel für ein Klassendiagramm. Oben sieht man die vorgegebenen Eigenschaften und unten die vorgegebenen Methoden.
+![Klassendiagramm](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/docs/image.png)
+
+
+
+
+Hier ist ein Beispiel für ein Objektdiagramm. Zuerst sieht man die Attribute mit ihren Attributwerten. 
+![Objektdiagramm](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/docs/Objektdiagramm.png)
 
 
  
@@ -245,5 +252,5 @@ Hier ist ein Beispiel für ein Klassendiagramm. Oben sieht man die vorgegebenen 
 
 
 
-![PogO]()
+
 
