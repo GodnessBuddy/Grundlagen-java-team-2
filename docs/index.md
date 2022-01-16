@@ -250,7 +250,7 @@ Der Konstruktor sorgt dafür, dass Objekte in einen Programm Anfangswerte zugesc
 
 <br>
 <br>
-[![Konstuktor](https://img.youtube.com/vi/uOjM9R5D1rw&list=PL_pqkvxZ6ho1foDU2vEutcBXwD13SsjuZ&index=23/o.jpg)](https://www.youtube.com/watch?v=uOjM9R5D1rw&list=PL_pqkvxZ6ho1foDU2vEutcBXwD13SsjuZ&index=23)
+[![Konstuktor](https://img.youtube.com/vi/uOjM9R5D1rw/o.jpg)](https://www.youtube.com/watch?v=uOjM9R5D1rw&list=PL_pqkvxZ6ho1foDU2vEutcBXwD13SsjuZ&index=23)
 
 
 
