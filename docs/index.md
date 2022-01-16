@@ -245,8 +245,12 @@ Hier ist ein Beispiel für ein Objektdiagramm. Zuerst sieht man die Attribute mi
 ---
 ### Konnstrukturen 
 <br>
-Der Konstruktor sorgt dafür, dass Objekte in einen Programm Anfangswerte zugeschrieben werden.<br>
+Der Konstruktor ist immer die erste Methode die beim instanziieren eins Objektes aufgerufen wird.
+Der Konstruktor sorgt dafür, dass Objekte in einen Programm Anfangswerte zugeschrieben werden. Jede Klasse besitzt einen Konstruktor.
 
+<br>
+<br>
+[![Konstuktor](https://img.youtube.com/vi/uOjM9R5D1rw/o.jpg)](https://www.youtube.com/watch?v=uOjM9R5D1rw&list=PL_pqkvxZ6ho1foDU2vEutcBXwD13SsjuZ&index=23)
 
 
 
