@@ -256,38 +256,38 @@ public class Main {
                     }
                 }
 
-                System.out.println(game.spieler1.karmapunkte); // kurzer Test (kann später gelöscht werden) 
+                
 
                 // Entscheidung Munitionslager (Karmapunkte = 10)
                 if (game.spieler1.karmapunkte==10) {
-                   Scanner enter = new Scanner(in.nextLine()); //Scanner, damit man nicht den ganzen Text aufeinmal bekommt
+                   
                     game.showstrich(); 
                     System.out.println("Ihr überfallt das Munitionslager, doch als ihr dort ankommt fällt euch auf, dass es gänzlich verlassen wurde.");
                     System.out.println("Ihr nehmt es ein, doch es bringt euch nicht wirklich viel");
                     game.showstrich(); 
-                    enter.nextLine();
+                    
 
                 }
                 
                 // Entscheidung für Satelitenbasis (Karmapunkte = -10)
                 if (game.spieler1.karmapunkte==-10) {
 
-                    Scanner enter = new Scanner(in.nextLine()); //Scanner, damit man nicht den ganzen Text aufeinmal bekommt
+                    
                     game.showstrich(); 
                     System.out.println("Wie du ja bereits weißt, birgt diese Entscheidung viele Risiken.");
                         game.showstrich();
                         System.out.println("Trotz des Risikos vertraut dein Team voll und ganz auf dich und dein Urteil \nDoch euer Angriff verläuft nicht wie geplant... \nGerade als ihr dort ankommt fliegt eine Handgranate auf euch zu, die euch alle töten wird.");
                         System.out.println("Doch aufeinmal hörst du etwas");
-                        enter.nextLine();
+                        
                         System.out.println("Eugene: LAUFT ALLE WEG! \nEugene stürzt sich auf die Granate und fängt die Explosion ab");
                         System.out.println("Eugene hat sich für euch alle geopfert");
                         game.showstrich();
-                        enter.nextLine();
+                        
                         System.out.println("Ihr alle seid geschockt");
                         game.showstrich();
                         System.out.println("Jessica: Wie konnte es nur soweit kommen?");
                         System.out.println("Norman: Er war doch unser Kamerad, wieso musste er sterben?");
-                        System.out.println("Stephan: Das ist alles nur die Schuld von" +game.spieler1.name);
+                        System.out.println("Stephan: Das ist alles nur die Schuld von " +game.spieler1.name);
                         System.out.println("Anastasia: Stimmt, wir hätten lieber Osnabrück angreifen sollen");
                         System.out.println("Roger: Wie konntest du nur so eine dumme Entscheidung treffen?"); // Text der Story für Satellitenbasis 
                     game.showstrich();  
@@ -1400,12 +1400,12 @@ public class Main {
                         // Story Bremen Anfang
                         if (zwischenstützpunkt.equals("1")) { 
                         zsp = 1;
-                        Scanner enter = new Scanner(System.in);
+                        
                         game.showstrich();
                         System.out.println("Du greifst mit" + team.teammitglieder + "Bremen an");
                         System.out.println("Dies wird ein Helikopterangriff");
                         System.out.println("Was als nächstes passieren wird, wird jedoch nicht von dir, sondern von deinen Karmapunkten \nbzw. deiner Beziehung zu deinem Team bestimmt");
-                        enter.nextLine();
+                        
                         game.showstrich();
                         
                         if (game.spieler1.karmapunkte == -50) {
