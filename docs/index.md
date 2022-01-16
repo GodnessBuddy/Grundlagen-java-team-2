@@ -175,6 +175,11 @@ Eine Do-While-Schleife, ist im Prinzip das Gleiche wie eine normale While-Schlei
 
 Eine If- Bedingung gibt an, was getan werden soll, wenn etwas bestimmtes zutrifft. Anders als bei einer Schleife, wird diese Bedingung jedoch nur einmal ausgeführt und nicht immer wieder überprüft.
 
+<br>
+<br>
+[![If Abfragen](https://img.youtube.com/vi/bduK1FAtHBk/0.jpg)](https://www.youtube.com/watch?v=bduK1FAtHBk)
+
+
 #### Switch-Case-Bedingung
 
 Die Switch-Case-Bedingung gibt eine beliebige Anzahl von Fällen, die eintreten können vor und eine bzw. mehrere Aktionen zu diesen Fällen. Dazu kommt noch ein "default" Fall mit einer Aktion, die ausgeführt wird, wenn keiner der genannten Fälle eintritt.
@@ -250,7 +255,7 @@ Der Konstruktor sorgt dafür, dass Objekte in einen Programm Anfangswerte zugesc
 
 <br>
 <br>
-[![Konstuktor](https://img.youtube.com/vi/uOjM9R5D1rw/0.jpg)](https://www.youtube.com/watch?v=uOjM9R5D1rw&list=PL_pqkvxZ6ho1foDU2vEutcBXwD13SsjuZ&index=23)
+[![Konstuktor](https://img.youtube.com/vi/uOjM9R5D1rw/0.jpg)](https://www.youtube.com/watch?v=uOjM9R5D1rw)
 
 
 
