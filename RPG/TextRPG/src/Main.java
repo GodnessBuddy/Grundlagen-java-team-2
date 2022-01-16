@@ -1402,7 +1402,7 @@ public class Main {
                         zsp = 1;
                         
                         game.showstrich();
-                        System.out.println("Du greifst mit" + team.teammitglieder + "Bremen an");
+                        System.out.println("Du greifst mit deinem Team Bremen an");
                         System.out.println("Dies wird ein Helikopterangriff");
                         System.out.println("Was als nächstes passieren wird, wird jedoch nicht von dir, sondern von deinen Karmapunkten \nbzw. deiner Beziehung zu deinem Team bestimmt");
                         
