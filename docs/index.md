@@ -157,14 +157,24 @@ int number = 9 <br>
 while(number <= 10){ <br>
   System.out.println(number); <br>
 } <br>
+<br>
+<br>
+[![While schleife](https://img.youtube.com/vi/bKb7jAi9Hw/0.jpg)](https://www.youtube.com/watch?v=-bKb7jAi9Hw)
+
+
+#### Do-While-Schleife
+
+Eine Do-While-Schleife, ist im Prinzip das Gleiche wie eine normale While-Schleife, bloß, dass die Aktion immer einmal ausgeführt wird, auch wenn die Bedingung nicht erfüllt ist.
+
+<br>
+<br>
+[![Do-While schleife](https://img.youtube.com/vi/ne2SwFDxUUs/0.jpg)](https://www.youtube.com/watch?v=ne2SwFDxUUs)
 
 #### For Schleife
 
 Eine For Schleife, gibt genau wie die While Schleife einen Zeitraum, beziehungsweise eine Bedingung an, während welcher, eine bestimmte Anweisung ausgeführt werden soll. Diese benutzt man meist, wenn man exakt weiß, wie lang die Schleife gehen soll. Eine Besonderheit dieser ist, dass man eine Variable in der Bedingung selbst initialisiert.
 
-#### Do-While-Schleife
 
-Eine Do-While-Schleife, ist im Prinzip das Gleiche wie eine normale While-Schleife, bloß, dass die Aktion immer einmal ausgeführt wird, auch wenn die Bedingung nicht erfüllt ist.
 
 
 
@@ -184,15 +194,27 @@ Eine If- Bedingung gibt an, was getan werden soll, wenn etwas bestimmtes zutriff
 
 Die Switch-Case-Bedingung gibt eine beliebige Anzahl von Fällen, die eintreten können vor und eine bzw. mehrere Aktionen zu diesen Fällen. Dazu kommt noch ein "default" Fall mit einer Aktion, die ausgeführt wird, wenn keiner der genannten Fälle eintritt.
 
+<br>
+<br>
+[![Switch-Case](https://img.youtube.com/vi/m122jhLuRRk/0.jpg)](https://www.youtube.com/watch?v=m122jhLuRRk)
+
+
+
 #### Verschachtelte Bedingungen
 
 Man kann Bedingungen auch verschachteln, indem man eine Bedingung in die Ausführung, einer anderen Bedingung schreibt. So erreicht man eine doppelte Überprüfung der Bedingung. So kann man zum Beispiel einen Zahlenbereich angeben, in dem ein Wert liegen muss, damit die Aktion ausgeführt wird.
+
+<br>
+<br>
+[![Verschachtelte Bedingungen](https://img.youtube.com/vi/v9CVZiFej0k/0.jpg)](https://www.youtube.com/watch?v=v9CVZiFej0k)
 
 
 ### Datentypen
 
 Datentypen sind ein essenzieller Bestandteil, von jeder Variable. Sie geben an, welche Werte beinhaltet werden können. So können manche Datentypen, wie int (Integer - Ganzzahlen) Zahlen in einem bestimmten Bereich umfassen und der Datentyp String kann nur Text beinhalten. Mit Typecasting kann man die Werte von einem primitiven Datentypen zu einem anderen umformen. So würde 9.3 im Datentyp double, im Typ int zu 9 werden.
 
+
+![Datentypen](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/docs/images/java-datentypen-1.png)
 <br>
 <br>
 <br>
