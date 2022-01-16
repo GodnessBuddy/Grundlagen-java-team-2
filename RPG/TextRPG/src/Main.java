@@ -210,7 +210,7 @@ public class Main {
                 }
 
                 game.showstrich();  
-                System.out.println("Diskussion was man angreift"); // Diskussion mit dem Team, was man angreift 
+                System.out.println("Du startest direkt in das Geschehen hinein. \nDein Team diskutiert gerade, welches euer nächstes Angriffsziel wird"); // Diskussion mit dem Team, was man angreift 
                 game.showstrich();  
 
                 // ao = Angriffsortabfrage für Bravo 6   
@@ -233,7 +233,7 @@ public class Main {
 
                         game.spieler1.karmapunkte = -10; // Karmapunkte werden auf -10 gesetzt 
                         game.showstrich(); 
-                        System.out.println("Du hast dich entschieden das Satelitenbasis in der nähe von Leipzig anzugreifen.");
+                        System.out.println("Du hast dich entschieden das Satelitenbasis in der nähe von Leipzig anzugreifen. ");
                         System.out.println("Deine Karmapunkte betragen" + "=" + game.spieler1.karmapunkte); 
                         game.showstrich(); 
                         ao++;
@@ -258,27 +258,39 @@ public class Main {
 
                 System.out.println(game.spieler1.karmapunkte); // kurzer Test (kann später gelöscht werden) 
 
-                // Entscheidung Satellitenbasis (Karmapunkte = -10)
-                if (game.spieler1.karmapunkte==-10) {
-
+                // Entscheidung Munitionslager (Karmapunkte = 10)
+                if (game.spieler1.karmapunkte==10) {
+                   Scanner enter = new Scanner(in.nextLine()); //Scanner, damit man nicht den ganzen Text aufeinmal bekommt
                     game.showstrich(); 
-                    System.out.println("Hier ist die Story für die Satellitenbasis"); // Text der Story für Satellitenbasis 
+                    System.out.println("Ihr überfallt das Munitionslager, doch als ihr dort ankommt fällt euch auf, dass es gänzlich verlassen wurde.");
+                    System.out.println("Ihr nehmt es ein, doch es bringt euch nicht wirklich viel");
                     game.showstrich(); 
+                    enter.nextLine();
 
                 }
                 
-                // Entscheidung für Munitionslager (Karmapunkte = 0)
-                if (game.spieler1.karmapunkte==0) {
+                // Entscheidung für Satelitenbasis (Karmapunkte = -10)
+                if (game.spieler1.karmapunkte==-10) {
 
+                    Scanner enter = new Scanner(in.nextLine()); //Scanner, damit man nicht den ganzen Text aufeinmal bekommt
                     game.showstrich(); 
-                    System.out.println("Hier steht die Story fürs Munitionslager"); // Story Munitionslager
-                    game.showstrich(); 
-
-                    game.showstrich(); 
-                    System.out.println("Dein Team ist Sauer auf dich, da ein Mann verloren gegangen ist");
-                    System.out.println("Du kannst dich nun entscheiden, wie du handeln möchtest");
-                    System.out.println("Sei dir bewusst, dass jede Entscheidung einen andere auswirkung hat");
-                    game.showstrich(); 
+                    System.out.println("Wie du ja bereits weißt, birgt diese Entscheidung viele Risiken.");
+                        game.showstrich();
+                        System.out.println("Trotz des Risikos vertraut dein Team voll und ganz auf dich und dein Urteil \nDoch euer Angriff verläuft nicht wie geplant... \nGerade als ihr dort ankommt fliegt eine Handgranate auf euch zu, die euch alle töten wird.");
+                        System.out.println("Doch aufeinmal hörst du etwas");
+                        enter.nextLine();
+                        System.out.println("Eugene: LAUFT ALLE WEG! \nEugene stürzt sich auf die Granate und fängt die Explosion ab");
+                        System.out.println("Eugene hat sich für euch alle geopfert");
+                        game.showstrich();
+                        enter.nextLine();
+                        System.out.println("Ihr alle seid geschockt");
+                        game.showstrich();
+                        System.out.println("Jessica: Wie konnte es nur soweit kommen?");
+                        System.out.println("Norman: Er war doch unser Kamerad, wieso musste er sterben?");
+                        System.out.println("Stephan: Das ist alles nur die Schuld von" +game.spieler1.name);
+                        System.out.println("Anastasia: Stimmt, wir hätten lieber Osnabrück angreifen sollen");
+                        System.out.println("Roger: Wie konntest du nur so eine dumme Entscheidung treffen?"); // Text der Story für Satellitenbasis 
+                    game.showstrich();  
 
                     int se  = 0; // se = Schuldentscheidung
                     while (se < 1) {
@@ -342,6 +354,7 @@ public class Main {
                     System.out.println("Anastasia: Ich sehe das genauso wie Eugene, Leipzig wäre besser gewesen.");
                     System.out.println("Riger: Regt euch ab, wir haben uns jetzt so entschieden und das wars. \nDann hat es uns halt nicht so viel gebracht, wenigstens leben wir alle noch");
                     game.showstrich();
+                    System.out.println("Ihr fart fort mit der Planung eurer nächsten Mission");
                     
                 }
                 
@@ -349,7 +362,7 @@ public class Main {
                     int karma1 = 0;
                     while (karma1 < 1){
                            game.showstrich();
-                    System.out.println("Du redest mit dem Truppleiter, dieser ist jedoch sehr sauer auf dich und rastet aus \nDas Gespräch eskaliert und du musst eine Entscheidung treffen:");
+                    System.out.println("Du redest mit dem Truppleiter, dieser ist jedoch sehr sauer auf dich und rastet aus \nDas Gespräch eskaliert und du musst eine Entscheidung treffen: \n");
                     System.out.println("\nOption 1: Du verteidigst dich (mit Worten)");
                     System.out.println("\nOption 2: Du ignorierst ihn");
                     System.out.println("\nOption 3: Du bringst ihn um");
@@ -363,6 +376,7 @@ public class Main {
                         game.showstrich();
                         System.out.println("Deine Karmapunkte:" + game.spieler1.karmapunkte);
                         game.showstrich();
+                        System.out.println("Ihr fahrt mit der Planung eurer nächsten Mission fort");
                         karma1 = 1;
                     }
                     if (schuldentscheidung.equals("2")) {
@@ -370,7 +384,7 @@ public class Main {
                         System.out.println("Dein Verhalten regt ihn so sehr auf, dass er sich nicht zusammenreißen kann \nEr bringt dich um...");
                         game.showstrich();
                         System.out.println("GAME OVER");
-                        karma1 = 1;
+                        
                         System.exit(0);
                         
                     }
@@ -381,6 +395,7 @@ public class Main {
                         game.showstrich();
                         System.out.println("Deine Karmapunkte:" + game.spieler1.karmapunkte);
                         game.showstrich();
+                        System.out.println("Du fährst mir der Planung deiner nächsten Mission fort, bei dieser wird dich niemand unterstützen");
                         karma1 = 1;
                         
                     }
@@ -392,7 +407,9 @@ public class Main {
                     
                     
                 else if (game.spieler1.karmapunkte == -20 ) {
-                    System.out.println("Da Vieles schief gelaufen ist, hinterfragt dein Team deine Entscheidungen \nSie wollen den Grund dafür wissen, warum du dich für Leipzig entschieden hast");
+                    int karma1 = 0;
+                    while (karma1 < 1) {
+                        System.out.println("Da Vieles schief gelaufen ist, hinterfragt dein Team deine Entscheidungen \nSie wollen den Grund dafür wissen, warum du dich für Leipzig entschieden hast");
                     game.showstrich();
                     System.out.println("Option 1: Du antwortest ihnen nicht");
                     System.out.println("Option 2: Du legst ihnen deine Gründe dar");
@@ -405,15 +422,24 @@ public class Main {
                         game.showstrich();
                         System.out.println("Deine Karmapunkte:" + game.spieler1.karmapunkte);
                         game.showstrich();
+                        System.out.println("Du fährst mir der Planung deiner nächsten Mission fort, bei dieser wird dich niemand unterstützen");
+                        karma1=1;
                     }
                     if (antwort.equals("2")) {
                         System.out.println("Deine Teamkameraden werfen dir vor, dass du an dem Tod eures Mannes Schuld bist \nDu sagst ihnen, dass du nicht wolltest, dass es so weit kommt. \nDes Weiteren entschuldigst du dich dafür, wie du dich entschieden hat und zeigst Reue");
-                        System.out.println("Du begründest dein Verhalten damit, dass du in Osnabrück keine Aussichten auf Erfolg gesehen hast \nDeine Teammitglieder verstehen dich und verzeihen dir");
+                        System.out.println("Du begründest dein Verhalten damit, dass du in Osnabrück keine Aussichten auf Erfolg gesehen hast und das es strategisch so gut wie nichts gebracht hätte \nDeine Teammitglieder verstehen dich und verzeihen dir");
                         game.spieler1.karmapunkte = game.spieler1.karmapunkte + 10;
                         game.showstrich();
                         System.out.println("Deine Karmapunkte:" + game.spieler1.karmapunkte);
                         game.showstrich();
+                        System.out.println("Ihr fahrt mit der Planung eurer nächsten Mission fort");
+                        karma1=1;
                     }
+                    else {
+                        game.showfalsecommand();
+                    }
+                    }
+                    
                 }
               
                 
