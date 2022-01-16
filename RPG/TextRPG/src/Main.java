@@ -379,7 +379,7 @@ public class Main {
                         System.out.println("Ihr fahrt mit der Planung eurer nächsten Mission fort");
                         karma1 = 1;
                     }
-                    if (schuldentscheidung.equals("2")) {
+                    else if (schuldentscheidung.equals("2")) {
                         System.out.println("Du nimmst ihn nicht ernst und gehst weg, ohne ihm Beachtung zu schenken \nDas macht ihn jedoch nur noch saurer");
                         System.out.println("Dein Verhalten regt ihn so sehr auf, dass er sich nicht zusammenreißen kann \nEr bringt dich um...");
                         game.showstrich();
@@ -388,7 +388,7 @@ public class Main {
                         System.exit(0);
                         
                     }
-                    if (schuldentscheidung.equals("3")) {
+                    else if (schuldentscheidung.equals("3")) {
                         System.out.println("Weil du die unnötigen Anschuldigungen von deinem Teamleiter nicht mehr ertragen kannst \nrastest du aus und bringst ihn um");
                         System.out.println("Dieses Verhalten schockiert dein Team \nSie verlieren jeglichen Respekt vor dir");
                         game.spieler1.karmapunkte = game.spieler1.karmapunkte - 20;
@@ -425,7 +425,7 @@ public class Main {
                         System.out.println("Du fährst mir der Planung deiner nächsten Mission fort, bei dieser wird dich niemand unterstützen");
                         karma1=1;
                     }
-                    if (antwort.equals("2")) {
+                    else if (antwort.equals("2")) {
                         System.out.println("Deine Teamkameraden werfen dir vor, dass du an dem Tod eures Mannes Schuld bist \nDu sagst ihnen, dass du nicht wolltest, dass es so weit kommt. \nDes Weiteren entschuldigst du dich dafür, wie du dich entschieden hat und zeigst Reue");
                         System.out.println("Du begründest dein Verhalten damit, dass du in Osnabrück keine Aussichten auf Erfolg gesehen hast und das es strategisch so gut wie nichts gebracht hätte \nDeine Teammitglieder verstehen dich und verzeihen dir");
                         game.spieler1.karmapunkte = game.spieler1.karmapunkte + 10;
@@ -501,20 +501,26 @@ public class Main {
                                 game.showstrich();
                                 System.out.println("Story Angriff");
                                 game.showstrich();
-                                System.out.println("Bei dem Angriff sterben vier deiner Leute");
+                                System.out.println("Ihr greift den Stützpunkt in Bremen an, startet aber bereits mit einem schlechten Gefühl. \nVermutlich, weil ihr euch nicht voll und ganz vertrauen könnt nach allem was passiert ist.");
+                                System.out.println("");
+                                System.out.println("Das schlimmst mögliche Szenario tritt ein: \nIhr geratet in einen unerwarteten Kampf und wisst euch nicht zu helfen \nDer Kampf endet mit dem Tod all deiner Teammitglieder");
                                 game.showstrich();
+                                System.out.println("Du fährst mir der Planung deiner nächsten Mission fort, bei dieser wird dich niemand unterstützen");
                             }//Zwischenstützpunkt Story bei -20 Karmapunkten ende
 
 
 
                                 //Zwischenstützpunkt Story bei -10 Karmapunkten Anfang
-                            else if (game.spieler1.karmapunkte == 0) {
+                            else if (game.spieler1.karmapunkte == -10) {
 
                                 game.showstrich();
                                 System.out.println("Story Angriff");
                                 game.showstrich();
-                                System.out.println("Der Truppleiter sagt, dass du gelogen hast.");
+                                System.out.println("Der Angriff verläuft gut, doch nicht jeder von euch hat es überstanden");
+                                System.out.println("Vier deiner Kameraden, die von rechts angriffen, wurden frühzeitig bemerkt und erschossen.");
+                                System.out.println("Dein Team spricht dich zwar nicht explizit darauf an, doch sie sind extrem sauer auf dich.");
                                 game.showstrich();
+                                game.spieler1.karmapunkte = -30;
                             }//Zwischenstützpunkt Story bei -10 Karmapunkten ende
 
 
@@ -525,6 +531,7 @@ public class Main {
                                 game.showstrich();
                                 System.out.println("Story Angriff");
                                 game.showstrich();
+                                System.out.println("Der Angriff auf Bremen verläuft perfekt. \nIhr wart in der Lage jeden Gegner auszuschalten und den Stützpunkt zu erobern \nDas Wichtigste ist jedoch, dass ihr dabei keinen einzigen Mann verloren habt \nDie Operation war ein voller Erfolg");
                             }//Zwischenstützpunkt Story bei 0 Karmapunkten ende
 
 
@@ -547,19 +554,20 @@ public class Main {
                                     String input = in.nextLine();
 
                                     System.out.println("\n Wenn du --1-- schreibst, dann bringtst du den Truppleiter um.");
-                                    System.out.println("\n Wenn du --2-- schreibst, dann führt ihr beide ein klärendes gespräch");
+                                    System.out.println("\n Wenn du --2-- schreibst, dann führt ihr beide ein klärendes Gespräch");
                                     game.showstrich();
 
                                     if (input.equals("1")) {
 
-                                        System.out.println("Du bringst deinen Truppleiter um");
+                                        System.out.println("Du bringst deinen Truppleiter um \nWie dir im selben Moment wird, wird dein Team dich dafür hassen... ");
                                         game.spieler1.karmapunkte = -40;
 
                                     }
 
                                     else if (input.equals("2")) {
                                         
-                                        System.out.println("klärendes Gespräch");
+                                        System.out.println("Du versuchst ganz offen mit ihm zu reden und erklärst ihm deine Sichtweise. \nAußerdem sagst du ihm ganz eindeutig, dass jede Entscheidung die du je getroffen hast nur zum Wohle des Teams war");
+                                        System.out.println("Er sieht es ein und sichert dir seine uneingeschränkte Loyalität zu");
                                         game.spieler1.karmapunkte = 20;
                                     
                                     }
@@ -587,8 +595,12 @@ public class Main {
                              if (game.spieler1.karmapunkte == -30) {
 
                                 game.showstrich();
-                                System.out.println("Auf dem Hinweg bringen dich deine Leute um");
+                                System.out.println("Du glaubst, dass du eine gute Entscheidung triffst, indem du dich für die sichere Variante entscheidest, \ndoch nach allem was ihr deinetwegen durchgemacht habt, hassen dich deine Teammitglieder.");
+                                System.out.println("Ihr seid gerade auf dem Weg nach Berlin. \nDu willst dich umdrehen und deine Leute nach ihrem Gefühl bezüglich der Operation fragen \nDoch alles was du siehst, ist eine Pistole, die gegen dich gerichtet ist...");
                                 game.showstrich();
+                                System.out.println("Noch auf dem Hinweg bringen deine Leute dich um");
+                                game.showstrich();
+                                System.exit(0);
                             }//Zwischenstützpunkt Story bei -30 Karmapunkten ende
 
 
@@ -599,8 +611,11 @@ public class Main {
                                 game.showstrich();
                                 System.out.println("Story Angriff");
                                 game.showstrich();
-                                System.out.println("Dein Team möchte dich nichtmehr haben.");
+                                System.out.println("Die Mission selber läuft gut, doch nach der Mission bemerkst du komische Spannungen deiner Teammitglieder gegenüber dir.");
+                                System.out.println("Du weißt nicht, ob du ihnen noch vertrauen kannst...");
+                                game.showstrich();
                                 System.out.println("Du kannst dich entscheiden ob du die Mission alleine weiterführst oder ob du doch mit ihnen mitgehst");
+                                game.showstrich();
 
                                 int b = 0;
 
@@ -615,7 +630,7 @@ public class Main {
 
                                     if (input.equals("1")) {
 
-                                        System.out.println("Du gehst mit deinem Team mit");
+                                        System.out.println("Du gehst mit deinem Team mit, doch wie du es dir schon gedacht hattest, vertrauen sie dir nicht mehr.");
                                         System.out.println("Sie bringen dich um"); 
                                         System.exit(0);
                                     }
@@ -623,6 +638,8 @@ public class Main {
                                     else if (input.equals("2")) {
 
                                         System.out.println("Du führst die restliche Mission alleine aus");
+                                        System.out.println("Du bist nun allerdings dazu gezwungen, deine letzte Mission alleine durchzuführen");
+                                        game.showstrich();
                                     }
 
                                     else {
@@ -635,10 +652,15 @@ public class Main {
 
 
                             //Zwischenstützpunkt Story bei -10 Karmapunkten Anfang
-                            else if (game.spieler1.karmapunkte == 0) {
+                            else if (game.spieler1.karmapunkte == -10) {
 
                                 game.showstrich();
                                 System.out.println("Story Angriff");
+                                game.showstrich();
+                                System.out.println("Die Mission verläuft perfekt");
+                                System.out.println("Ihr wart in der Lage den Stützpunkt einzunehmen und die Gegner zu überwältigen, \naußerdem ist keiner von euch gestorben oder verletzt worden.");
+                                game.showstrich();
+                                System.out.println("Da du dein Team zu diesem Sieg geführt hast, vertrauen sie dir nun wieder \nund ihr seid bereit für die nächste Mission.");
                                 game.showstrich();
                                 game.spieler1.karmapunkte = 10;
                             }//Zwischenstützpunkt Story bei -10 Karmapunkten ende
@@ -651,6 +673,7 @@ public class Main {
                                 game.showstrich();
                                 System.out.println("Story Angriff");
                                 game.showstrich();
+                                System.out.println("Der Angriff auf Berlin verläuft perfekt. \nIhr wart in der Lage jeden Gegner auszuschalten und den Stützpunkt zu erobern \nDas Wichtigste ist jedoch, dass ihr dabei keinen einzigen Mann verloren habt \nDie Operation war ein voller Erfolg");
                             }//Zwischenstützpunkt Story bei 0 Karmapunkten ende
 
 
@@ -678,14 +701,15 @@ public class Main {
 
                                     if (input.equals("1")) {
 
-                                        System.out.println("Du bringst deinen Truppleiter um");
+                                        System.out.println("Du bringst deinen Truppleiter um \nWie dir im selben Moment wird, wird dein Team dich dafür hassen... ");
                                         game.spieler1.karmapunkte = -40;
 
                                     }
 
                                     else if (input.equals("2")) {
                                         
-                                        System.out.println("klärendes Gespräch");
+                                        System.out.println("Du versuchst ganz offen mit ihm zu reden und erklärst ihm deine Sichtweise. \nAußerdem sagst du ihm ganz eindeutig, dass jede Entscheidung die du je getroffen hast nur zum Wohle des Teams war");
+                                        System.out.println("Er sieht es ein und sichert dir seine uneingeschränkte Loyalität zu");
                                         game.spieler1.karmapunkte = 20;
                                     
                                     }
