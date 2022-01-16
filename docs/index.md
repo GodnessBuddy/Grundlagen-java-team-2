@@ -157,6 +157,14 @@ int number = 9 <br>
 while(number <= 10){ <br>
   System.out.println(number); <br>
 } <br>
+Aufgabe: Fülle die Lücken in deinem Editor aus.
+```
+int i = 1;
+ ____(i < 6) {
+System.out.println(i);
+____;
+}
+```
 <br>
 <br>
 
@@ -168,11 +176,28 @@ Eine Do-While-Schleife, ist im Prinzip das Gleiche wie eine normale While-Schlei
 <br>
 [![Do-While schleife](https://img.youtube.com/vi/ne2SwFDxUUs/0.jpg)](https://www.youtube.com/watch?v=ne2SwFDxUUs)
 
+Aufgabe: Fülle die Lücken in deinem Editor aus.
+
+```
+int i = 1;
+ __{
+  System.out.println(i);
+  i++;
+}
+ _____(i < 6);
+```
+
+
 #### For Schleife
 
 Eine For Schleife, gibt genau wie die While Schleife einen Zeitraum, beziehungsweise eine Bedingung an, während welcher, eine bestimmte Anweisung ausgeführt werden soll. Diese benutzt man meist, wenn man exakt weiß, wie lang die Schleife gehen soll. Eine Besonderheit dieser ist, dass man eine Variable in der Bedingung selbst initialisiert.
 
-
+Aufgabe: Fülle die Lücken in deinem Editor aus.
+```
+___(int i = 0; i < 5; ___) {
+  System.out.println(____);
+}
+```
 
 
 
@@ -186,6 +211,15 @@ Eine If- Bedingung gibt an, was getan werden soll, wenn etwas bestimmtes zutriff
 <br>
 <br>
 [![If Abfragen](https://img.youtube.com/vi/bduK1FAtHBk/0.jpg)](https://www.youtube.com/watch?v=bduK1FAtHBk)
+Aufgabe: Fülle die Lücken in deinem Editor aus.
+
+```
+int x = 50;
+int y = 10;
+ ___(x_y) {
+  System.out.println("Hello World");
+}
+```
 
 
 #### Switch-Case-Bedingung
@@ -195,6 +229,21 @@ Die Switch-Case-Bedingung gibt eine beliebige Anzahl von Fällen, die eintreten 
 <br>
 <br>
 [![Switch-Case](https://img.youtube.com/vi/m122jhLuRRk/0.jpg)](https://www.youtube.com/watch?v=m122jhLuRRk)
+Aufgabe: Fülle die Lücken in deinem Editor aus.
+
+```
+int day = 2;
+   switch (___) {
+      ___1:
+         System.out.println("Saturday");
+         break;
+  
+      ___2:
+         System.out.println("Sunday");
+___;
+}
+```
+
 
 
 
