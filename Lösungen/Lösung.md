@@ -1,1 +1,1 @@
-![Text]()
+![Beispiel](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/Lösungen/images/PogO-transparent.png)
