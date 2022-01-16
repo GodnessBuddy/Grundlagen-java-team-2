@@ -159,8 +159,6 @@ while(number <= 10){ <br>
 } <br>
 <br>
 <br>
-[![While schleife](https://img.youtube.com/vi/bKb7jAi9Hw/0.jpg)](https://www.youtube.com/watch?v=-bKb7jAi9Hw)
-
 
 #### Do-While-Schleife
 
@@ -251,14 +249,14 @@ Eine **Klasse** wird als Bauplan für Objekte benutzt. Sie gibt die verschiedene
 <br>
 Hier ist ein Beispiel für ein Klassendiagramm. Oben sieht man die vorgegebenen Eigenschaften und unten die vorgegebenen Methoden.
 <br>
-![Klassendiagramm](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/docs/image.png)
+![Klassendiagramm](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/docs/images/image.png)
 
 
 
 
 Hier ist ein Beispiel für ein Objektdiagramm. Zuerst sieht man die Attribute mit ihren Attributwerten. 
 <br>
-![Objektdiagramm](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/docs/Objektdiagramm.png)
+![Objektdiagramm](https://raw.githubusercontent.com/GodnessBuddy/Grundlagen-java-team-2/gh-pages/docs/images/Objektdiagramm.png)
 
 
  
