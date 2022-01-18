@@ -135,6 +135,7 @@ Der Vorteil an die JVM ist, dass das Java Programm auf jeden Betriebssystem glei
 
 ## Einführung in die Programmierung 
 
+---
 ### Variablen
 
 Variablen sind **Datenbehälter**, die Zahlen oder Buhstaben beinhalten können. Man kann eine Variable an mehreren Stellen in einem Programm verwenden, wenn man möchte, dass es immer der gleiche Wert ist und sich dieser auch gleich ändert. Um eine Variable zu iniziieren, muss man ihr einen **Datentyp** und einen **Bezeichner** zuweisen. Ein Beispiel für eine Variable wäre: 
@@ -143,11 +144,14 @@ Durch diesen Befehl hat man eine Variable, mit dem Wert 20 erstellt, ihr den Bez
 Dass der Datentyp stimmt, ist essenziell, damit die Variable richtig funktioniert, denn je nach Datentwkrdann nur ein bestimmter Zahlenbereich ausgegeben werden. Wenn man versucht, die Variable wie folgt zu iniziieren, wird sie nicht die gewünschte Zahl, sondern nur die höchst mögliche Zahl in ihrem Bereich (in diesem Fall 127) ausgeben.
 byte number = 128; Der byte Datentyp umfasst nur die Zahlen von -128 - 127, weshalb die 128 nicht ausgegeben werden kann. *Tabelle*
 
+---
 ### Wertzuweisung
 
 In Java werden Variablen mithilfe von Wertzuweisungen Werte zugewiesen. Dabei kann man die gewöhnlichen Grundrechenarten verwenden, sodass beispielsweise eine Variable einer anderen Variable + 5 entspricht.
 
+---
 ### Schleifen
+<br>
 
 #### While Schleife
 
@@ -157,7 +161,9 @@ int number = 9 <br>
 while(number <= 10){ <br>
   System.out.println(number); <br>
 } <br>
-Aufgabe: Fülle die Lücken in deinem Editor aus.
+
+---
+Aufgabe: Vervollständige die vorliegende While-Schleife. Hierbei soll nachdem i ausgegeben wird um 1 erhöht werden. Fülle die Lücken in deinem Editor aus.
 ```
 int i = 1;
  ____(i < 6) {
@@ -168,6 +174,10 @@ ____;
 <br>
 <br>
 
+Lösung: 
+
+---
+
 #### Do-While-Schleife
 
 Eine Do-While-Schleife, ist im Prinzip das Gleiche wie eine normale While-Schleife, bloß, dass die Aktion immer einmal ausgeführt wird, auch wenn die Bedingung nicht erfüllt ist.
@@ -176,7 +186,8 @@ Eine Do-While-Schleife, ist im Prinzip das Gleiche wie eine normale While-Schlei
 <br>
 [![Do-While schleife](https://img.youtube.com/vi/ne2SwFDxUUs/0.jpg)](https://www.youtube.com/watch?v=ne2SwFDxUUs)
 
-Aufgabe: Fülle die Lücken in deinem Editor aus.
+---
+Aufgabe: Vervollständige die Do-While Schleife. Fülle die Lücken in deinem Editor aus.
 
 ```
 int i = 1;
@@ -186,23 +197,25 @@ int i = 1;
 }
  _____(i < 6);
 ```
-
+---
 
 #### For Schleife
 
 Eine For Schleife, gibt genau wie die While Schleife einen Zeitraum, beziehungsweise eine Bedingung an, während welcher, eine bestimmte Anweisung ausgeführt werden soll. Diese benutzt man meist, wenn man exakt weiß, wie lang die Schleife gehen soll. Eine Besonderheit dieser ist, dass man eine Variable in der Bedingung selbst initialisiert.
 
-Aufgabe: Fülle die Lücken in deinem Editor aus.
+Aufgabe: Vervollstädige die For Schleife in deinem Editor. die Variable i soll 5 mal ausgegeben werden.
 ```
 ___(int i = 0; i < 5; ___) {
   System.out.println(____);
 }
 ```
+---
 
 
 
+### Bedingungen:
 
-### Bedingungen
+<br>
 
 #### If-Bedingung
 
@@ -211,15 +224,21 @@ Eine If- Bedingung gibt an, was getan werden soll, wenn etwas bestimmtes zutriff
 <br>
 <br>
 [![If Abfragen](https://img.youtube.com/vi/bduK1FAtHBk/0.jpg)](https://www.youtube.com/watch?v=bduK1FAtHBk)
-Aufgabe: Fülle die Lücken in deinem Editor aus.
+
+
+<br>
+
+
+Aufgabe: Wenn x größer als y ist soll "Hello World" ausgegeben werden. Fülle die Lücken in deinem Editor aus.
 
 ```
 int x = 50;
 int y = 10;
- ___(x_y) {
-  System.out.println("Hello World");
+ ___(x _ y) {
+  System.out.println(___);
 }
 ```
+---
 
 
 #### Switch-Case-Bedingung
@@ -229,21 +248,28 @@ Die Switch-Case-Bedingung gibt eine beliebige Anzahl von Fällen, die eintreten 
 <br>
 <br>
 [![Switch-Case](https://img.youtube.com/vi/m122jhLuRRk/0.jpg)](https://www.youtube.com/watch?v=m122jhLuRRk)
-Aufgabe: Fülle die Lücken in deinem Editor aus.
+
+<br>
+Aufgabe: Vervollständige die Switch-Case Bedingung. Bei dem ersten Fall wird "Saturday" ausgegeben bei dem zweiten Fall wird "Sunday" ausgegeben. Wenn kein Fall stimmt, dann soll "Friday" ausgegeben werden.
 
 ```
 int day = 2;
    switch (___) {
       ___1:
-         System.out.println("Saturday");
+         System.out.println("___");
          break;
   
       ___2:
-         System.out.println("Sunday");
-___;
+         System.out.println("___");
+         break;
+
+      :
+         System.out.println("___");
+         break;
+
 }
 ```
-
+---
 
 
 
@@ -255,7 +281,7 @@ Man kann Bedingungen auch verschachteln, indem man eine Bedingung in die Ausfüh
 <br>
 [![Verschachtelte Bedingungen](https://img.youtube.com/vi/v9CVZiFej0k/0.jpg)](https://www.youtube.com/watch?v=v9CVZiFej0k)
 
-
+---
 ### Datentypen
 
 Datentypen sind ein essenzieller Bestandteil, von jeder Variable. Sie geben an, welche Werte beinhaltet werden können. So können manche Datentypen, wie int (Integer - Ganzzahlen) Zahlen in einem bestimmten Bereich umfassen und der Datentyp String kann nur Text beinhalten. Mit Typecasting kann man die Werte von einem primitiven Datentypen zu einem anderen umformen. So würde 9.3 im Datentyp double, im Typ int zu 9 werden.
