@@ -776,7 +776,7 @@ public class Main {
                         else if (entscheidung.equals("2")){
 
                             System.out.println("Du gibst auf und lebst ein Leben. Allerdings hast du keine Rache für deine Familie bekommen.");
-                            game.spieler1.karmapunkte = -10;
+                           
                             ae++;
                         }
 
@@ -811,14 +811,14 @@ public class Main {
 
                             System.out.println("Du willst die Mission zu Ende bringen. Ihr rafft euch zusammen und zieht es durch. Ihr schafft es und gewinnt.");
                             System.out.println("Allerdings habt ihr 2 weitere teammitglieder verloren.");
-                            game.spieler1.karmapunkte = +10;
+                            
                             zb++;
                         }
 
                         else if (entscheidung.equals("2")){
 
                             System.out.println("Du brichst die Mission ab um dein Team zu schützen. Ihr zieht euch zurück und führt ein normales Leben, allerdings konntest du deine Familie nicht rechnen.");
-                            game.spieler1.karmapunkte = -10;
+                          
                             zb++;
                         }
 
@@ -851,7 +851,7 @@ public class Main {
 
                             System.out.println("Du erklärst dem Team, dass du sie nur angelogen hast, um ans Ziel zu kommen und entschuldigst dich.");
                             System.out.println("Das Team verzeiht dir. Ihr zieht die Mission durch und gewinnt.");
-                            game.spieler1.karmapunkte = 10;
+                          
                             System.exit(0);
                         }
 
@@ -882,7 +882,7 @@ public class Main {
 
                                     System.out.println("Du gehst das Risiko nicht ein und ziehst dich zurück.");
                                     System.out.println("Du lebst ein normales Leben, allerdings konntest du deine Familie nicht rächen.");
-                                    game.spieler1.karmapunkte = 0;
+                                    
                                     zb2++;
                                 }
 
@@ -924,7 +924,7 @@ public class Main {
 
                             System.out.println("Du rettest dein Team, allerdings wirst du bei der Aktion getroffen und verblutest während des weiteren Verlauf der Mission.");
                             System.out.println("Dein Team bringt um dich zu ehren die Mission zu Ende, deine Familie wurde gerecht.");
-                            game.spieler1.karmapunkte = 30;
+            
                             zb++;
                         }
 
@@ -964,7 +964,6 @@ public class Main {
                         else if (entscheidung.equals("2")){
 
                             System.out.println("Du zeihst die Mission alleine durch. Dadurch das du alleine bist, kannst du dich bis zum Führer durchschleichen und ihn exekutieren.");
-                            game.spieler1.karmapunkte = -10;
                             zb++;
                         }
                     }
@@ -992,7 +991,7 @@ public class Main {
 
                             System.out.println("Du rettest dein Team, allerdings wirst du bei der Aktion getroffen und verblutest während des weiteren Verlauf der Mission.");
                             System.out.println("Dein Team bringt um dich zu ehren die Mission zu Ende, deine Familie wurde gerecht.");
-                            game.spieler1.karmapunkte = 10;
+                            
                             zb++;
                         }
 
@@ -2054,14 +2053,14 @@ public class Main {
                         if (execution.equals("1")){
 
                             System.out.println("Du lässt den Führer am leben...");
-                            game.spieler1.karmapunkte = -10;
+                            
                             ae++;
                         }
 
                         else if (execution.equals("2")){
 
                             System.out.println("Du lässt den Gegner exekutieren...");
-                            game.spieler1.karmapunkte = -20;
+                           
                             ae++;
                         }
 
@@ -2094,14 +2093,14 @@ public class Main {
                         if (entscheidung.equals("1")){
 
                             System.out.println("Du willst die Mission zu Ende bringen.");
-                            game.spieler1.karmapunkte = 10;
+                            
                             zb++;
                         }
 
                         else if (entscheidung.equals("2")){
 
                             System.out.println("Du brichst die Mission ab um dein Team zu schützen");
-                            game.spieler1.karmapunkte = 30;
+                            
                             zb++;
                         }
 
@@ -2134,14 +2133,14 @@ public class Main {
 
                             System.out.println("Du willst die Mission zu Ende bringen.");
                             System.out.println("Du stirbst");
-                            game.spieler1.karmapunkte = -10;
+                            
                             System.exit(0);
                         }
 
                         else if (entscheidung.equals("2")){
 
                             System.out.println("Du brichst die Mission ab um dein Team zu schützen");
-                            game.spieler1.karmapunkte = 10;
+                            
                             zb++;
                         }
 
@@ -2180,14 +2179,14 @@ public class Main {
                         if (entscheidung.equals("1")){
 
                             System.out.println("Du lässt dein Team in Stich. Sie sterben. Du kämpfst dich alleine durch und Bringst den Anführer um.");
-                            game.spieler1.karmapunkte = -30;
+                            
                             zb++;
                         }
 
                         else if (entscheidung.equals("2")){
 
                             System.out.println("Du zeihst dich mit deinem Team zurück, ihr brecht die Mission ab. Du bekommst keine Rache, dafür überlebt allerdings das Team.");
-                            game.spieler1.karmapunkte = 40;
+                            
                             zb++;
                         }
                     }
