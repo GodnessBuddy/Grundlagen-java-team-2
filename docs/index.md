@@ -281,6 +281,18 @@ Man kann Bedingungen auch verschachteln, indem man eine Bedingung in die Ausfüh
 <br>
 [![Verschachtelte Bedingungen](https://img.youtube.com/vi/v9CVZiFej0k/0.jpg)](https://www.youtube.com/watch?v=v9CVZiFej0k)
 
+Aufgabe: Vervollständige die Verschachtelte Bedingung Damit 3 x in einer Reihe dreimal kommt.
+
+```
+ ___(int i = 1; i < 4; i++){
+          
+            ___(___ j = 1; j < 4; j++){
+                System.out.print("x ");
+            }
+            System.out.println();
+        }
+```
+
 ---
 ### Datentypen
 
@@ -291,6 +303,17 @@ Datentypen sind ein essenzieller Bestandteil, von jeder Variable. Sie geben an, 
 <br>
 <br>
 <br>
+
+Aufgabe: gebe die richtigen Datentypen an.
+char,float,boolean,String,int
+
+```
+___myNum = 9;
+___myFloatNum = 8.99f;
+___myLetter = 'A';
+___myBool = false;
+___myText = "Hello World";
+```
 
 ---
 ## ./ Einführung in die objektorientierte Programmierung
