@@ -1226,7 +1226,8 @@ public class Testmain {
                 if(game.spieler1.karmapunkte == -20) { //Karmapunkte sind -20
                    
                     game.showstrich();
-                    System.out.println("Storytelling");
+                    System.out.println("Durch die reibungslose Mission davor, ist eure Motivation sehr stark.");
+                    System.out.println("Ihr kämpft euch durch dei feindlichen Linien und nehm den Anführer gefangen.");
 
                     int ae = 0;  // int für Loop für Anführer Exekution
 
@@ -1265,7 +1266,8 @@ public class Testmain {
                 else if(game.spieler1.karmapunkte == +10) { //Karmapunkte sind +10
 
                     game.showstrich();
-                    System.out.println("Storytelling");
+                    System.out.println("Durch die erfolgreiche Rettung in der Mission davor, seit ihr sehr motiviert.");
+                    System.out.println("Ihr seht das Ziel in greifbarer Nähe. Das team ist für dich zur Familie geworden.");
                     
                     int zb = 0; //int für loop für es zu Ende bringen
 
